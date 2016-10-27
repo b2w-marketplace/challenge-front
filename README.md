@@ -1,4 +1,4 @@
-# Desafio Frontend BIT - SP - Teste Commit
+# Desafio Frontend BIT - SP
 
 Para o teste, pedimos que seja entrega em até 3 dias, mas de acordo com a experiência e/ou ferramentas escolhidas por você, talvez precise de mais tempo para concluir o desafio, nos avise!
 
