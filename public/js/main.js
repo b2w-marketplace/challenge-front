@@ -1,8 +1,8 @@
 angular.module("Main",['ngRoute']).config(function($routeProvider){
-    $routeProvider.when('/professional',{
+    $routeProvider.when('/profissional',{
        templateUrl: 'partials/profissional.html',
        controller: 'ProfissionalController'
     });
 
-    $routeProvider.otherwise({redirectTo:'/professional'});
+    $routeProvider.otherwise({redirectTo:'/profissional'});
 });
