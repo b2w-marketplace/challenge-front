@@ -1,5 +1,113 @@
 <div>
-    <h1>Ola Profissional {{profissional.name}}</h1>
-    <p>{{profissional.profession}}</p>
+    <aside id="profileGreen" class="col-xs-5">
+        <div class="pull-right col-xs-6">
+            <div class="row">
+                <ul>
+                    <li class="profissionalRow">
+                        <img ng-src="{{profissional.thumb}}" alt="{{profissional.name}}" title="{{profissional.name}}" />
+                        <h2 class="text-center">{{profissional.name}}</h2>
+                        <p class="text-center">{{profissional.profession}}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul>
+                    <li class="titleRow">
+                        <span><i class="fa fa-user"></i> {{profissional.profile.title}}</span>
+                    </li>
+                    <li class="descriptRow">
+                        <p>{{profissional.profile.description}}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul>
+                    <li class="titleRow">
+                        <span><i class="fa fa-leaf"></i> {{profissional.objective.title}}</span>
+                    </li>
+                    <li class="descriptRow">
+                        <p>{{profissional.objective.description}}</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul>
+                    <li class="titleRow">
+                        <span><i class="fa fa-bolt"></i> {{profissional.personalSkill.title}}</span>
+                    </li>
+                    <li class="progressBarRow">
+                        <ul>
+                            <li>
+                                <div>
+                                    <span>MANAGEMENT</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{profissional.personalSkill.management}}" aria-valuemin="0" aria-valuemax="100" style="width: {{profissional.personalSkill.management}}%"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>TEAMWORK</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{profissional.personalSkill.teamWork}}" aria-valuemin="0" aria-valuemax="100" style="width: {{profissional.personalSkill.teamWork}}%"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>CREATIVE</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{profissional.personalSkill.creative}}" aria-valuemin="0" aria-valuemax="100" style="width: {{profissional.personalSkill.creative}}%"></div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span>COMMUNICATION</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{profissional.personalSkill.communication}}" aria-valuemin="0" aria-valuemax="100" style="width: {{profissional.personalSkill.communication}}%"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul>
+                    <li class="titleRow">
+                        <span><i class="fa fa-address-card-o"></i> {{profissional.contactMe.title}}</span>
+                    </li>
+                    <li class="contactRow">
+                        <ul>
+                            <li>
+                                <p>
+                                    <i class="fa fa-map-marker"></i> {{profissional.contactMe.address}}
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <i class="fa fa-phone"></i> {{profissional.contactMe.tel}}
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <i class="fa fa-envelope"></i> {{profissional.contactMe.email}}
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    <i class="fa fa-dribbble"></i> {{profissional.contactMe.webSite}}
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </aside>
+    <aside id="profileWhite" class="col-xs-7">
+        <h1>{{profissional.name}}</h1>
+    </aside>
 </div>
 
