@@ -107,7 +107,99 @@
         </div>
     </aside>
     <aside id="profileWhite" class="col-xs-7">
-        <h1>{{profissional.name}}</h1>
+        <div class="col-xs-6">
+            <div class="row">
+                <ul>
+                    <li class="titleRow">
+                        <span><i class="fa fa-graduation-cap"></i> {{profissional.education.title}}</span>
+                    </li>
+                    <li class="descriptRow">
+                        <ul>
+                            <li ng-repeat="university in profissional.education.university">
+                                <ul>
+                                    <li class="col-xs-3 dateColumn">
+                                        <p class="text-center">{{university.month}}</p>
+                                        <p class="text-center">{{university.year}}</p>
+                                    </li>
+                                    <li class="col-xs-9 descriptColumn">
+                                        <h3>{{university.courseName}}</h3>
+                                        <span>{{university.universityName}}, {{university.universityCity}}</span>
+                                        <p>{{university.description}}</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul>
+                    <li class="titleRow">
+                        <span><i class="fa fa-suitcase"></i> {{profissional.experience.title}}</span>
+                    </li>
+                    <li class="descriptRow">
+                        <ul>
+                            <li ng-repeat="company in profissional.experience.company">
+                                <ul>
+                                    <li class="col-xs-3 dateColumn">
+                                        <p class="text-center">{{company.month}}</p>
+                                        <p class="text-center">{{company.year}}</p>
+                                    </li>
+                                    <li class="col-xs-9 descriptColumn">
+                                        <h3>{{company.companyName}}</h3>
+                                        <span>{{company.roleName}}, {{company.companyCity}}</span>
+                                        <p>{{company.description}}</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul>
+                    <li class="titleRow">
+                        <span><i class="fa fa-suitcase"></i> {{profissional.experience.title}}</span>
+                    </li>
+                    <li class="progressBarRow">
+                        <ul>
+                            <li ng-repeat="skill in profissional.professionalSkill.tools">
+                                <div>
+                                    <span>{{skill.toolName}}</span>
+                                    <div class="progress">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="{{skill.toolsSkill}}" aria-valuemin="0" aria-valuemax="100" style="width: {{skill.toolsSkill}}%"></div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <ul>
+                    <li class="titleRow">
+                        <span><i class="fa fa-trophy"></i> {{profissional.award.title}}</span>
+                    </li>
+                    <li class="descriptRow">
+                        <ul>
+                            <li>
+                                <ul>
+                                    <li class="col-xs-3 dateColumn">
+                                        <p class="text-center">{{profissional.award.month}}</p>
+                                        <p class="text-center">{{profissional.award.year}}</p>
+                                    </li>
+                                    <li class="col-xs-9 descriptColumn">
+                                        <h3>{{profissional.award.awardName}}</h3>
+                                        <span>{{profissional.award.projectName}}, {{profissional.award.city}}</span>
+                                        <p>{{profissional.award.description}}</p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </aside>
 </div>
 
