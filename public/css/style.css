@@ -1,0 +1,85 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, input {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+body, html{height: 100%}
+/* FIM RESET */
+
+
+#profileGreen {background-color: #49c5b1;}
+#profileGreen ul {list-style: none;}
+#profileGreen ul li.profissionalRow h2{font-size: 1.5em; color: #FFF; font-weight: 300; margin: 10px 0;}
+#profileGreen ul li.profissionalRow p{font-size: 0.8em; color: #FFF; font-weight: 300;}
+#profileGreen ul li.profissionalRow img {border-top-left-radius: 5%; border-bottom-right-radius: 5%; height: 8em; margin: 5px 0 5px 22%;}
+
+#profileGreen div .row ul{margin-bottom: 10px}
+#profileGreen div .titleRow span{color: #FFF; font-weight: 300; text-transform: uppercase;}
+#profileGreen div .titleRow span i {color: #49c5b1; background-color: #FFF; min-width: 30px; max-width: 30px; border-top-left-radius: 25%; border-bottom-right-radius: 25%; padding: 5px 0; text-align: center}
+#profileGreen div .descriptRow{color:#FFF; font-size: 0.8em; text-align: justify;}
+#profileGreen div .descriptRow p{margin-top: 5px}
+#profileGreen div .progressBarRow ul, #profileGreen div .contactRow ul{margin-top: 5px}
+#profileGreen div .progressBarRow li, #profileGreen div .contactRow li{margin-bottom: 10px;}
+#profileGreen div .progressBarRow span, #profileGreen div .contactRow ul li p{color: #FFF; font-weight: 300; font-size: 0.8em;}
+#profileGreen div .progressBarRow .progress{background-color: #FFF!important; border-radius: 0!important; width: 50%; float: right; height: 15px; margin: 0}
+#profileGreen div .progressBarRow .progress .progress-bar-success{ background-image: linear-gradient(to bottom, #a6a5a5 0%, #a6a5a5 100%)};
+
+#profileWhite {background-color: white}
+#profileWhite div {margin-top: 2px}
+#profileWhite div .row ul{margin-bottom: 10px}
+#profileWhite div .titleRow span{color: #49c5b1; font-weight: 300; text-transform: uppercase;}
+#profileWhite div .titleRow span i {color: #FFF; background-color: #49c5b1; min-width: 30px; max-width: 30px; border-top-left-radius: 25%; border-bottom-right-radius: 25%; padding: 5px 0; text-align: center}
+
+#profileWhite div .row ul li.descriptRow ul li{margin-top: 10px}
+#profileWhite div .row ul li.dateColumn p{font-weight: 300; font-size: 0.6em;}
+#profileWhite div .row ul li.descriptColumn h3{font-weight: 700; font-size: 0.8em;}
+#profileWhite div .row ul li.descriptColumn span{font-weight: 300; font-size: 0.5em;}
+#profileWhite div .row ul li.descriptColumn p{font-weight: 300; font-size: 0.7em;}
+
+
+#profileWhite div .progressBarRow ul, #profileGreen div .contactRow ul{margin-top: 5px}
+#profileWhite div .progressBarRow li, #profileGreen div .contactRow li{margin-bottom: 10px}
+#profileWhite div .progressBarRow span, #profileGreen div .contactRow p{color: #000; font-weight: 300; font-size: 0.8em;}
+#profileWhite div .progressBarRow .progress{background-image: linear-gradient(to bottom, #a6a5a5 0%, #a6a5a5 100%); border-radius: 0!important; width: 50%; float: right; height: 15px; margin: 0}
+#profileWhite div .progressBarRow .progress .progress-bar-success{ background-image: linear-gradient(to bottom, #49c5b1 0%, #49c5b1 100%); margin: 0};
