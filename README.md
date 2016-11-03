@@ -1,3 +1,38 @@
+# Para utilizar
+
+    npm install -g angular-cli
+
+#### instale as dependências
+
+    npm install
+
+#### execute o projeto (dev mode)
+
+    ng serve
+
+#### compile o projeto (prod mode)
+
+    ng build
+
+#### execute os testes (apenas 1 para exemplificar)
+    
+    ng test
+
+#### como foi feito?
+
+Feito em Angular 2 com RxJS no consumo da API. 
+
+Todos os topicos são compomentes `src/app/widgets/` e cada componente tem a sua folha de estilo (scss).
+O retorno da API foi modificado para facilidar a reutilização dos compomentes `src/app/app.component.ts`.
+
+#### screenshots
+
+![Print 01](docs/print01.png)
+
+![Print 02](docs/print02.png)
+
+<hr/>
+
 # Desafio Frontend BIT - SP
 
 Para o teste, pedimos que seja entrega em até 3 dias, mas de acordo com a experiência e/ou ferramentas escolhidas por você, talvez precise de mais tempo para concluir o desafio, nos avise!

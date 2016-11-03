@@ -1,0 +1,59 @@
+@mixin address-item($class, $icon) {
+  .#{$class} {
+    background: url($icon) no-repeat 0 center;
+    height: 40px;
+    line-height: 40px;
+    vertical-align: middle;
+    padding-left: 40px;
+  }
+}
+
+section {
+  margin: 35px 0;
+
+  .title {
+    display: table;
+
+    > .icon {
+      background: #fff;
+      display: table-cell;
+      border-radius: 12px 0px;
+      height: 75px;
+      text-align: center;
+      vertical-align: middle;
+      width: 75px;
+    }
+
+    > .icon2 {
+      background: #49c5b1;
+    }
+
+    .text {
+      display: table-cell;
+      font-weight: normal;
+      padding: 0 0 0 20px;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+  }
+
+  address {
+    font-style: normal;
+    margin: 0 1px 0 0;
+    text-align: left;
+    list-style: none;
+    display: inline;
+    ul {
+      list-style: none;
+      @include address-item('address', '../../assets/ico-address.png');
+      @include address-item('tel', '../../assets/ico-tel.png');
+      @include address-item('email', '../../assets/ico-email.png');
+      @include address-item('website', '../../assets/ico-website.png');
+    }
+    
+    a, a:visited {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
