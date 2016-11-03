@@ -10,9 +10,19 @@ var postcss = require('gulp-postcss');
 var path = require('path');
 var rename = require('gulp-rename');
 var copy = require('gulp-contrib-copy');
-
+var browserify = require('browserify')
+var source = require('vinyl-source-stream')
 
 var publicFolder = './public';
+
+
+gulp.task('browserify', function() {
+    return browserify('./src/js/app.js')
+        .bundle()
+        .pipe(source('main.js'))
+        .pipe(gulp.dest('./public/js/'));
+})
+
 
 gulp.task('serve', function() {
     browserSync.init({
@@ -23,13 +33,14 @@ gulp.task('serve', function() {
         }
     });
 
-    gulp.watch("src/sass/*.sass", ['sass-compile']);
-    gulp.watch("src/js/*.js", ['scripts']);
+    gulp.watch("src/scss/*.scss", ['sass-compile']);
+    gulp.watch("src/js/*.js", ['browserify']);
     gulp.watch("src/*.html", ['minify-html']);
+    gulp.watch("src/views/*", ['sync:views']);
 });
 
 gulp.task('sass-compile', function () {
-    return gulp.src('src/sass/app.sass')
+    return gulp.src('src/scss/app.scss')
         .pipe($.sass({
             outputStyle: 'compressed'
         }).on('error', sass.logError))
@@ -54,6 +65,12 @@ gulp.task('copy', function() {
     gulp.src('./bower_components/font-awesome/fonts/*')
         .pipe(copy())
         .pipe(gulp.dest(path.join(publicFolder, 'fonts')));
+});
+
+gulp.task('sync:views', function() {
+    gulp.src('./src/views/*')
+        .pipe(copy())
+        .pipe(gulp.dest(path.join(publicFolder, 'views')));
 });
 
 

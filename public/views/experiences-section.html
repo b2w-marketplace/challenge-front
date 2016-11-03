@@ -1,0 +1,14 @@
+<section class="experiences">
+    <h2 class="box-title experience">{{ title }}</h2>
+    <ul class="description-list">
+       <timeline-item 
+            ng-repeat="data in experience track by $index"            
+            month="{{ data.month }}"
+            year="{{ data.year }}"
+            name="{{ data.courseName }}"
+            location="{{ data.universityName }}"
+            city="{{ data.universityCity }}"
+            description="{{ data.description }}"
+            />
+    </ul>
+</section>

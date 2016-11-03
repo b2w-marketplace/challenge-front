@@ -1,0 +1,208 @@
+@import 'reset';
+@import 'fonts';
+@import '../../bower_components/font-awesome/scss/font-awesome.scss';
+
+.container{
+    width: 100%;
+    max-width: 1010px;
+    margin: 0 auto;
+    @include font-open-sans();
+    display: table;
+    table-layout: fixed;
+
+    .box-float{
+        display: table-cell;
+        margin: 0 auto;
+        height: 100%;
+        padding: 90px 0;
+        vertical-align: top;
+
+        &.left{
+            background-color: #49c4ae;
+            color: #ffffff;
+        }
+
+
+
+
+        section{
+            margin-bottom: 2em;
+            text-align: justify;
+            padding: 0 1em;
+            font-size: 1.4em;
+
+            .box-title{
+                font-size: 2em;
+                margin-bottom: 20px;
+                position: relative;
+                text-indent: 2em;
+                line-height: 1.4;
+                font-weight: 300;
+                
+                &::before{
+                    font-family: FontAwesome;
+                    line-height: 1;
+                    padding: .5em .7em;
+                    background-color: #ffffff;
+                    color: #49c4ae;
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    content: "\f09b";
+                    text-indent: 0;
+                    border-top-left-radius: 5px;
+                    border-bottom-right-radius: 5px;
+                    font-size: .7em;
+                }
+
+                &.profile{
+
+                    &::before{
+                        content: "\f007"
+                    }
+                }
+                &.objective   {
+                    &::before{
+                        content: "\f06c"
+                    }
+                }          
+            }
+        }
+
+        &.right{
+            .box-title{
+                color: #49c4ae;
+
+                &::before{
+                    background-color: #49c4ae;
+                    color: #ffffff;
+                }
+            }
+        }
+
+
+        .head-info{
+            text-align: center;
+
+            .profile-name,
+            .profile-position{
+                margin: 0 auto;
+            }
+
+            .profile-name{
+                font-size: 3em;
+                font-weight: 300;
+            }
+            .profile-position{
+                font-size: 1.5em;
+                font-weight: 500;
+                margin-top: 10px;
+            }
+
+            img{
+                max-width: 280px;
+                max-height: 280px;
+                width: 80%;
+                height: 80%;
+                border-top-left-radius: 25px;
+                border-bottom-right-radius: 25px;
+            }
+        }
+
+
+        .skills{
+            .skill-list{
+                text-transform: uppercase;
+                
+                li{
+                    margin-bottom: 10px;
+                    display: flex;
+                    clear: both;
+
+                    div{
+                        flex-basis: 100%;
+                        
+                        &.skill-level{
+                            background-color: #ffffff;
+                            height: 15px;
+                            margin-top: 3px;
+
+                            div.level{
+                                background-color: #A7A5A6;
+                                display: block;
+                                width: 0%;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+
+            &.professional{
+                .skill-list{
+                    .skill-level{
+                        background-color: #A7A5A6;
+
+                        div.level{
+                            background-color: #49c5b1;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact{
+            .contact-list{
+                li.item{
+                    margin-bottom: 20px;
+
+                    i{
+                        width: 30px;
+                    }
+                }
+            }
+        }
+
+        .education, .awards, .experiences{
+            .description-list{
+                li.item{
+                    display: table;
+
+                    .when{
+                        font-size: 14px;
+                        text-align: center;
+                        max-width: 72px;
+                        display: table-cell;
+                        padding: 2px 24px 0 0;
+                        vertical-align: top;
+                        color: #636363;
+                    }
+
+                    .details{
+                        display: table-cell;
+                        vertical-align: top;
+
+                        strong{
+                            font-weight: bold;
+                            margin-bottom: 10px;
+                            display: block;
+                            text-align: left;
+                        }
+                        p{
+                            color: #7d7d7d;
+                            font-size: 22px;
+                            margin-bottom: 10px;
+                            line-height: 1;
+                        }
+
+                        &.location{
+                            color: #4d4d4d;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
