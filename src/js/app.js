@@ -3,9 +3,10 @@ let angular = require('angular')
 angular.module(
 	'curriculumb2w', 
 	[
-		require('angular-route'),
+		require('angular-route')
 	])
-	.config(function ($routeProvider) {
+	.config(function ($routeProvider, $locationProvider) {
+		$locationProvider.html5Mode(true);
 	    $routeProvider
 	    	.when('/', {
 		        templateUrl: 'views/main.html',
@@ -17,14 +18,18 @@ angular.module(
 	})
 	.controller('MainController', function ($scope, $http) {
 	    $scope.curriculum = {}
-
-	    $http.get('http://www.mocky.io/v2/57dfec211000009020598073')
-	    	.success(function(data) {
-	    		$scope.curriculum = data
-	    	})
-	    	.error(function(error) {
-	    		console.log(error)
-	    	})
+	    $scope.ready = false
+	    $scope.error = false
+		$http.get('http://www.mocky.io/v2/57dfec211000009020598073')
+    	.success(function(data) {
+    		$scope.curriculum = data
+    		$scope.ready = true
+    	})
+    	.error(function(error) {
+    		console.log(error)
+    		$scope.ready = true
+    		$scope.error = true
+    	})
 	})
 	.directive('headInfo', function() {
 		return {
@@ -125,6 +130,13 @@ angular.module(
 				title: '@',
 				description: '@'
 			}
+		}
+		
+	})
+	.directive('loader', function() {
+		return {
+			restrict: "AE",
+			templateUrl: './views/loader.html',
 		}
 		
 	})

@@ -1,3 +1,9 @@
+$browser-context: 12;
+
+@function em($pixels, $context: $browser-context) {
+  @return ($pixels / $context) * 1em;
+}
+
 @mixin font-open-sans() {
 	font-family: 'Open Sans', sans-serif;
 }
