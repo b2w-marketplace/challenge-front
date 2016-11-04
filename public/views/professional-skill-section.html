@@ -1,0 +1,11 @@
+<section class="skills professional">
+    <h2 class="box-title professional-skill">{{ curriculum.professionalSkill.title}}</h2>
+    <ul class="skill-list">
+    	<skill-item 
+    		ng-repeat="skill in curriculum.professionalSkill.tools"
+    		tool-name="{{ skill.toolName }}"
+    		tools-skill="{{ skill.toolsSkill }}"
+    		>
+    	</skill-item>
+    </ul>
+</section>

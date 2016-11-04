@@ -1,0 +1,28 @@
+{
+  "name": "code-challenge",
+  "description": "B2W Code challenge by Vagner Leitte",
+  "main": "index.js",
+  "authors": [
+    "Vagner Leitte <vagnerleitte@outlook.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "code",
+    "challenge",
+    "vagner",
+    "leitte",
+    "b2w"
+  ],
+  "homepage": "https://github.com/vagnerleitte/code-challenge",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "font-awesome": "fontawesome#^4.7.0"
+  }
+}

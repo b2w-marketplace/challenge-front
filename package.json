@@ -1,0 +1,46 @@
+{
+  "name": "code-challenge",
+  "version": "1.0.0",
+  "description": "B2W Code challenge by Vagner Leitte",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vagnerleitte/code-challenge.git"
+  },
+  "keywords": [
+    "code",
+    "challenge",
+    "vagner",
+    "leitte",
+    "b2w"
+  ],
+  "author": "Vagner Leitte <vagnerleitte@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vagnerleitte/code-challenge/issues"
+  },
+  "homepage": "https://github.com/vagnerleitte/code-challenge#readme",
+  "dependencies": {
+    "angular": "^1.5.8",
+    "autoprefixer": "^6.5.1",
+    "browser-sync": "^2.17.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-contrib-copy": "^0.1.2",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-postcss": "^6.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
+  },
+  "devDependencies": {
+    "angular": "^1.5.8",
+    "angular-mocks": "^1.5.8",
+    "angular-ui-router": "^0.3.1",
+    "browserify": "^13.1.1",
+    "gulp": "^3.9.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}

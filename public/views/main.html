@@ -1,0 +1,38 @@
+<div class="container" ng-controller="MainController">
+    <div class="box-float left">
+        <head-info name="{{ curriculum.name }}" picture="{{ curriculum.thumb }}" profession="{{ curriculum.profession }}"></head-info>
+        
+        <profile-section
+            title="{{ curriculum.profile.title }}"
+            description="{{ curriculum.profile.description }}"
+        ></profile-section>
+
+        <section-objective
+            title="{{ curriculum.objective.title }}"
+            description="{{ curriculum.objective.description }}"
+        ></section-objective>
+
+        <personal-skill-section>
+        </personal-skill-section>
+
+        <contact-section
+            title="{{ curriculum.contactMe.title }}"
+            tel="{{ curriculum.contactMe.tel }}"
+            email="{{ curriculum.contactMe.email }}"
+            website="{{ curriculum.contactMe.webSite }}"
+            address="{{ curriculum.contactMe.address }}"
+        ></contact-section>
+    </div>
+
+    <div class="box-float right">
+        <education-section>
+        </education-section>
+        <experience-section>
+        </experience-section>
+        <professional-skill-section>
+        </professional-skill-section>
+        <award-section>
+        </award-section>
+    </div>
+    
+</div>

@@ -1,0 +1,14 @@
+<section class="education">
+    <h2 class="box-title education">{{ curriculum.education.title }}</h2>
+    <ul class="description-list">
+        <timeline-item 
+            ng-repeat="data in curriculum.education.university track by $index"
+            month="{{ data.month }}"
+            year="{{ data.year }}"
+            name="{{ data.courseName }}"
+            location="{{ data.universityName }}"
+            city="{{ data.universityCity }}"
+            description="{{ data.description }}"
+            >
+    </ul>
+</section>
