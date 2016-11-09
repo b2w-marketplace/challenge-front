@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css?family=Pacifico);
+body {
+  overflow: hidden;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+section.home .row div {
+  height: 50%;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+section.home .row div i {
+  font-size: 5vw;
+  vertical-align: bottom;
+}
+section.home .row div label {
+  cursor: pointer;
+  color: white;
+  font-family: 'Pacifico';
+  display: block;
+  text-align: center;
+  font-size: 4vw;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+section.home .row div:hover {
+  transform: scale(1.05);
+  z-index: 100;
+}
+#upload-photo-modal .modal-body ul input {
+  margin-top: 30px;
+}

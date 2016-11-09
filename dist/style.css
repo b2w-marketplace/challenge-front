@@ -1,0 +1,166 @@
+body {
+  overflow: hidden;
+  height: 100%; }
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+section.home {
+  overflow-y: scroll;
+  height: 100%; }
+  section.home .left-bar {
+    font-family: 'Open Sans';
+    background-color: #49c5b1;
+    height: 100%;
+    display: table;
+    color: white; }
+    section.home .left-bar .left-bar-holder {
+      width: 500px;
+      float: right; }
+      section.home .left-bar .left-bar-holder img.profile-picture {
+        width: 275;
+        height: 275;
+        border-radius: 45px 0px 45px 0px;
+        display: block;
+        margin: 90px auto 30px auto; }
+      section.home .left-bar .left-bar-holder h1.name-title {
+        text-align: center;
+        font-weight: lighter;
+        text-transform: uppercase;
+        font-size: 51.62px; }
+      section.home .left-bar .left-bar-holder p.profession {
+        text-align: center;
+        font-size: 30.11px; }
+      section.home .left-bar .left-bar-holder section.information-block {
+        margin-top: 45px; }
+        section.home .left-bar .left-bar-holder section.information-block span.icon-holder {
+          width: 75px;
+          height: 75px;
+          display: inline-block;
+          text-align: center;
+          position: relative;
+          vertical-align: middle;
+          border-radius: 15px 5px 15px 5px;
+          background: white; }
+          section.home .left-bar .left-bar-holder section.information-block span.icon-holder img {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); }
+        section.home .left-bar .left-bar-holder section.information-block label.title {
+          font-size: 38px;
+          margin-left: 25px;
+          vertical-align: middle;
+          font-weight: lighter;
+          text-transform: uppercase; }
+        section.home .left-bar .left-bar-holder section.information-block p {
+          margin-top: 20px;
+          font-weight: 400;
+          font-size: 23px;
+          line-height: 33px;
+          word-break: break-all; }
+        section.home .left-bar .left-bar-holder section.information-block ul.contact-list {
+          margin-top: 30px; }
+          section.home .left-bar .left-bar-holder section.information-block ul.contact-list img {
+            vertical-align: top; }
+          section.home .left-bar .left-bar-holder section.information-block ul.contact-list label {
+            font-size: 25px;
+            margin-left: 30px;
+            font-weight: 100; }
+        section.home .left-bar .left-bar-holder section.information-block section.percentage-block {
+          margin-top: 20px; }
+          section.home .left-bar .left-bar-holder section.information-block section.percentage-block .row label {
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: 100; }
+          section.home .left-bar .left-bar-holder section.information-block section.percentage-block .row .progress {
+            border-radius: 0px;
+            width: 230px;
+            background: white;
+            margin-top: 8px; }
+            section.home .left-bar .left-bar-holder section.information-block section.percentage-block .row .progress .progress-bar {
+              background-color: #a6a5a5 !important;
+              background-image: none !important;
+              width: 230px;
+              height: 20px; }
+  section.home .right-bar {
+    font-family: 'Open Sans'; }
+    section.home .right-bar .right-bar-holder {
+      margin: 98px 0px 0px 65px;
+      width: 540px; }
+      section.home .right-bar .right-bar-holder section.information-block {
+        margin-top: 31px; }
+        section.home .right-bar .right-bar-holder section.information-block div.icon {
+          padding-left: 3px; }
+          section.home .right-bar .right-bar-holder section.information-block div.icon span.icon-holder {
+            width: 75px;
+            height: 75px;
+            display: block;
+            text-align: center;
+            vertical-align: middle;
+            border-radius: 15px 5px 15px 5px;
+            background: #49c5b1; }
+            section.home .right-bar .right-bar-holder section.information-block div.icon span.icon-holder img {
+              position: absolute;
+              top: 50%;
+              transform: translate(-50%, -50%); }
+        section.home .right-bar .right-bar-holder section.information-block label.title {
+          font-size: 38px;
+          margin: 0px 0px 34px 0px;
+          color: #49c5b1;
+          vertical-align: middle;
+          font-weight: lighter;
+          text-transform: uppercase; }
+        section.home .right-bar .right-bar-holder section.information-block .info-holder {
+          overflow: auto; }
+          section.home .right-bar .right-bar-holder section.information-block .info-holder label.name {
+            font-size: 24px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 10px; }
+          section.home .right-bar .right-bar-holder section.information-block .info-holder label.details {
+            font-size: 21px;
+            font-weight: normal;
+            color: #4d4d4d;
+            line-height: 14px;
+            margin-bottom: 10px; }
+          section.home .right-bar .right-bar-holder section.information-block .info-holder label.description {
+            font-size: 24px;
+            color: #7d7d7d;
+            max-width: 535px;
+            font-weight: normal;
+            line-height: 29px;
+            margin-bottom: 25px; }
+        section.home .right-bar .right-bar-holder section.information-block .left-date {
+          padding: 0px; }
+          section.home .right-bar .right-bar-holder section.information-block .left-date p {
+            text-align: center;
+            font-size: 17px;
+            float: left;
+            font-weight: 400;
+            color: #646464;
+            margin-top: 5px;
+            line-height: 22px; }
+        section.home .right-bar .right-bar-holder section.information-block h2 {
+          color: #333; }
+        section.home .right-bar .right-bar-holder section.information-block section.percentage-block {
+          margin-bottom: 20px; }
+          section.home .right-bar .right-bar-holder section.information-block section.percentage-block .row label.toolName {
+            text-transform: uppercase;
+            font-size: 25px;
+            font-weight: 100;
+            margin: 0;
+            padding: 0;
+            font-weight: 400; }
+          section.home .right-bar .right-bar-holder section.information-block section.percentage-block .row .progress {
+            border-radius: 0px;
+            width: 230px;
+            background: #a6a5a5;
+            margin-top: 8px; }
+            section.home .right-bar .right-bar-holder section.information-block section.percentage-block .row .progress .progress-bar {
+              background-color: #49c5b1 !important;
+              background-image: none !important;
+              width: 230px;
+              height: 20px; }
