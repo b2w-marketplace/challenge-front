@@ -1,0 +1,271 @@
+
+body {
+    overflow: hidden;    
+    height:100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;    
+    list-style: none; 
+}
+
+
+section.home {
+
+    overflow-y: scroll;
+    height: 100%;
+
+    .left-bar{
+
+        font-family: 'Open Sans';
+        background-color: #49c5b1;
+        height: 100%;
+        display: table;
+        color: white;
+
+        .left-bar-holder{
+
+            width: 500px;
+            float: right;
+
+            img.profile-picture{
+                width: 275;
+                height: 275;
+                border-radius: 45px 0px 45px 0px;
+                display: block;
+                margin: 90px auto 30px auto;
+            }
+
+            h1.name-title{
+                text-align: center;
+                font-weight: lighter;
+                text-transform: uppercase;
+                font-size: 51.62px;
+            }
+
+            p.profession{
+                text-align: center;
+                font-size: 30.11px;
+            }
+
+            section.information-block{
+
+                margin-top: 45px;
+                
+                span.icon-holder{
+
+                    width: 75px;
+                    height: 75px;
+                    display: inline-block;
+                    text-align: center;
+                    position: relative;
+                    vertical-align: middle;
+                    border-radius: 15px 5px 15px 5px;
+                    background: white;
+                    
+                    img{
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+                }
+
+                label.title{
+                    font-size: 38px;
+                    margin-left: 25px;
+                    vertical-align: middle;
+                    font-weight: lighter;
+                    text-transform: uppercase;
+                }
+
+                p{
+                    margin-top: 20px;
+                    font-weight: 400;
+                    font-size: 23px;
+                    line-height: 33px;
+                    word-break: break-all;
+                }  
+
+                ul.contact-list{
+                    margin-top: 30px;
+                    
+                    img{
+                        vertical-align: top;
+                    }
+                    
+                    label{
+                        font-size: 25px;
+                        margin-left: 30px;
+                        font-weight: 100;
+                    }
+                }
+
+                section.percentage-block {
+                   
+                    margin-top: 20px;
+                    
+                    .row{                       
+
+                        label{
+                            text-transform: uppercase;
+                            font-size: 25px;
+                            font-weight: 100;
+                        }
+
+                        
+
+                        
+                        .progress{
+                            border-radius: 0px;
+                            width: 230px;
+                            background: white;
+                            margin-top: 8px;
+
+                        
+                            .progress-bar{
+                                background-color: #a6a5a5 !important; 
+                                background-image: none !important;
+                                width: 230px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+            }    
+        }
+    }
+
+    .right-bar{
+
+         font-family: 'Open Sans';
+         
+         .right-bar-holder{
+
+              margin: 98px 0px 0px 65px;
+              width: 540px;
+
+              section.information-block{
+
+                margin-top: 31px;
+
+                div.icon{
+                    
+                    padding-left: 3px;                
+                
+                    span.icon-holder{
+
+                        width: 75px;
+                        height: 75px;
+                        display: block;
+                        text-align: center;
+                        vertical-align: middle;
+                        border-radius: 15px 5px 15px 5px;
+                        background: #49c5b1;
+
+                        img{
+                            position: absolute;
+                            top: 50%;
+                            transform: translate(-50%, -50%);
+                        }
+                    }
+                }
+  
+
+                label.title{
+                    font-size: 38px;
+                    margin: 0px 0px 34px 0px;
+                    color:#49c5b1;
+                    vertical-align: middle;
+                    font-weight: lighter;
+                    text-transform: uppercase;
+                }
+
+                .info-holder{
+
+                    overflow: auto;
+
+                    label.name{
+                        font-size: 24px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        margin-bottom: 10px;
+                    }
+
+                    label.details{
+                        font-size: 21px;
+                        font-weight: normal;
+                        color: #4d4d4d;
+                        line-height: 14px;
+                        margin-bottom: 10px;
+                    }
+
+                    label.description{
+                        font-size: 24px;
+                        color: #7d7d7d;
+                        max-width: 535px;
+                        font-weight: normal;
+                        line-height: 29px;
+                        margin-bottom: 25px;
+                    }
+                }
+
+               
+
+                .left-date {
+                    
+                    padding: 0px;
+                    
+                    p { 
+                        text-align: center;
+                        font-size: 17px;
+                        float: left;
+                        font-weight: 400;
+                        color: #646464;
+                        margin-top: 5px;
+                        line-height: 22px;
+
+                    }
+                }
+                
+                h2 {
+                    color: #333;
+                }
+                
+                section.percentage-block {
+                   
+                    margin-bottom: 20px;
+                    
+                    .row{
+
+                        label.toolName{
+                            text-transform: uppercase;
+                            font-size: 25px;
+                            font-weight: 100;
+                            margin: 0;
+                            padding: 0;
+                            font-weight: 400;
+                        }
+                        
+                        
+                        .progress{
+                            border-radius: 0px;
+                            width: 230px;
+                            background: #a6a5a5;
+                            margin-top: 8px;
+
+                        
+                            .progress-bar{
+                                background-color: #49c5b1 !important; 
+                                background-image: none !important;
+                                width: 230px;
+                                height: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}

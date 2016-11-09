@@ -1,66 +1,75 @@
-var gulp = require("gulp"),
+'use strict'
+
+const gulp = require("gulp"),
     nodemon = require('gulp-nodemon'),
-    less = require('gulp-less'),
+    babel = require('gulp-babel'),
+    es2015 = require('babel-preset-es2015'),
+    sass = require('gulp-sass'),
     inject = require('gulp-inject'),
     uglify = require('gulp-uglify'),
     concat = require('gulp-concat'),
     rename = require('gulp-rename'),
     print = require('gulp-print'),
-    babel = require('gulp-babel'),
-    concat = require('gulp-concat'),
+    del = require('del'),
     livereload = require('gulp-livereload'),
-    es2015 = require('babel-preset-es2015'),
     sourcemaps = require('gulp-sourcemaps'),
-    clean = require('gulp-clean'),
-    browserify = require('browserify'),
-    babelify = require('babelify'),
-    source = require('vinyl-source-stream');
+    clean = require('gulp-clean');
 
-gulp.task('transpile', function() 
-{
 
+gulp.task('cleanFolder', () => {
+    return del('dist');
 });
 
-gulp.task('less', function() {
+gulp.task('transpile', function() {
 
-    return gulp.src('public/**/*.less')
-        .pipe(less())
+    return gulp.src('app/**/*.js')
+        .pipe(babel({
+            presets: [es2015]
+        }))
+        .pipe(concat('all.js'))
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('sass', () => {
+
+    return gulp.src('app/**/*.scss')
+        .pipe(sass())
         .pipe(concat('style.css'))
-        .pipe(gulp.dest('www'))
+        .pipe(gulp.dest('dist'))
         .pipe(livereload());
 });
 
-gulp.task('includePublic', ['transpile', 'less'], function() {
+gulp.task('includePublic', ['transpile', 'sass'], () => {
 
-    var target = gulp.src('views/*.html');
+    const target = gulp.src('views/*.html');
 
-    var sources = gulp.src(
-        ['www/*.js', 'www/*.css'], { read: false, relative: true }
+    const sources = gulp.src(
+        ['dist/*.js', 'dist/*.css'], { read: false, relative: true }
     );
 
-    return target.pipe(inject(sources, { ignorePath: 'www', addRootSlash: true }))
+    return target.pipe(inject(sources, { ignorePath: 'dist', addRootSlash: true }))
         .pipe(gulp.dest(function(file) {
             return file.base;
         }));;
 });
 
-gulp.task('includeScripts', ['transpile', 'less', 'includePublic'], function() {
+gulp.task('includeScripts', ['transpile', 'sass', 'includePublic'], () => {
 
-    var target = gulp.src('views/*.html');
+    const target = gulp.src('views/*.html');
 
-    gulp.src('www/lib', { read: false })
+    gulp.src('dist/lib', { read: false })
         .pipe(clean({ force: true }));
 
-    gulp.src(['bower_components/**/*.js', 'bower_components/**/*.map', 'bower_components/**/*.css'])
+    gulp.src(['scripts/**/*.js', 'scripts/**/*.map', 'scripts/**/*.css'])
         .pipe(rename({ dirname: '' }))
-        .pipe(gulp.dest('www/lib'))
-        .on('end', function() {
+        .pipe(gulp.dest('dist/lib'))
+        .on('end', () => {
 
-            var sources = gulp.src(
-                ['www/lib/*.*'], { read: false, relative: true }
+            const sources = gulp.src(
+                ['dist/lib/*.*'], { read: false, relative: true }
             );
 
-            return target.pipe(inject(sources, { ignorePath: 'www', addRootSlash: true, name: 'scripts' }))
+            return target.pipe(inject(sources, { ignorePath: 'dist', addRootSlash: true, name: 'scripts' }))
                 .pipe(gulp.dest(function(file) {
                     return file.base;
                 }));
@@ -68,17 +77,18 @@ gulp.task('includeScripts', ['transpile', 'less', 'includePublic'], function() {
 
 });
 
-gulp.task('exec', ['less', 'transpile', 'includeScripts', 'includePublic'], function() {
+gulp.task('exec', ['cleanFolder', 'sass', 'transpile', 'includeScripts', 'includePublic'], () => {
 
-    var stream = nodemon({
+    const stream = nodemon({
         script: 'server/server.js',
         env: { 'NODE_ENV': 'development' }
-    }).on('restart', function() {
+    }).on('restart', () => {
         console.log('Server restarted');
     });
 
-    gulp.watch("public/**/*.js", ["transpile"]);
-    gulp.watch("public/**/*.less", ["less"]);
+    gulp.watch("app/**/*.ts", ["transpile"]);
+    gulp.watch("app/**/*.js", ["transpile"]);
+    gulp.watch("app/**/*.scss", ["sass"]);
 
     return stream;
 })

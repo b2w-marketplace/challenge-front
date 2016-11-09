@@ -1,9 +1,8 @@
 <html>
 
 <head>
-    <title>UiChallenge</title>    
-    
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>B2W - challenge</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
     <!-- inject:css -->
     <link rel="stylesheet" href="/style.css">
     <!-- endinject -->
@@ -11,68 +10,28 @@
     <link rel="stylesheet" href="/lib/bootstrap-theme.min.css">
     <link rel="stylesheet" href="/lib/bootstrap.min.css">
     <!-- endinject -->
-      
- <style>
-
-label {
-    cursor: pointer;
-    color: white;
-    font-family: 'Pacifico';
-    display: block;
-    text-align: center;
-    font-size: 4vw;
-    position: relative;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.row div:hover {
-    transform: scale(1.05);
-    z-index: 100;
-}
-    .row div {
-    height: 50%;
-    transition: all 0.5s ease-in-out;
-    cursor: pointer;
-}
-
-
- </style>
-
-
+  
 </head>
-    <body >
-        <div id="containerB2WChallenge">
-            <div class="row">
-                <div class="col-xs-6">
-                    <label>Example 2</label>
-                </div>
-                <div class="col-xs-6">
-                    <label>Github</label>
-                </div>
-            </div>
-        </div>
-    </body>
 
+<body ng-app="app">
+    <div ng-view></div>
+</body>
 <footer>
-    <script src="http://maps.google.com/maps/api/js?sensor=true"></script>
     <!-- scripts:js -->
     <script src="/lib/0.2.2_jquery.min.js"></script>
+    <script src="/lib/01_angular.min.js"></script>
+    <script src="/lib/angular-animate.min.js"></script>
+    <script src="/lib/angular-aria.min.js"></script>
     <script src="/lib/bootstrap.min.js"></script>
-    <script src="/lib/gmaps.js"></script>
     <script src="/lib/underscore-min.js"></script>
     <!-- endinject -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.3.2/react-dom.min.js"></script>    
-    
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-route.js"></script>
+
     <!-- inject:js -->
     <script src="/all.js"></script>
-    <!-- endinject --> 
-
+    <!-- endinject -->
     
-
 </footer>
 
 </html>

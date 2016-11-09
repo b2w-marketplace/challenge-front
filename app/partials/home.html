@@ -1,0 +1,247 @@
+<section class="home">
+
+        <div class="col-lg-6 col-sm-12 left-bar">
+
+            <div class="left-bar-holder">
+
+                <figure>
+                    <img class="profile-picture" alt="profile picture" ng-src="{{user.thumb}}">
+                </figure>
+
+                <h1 class="name-title">{{user.name}}</h1>
+
+                <p class="profession">{{user.profession}}</p>
+
+                <section class="information-block">
+                    
+                    <span class="icon-holder">
+                        <img src="assets/images/icon-profile.png" alt="profile "/>
+                    </span> 
+                    
+                    <label class="title">{{user.profile.title}}</label>                    
+                    
+                    <p>
+                        {{user.profile.description}} 
+                    </p>
+
+                </section>
+
+                <section class="information-block">
+                    
+                    <span class="icon-holder">
+                        <img src="assets/images/icon-objective.png" alt="objective "/>
+                    </span> 
+                    
+                    <label class="title">{{user.objective.title}}</label>                    
+                    
+                    <p>
+                        {{user.objective.description}} 
+                    </p>
+
+                </section>
+
+
+                <section class="information-block">
+
+                    <span class="icon-holder">
+                         <img src="assets/images/icon-bolt.png" alt="personalSkill " />
+                    </span> 
+                    
+                    <label class="title">{{user.personalSkill.title}}</label> 
+                    
+                    
+                    <section class="percentage-block" >
+                        
+                        <div ng-repeat="(key, val) in user.personalSkill " ng-if="$index > 0 ">
+                            
+                            <div class="row">
+                                
+                                <label class="col-sm-6" >{{key}}</label>
+
+                                <div class="progress">
+                                    
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="{{val}}" aria-valuemin="0" aria-valuemax="100" style="width:{{val}}%"></div>
+                        
+                                </div>
+                        
+                            </div>
+                        
+                        </div> 
+
+                    </section>
+
+                </section>
+
+                <section class="information-block">
+                    
+                    <span class="icon-holder">
+                        <img src="assets/images/icon-contact.png" alt="contact "/>
+                    </span> 
+                    
+                    <label class="title">{{user.objective.title}}</label>
+                    
+                    <ul class="contact-list">
+                        <li>
+                            <img src="assets/images/icon-address.png" alt="icon map" />
+                            <label> {{user.contactMe.address}}</label>
+                        </li>
+                        <liul>
+                            <img src="assets/images/icon-phone.png" alt="icon tel" />
+                            <label>{{user.contactMe.tel}}</label>
+                        </li>
+                        <li>
+                            <img src="assets/images/icon-email.png" alt="icon mail" />
+                            <label>{{user.contactMe.email}}</label>
+                        </li>
+                        <li>
+                            <img src="assets/images/icon-site.png" alt="icon web" />
+                            <label>{{user.contactMe.webSite}}</label>
+                        </li>
+                    </ul>
+
+                </section>
+                
+            </div>
+        </div>
+        
+        <div class="col-lg-6 col-sm-12 right-bar">
+
+            <div class="right-bar-holder">
+            
+            <section class="information-block">
+
+                <div class="row">
+                    
+                    <div class="col-md-2 col-sm-2 icon">
+                        <span class="icon-holder ">
+                            <img src="assets/images/icon-education.png" alt="education " />
+                        </span> 
+                    </div>
+                    
+                    <div  class="title col-md-10">
+                        <label class="title">{{user.education.title}}</label> 
+                    </div>
+
+                </div>
+
+                <div class="row" ng-repeat="education in user.education.university">
+                    
+                    <div class="left-date col-md-2 ">
+                        <p>{{education.month}} <br> {{education.year}} </p>
+                    </div>
+                    
+                    <div class=" col-md-10 info-holder">
+                        <label class="name">{{education.courseName}}</label><br>
+                        <label class="details">{{education.universityName +', '+ education.universityCity}}</label><br>
+                        <label class="description">{{education.description}}</label>
+                    </div>
+
+                </div>
+                
+            </section>
+
+            <section class="information-block">
+
+                <div class="row">
+                    
+                    <div class="col-md-2 col-sm-2 icon">
+                        <span class="icon-holder ">
+                            <img src="assets/images/icon-experience.png" alt="experience " />
+                        </span> 
+                    </div>
+                    
+                    <div  class="title col-md-10">
+                        <label class="title">{{user.experience.title}}</label> 
+                    </div>
+
+                </div>
+
+                <div class="row" ng-repeat="experience in user.experience.company">
+                    
+                    <div class="left-date col-md-2 ">
+                        <p>{{experience.month}} <br> {{experience.year}} </p>
+                    </div>
+                    
+                    <div class=" col-md-10 info-holder">
+                        <label class="name">{{experience.roleName}}</label><br>
+                        <label class="details">{{experience.companyName + ', '+ experience.companyCity}}</label><br>
+                        <label class="description">{{experience.description}}</label>
+                    </div>
+
+                </div>
+                
+            </section>
+
+            <section class="information-block">
+
+                <div class="row">
+                    
+                    <div class="col-md-2 col-sm-2 icon">
+                        <span class="icon-holder ">
+                            <img src="assets/images/icon-professionalSkill.png" alt="professionalSkills "/>
+                        </span> 
+                    </div>
+                    
+                    <div  class="title col-md-10">
+                        <label class="title">{{user.professionalSkill.title}}</label> 
+                    </div>
+
+                </div>
+
+                <section class="percentage-block" >
+                    
+                    <div ng-repeat="tool in user.professionalSkill.tools ">
+                        
+                        <div class="row">
+                            
+                            <label class="col-sm-6 bold toolName" >{{tool.toolName}}</label>
+
+                            <div class="progress">
+                                
+                                <div class="progress-bar" role="progressbar" aria-valuenow="{{tool.toolName}}" aria-valuemin="0" aria-valuemax="100" style="width:{{tool.toolsSkill}}%"></div>
+                    
+                            </div>
+                    
+                        </div>
+                    
+                    </div> 
+
+                </section>
+
+            </section>
+
+
+            <section class="information-block">
+
+                <div class="row">
+                    
+                    <div class="col-md-2 col-sm-2 icon">
+                        <span class="icon-holder ">
+                            <img src="assets/images/icon-award.png" alt="award"/>
+                        </span> 
+                    </div>
+                    
+                    <div  class="title col-md-10">
+                        <label class="title">{{user.award.title}}</label> 
+                    </div>
+
+        
+                    
+                        <div class="left-date col-md-2 ">
+                            <p>{{user.award.month}} <br> {{user.award.year}} </p>
+                        </div>
+                        
+                        <div class=" col-md-10 info-holder">
+                            <label class="name">{{user.award.awardName}}</label><br>
+                            <label class="details">{{user.award.projectName +', '+ user.award.city}}</label><br>
+                            <label class="description">{{user.award.description}}</label>
+                        </div>
+
+                    </div>
+
+  
+
+            </section>
+        </div>
+    </div>
+</section>

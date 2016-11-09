@@ -28,7 +28,7 @@ app.set('view engine', 'html');
 //Configuring CORS
 const corsOptions = {
     origin: '*',
-    optionsSuccessStatus: 200 // Some legacy browsers (IE11, various SmartTVs) choke on 204
+    optionsSuccessStatus: 200 
 };
 
 app.use(cors(corsOptions));
@@ -39,15 +39,9 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.use(express.static(path.join(process.cwd(), '/www')));
-app.use(express.static(path.join(process.cwd(), '/scripts')));
-app.use(express.static(path.join(process.cwd(), '/public')));
+app.use(express.static(path.join(process.cwd(), '/dist')));
+app.use(express.static(path.join(process.cwd(), '/app')));
 
-app.use(function(req, res, next) {
-    const err = new Error('Not Found');
-    err.status = 404;
-    next(err);
-});
 
 
 module.exports = app;
