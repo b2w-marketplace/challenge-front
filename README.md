@@ -9,7 +9,7 @@ O layout do desafio é [esse](https://ucarecdn.com/a3d9551d-8bb1-4e58-b152-0832d
 
 Aqui temos o arquivo .psd para [download](https://drive.google.com/open?id=0BwJHZ1PdHAcGalV4U0NGTWMzSW8)
 
-Aqui, o link para [API](http://www.mocky.io/v2/57dfec211000009020598073)
+Aqui, o link para [API](http://www.mocky.io/v2/587935ac260000420e1c3644)
 
 ## Desafio:
 Desenvolver a página seguindo o [layout](https://ucarecdn.com/a3d9551d-8bb1-4e58-b152-0832dbffd5a2/testeb2w.jpg), que atenda os seguintes critérios:
