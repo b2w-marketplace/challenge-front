@@ -1,0 +1,18 @@
+{
+  "name": "b2w",
+  "version": "1.0.0",
+  "description": "teste front-end b2w",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Thiago Previero",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.14.1",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0",
+    "path": "^0.12.7"
+  }
+}

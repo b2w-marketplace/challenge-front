@@ -1,0 +1,162 @@
+<article class="perfil-verde">
+    <section class="container">
+        <div class="row identity">
+            <img ng-src="{{profissional.thumb}}" alt="{{profissional.name}}" title="{{profissional.name}}" />
+            <h2 class="text-center">{{profissional.name}}</h2>
+            <h4 class="text-center">{{profissional.profession}}</h4>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row profile">
+            <div class="title">
+                <img ng-src="../assets/image/icon-profile.png" width="38" height="38" alt="icon-profile">
+                <h3>{{profissional.profile.title}}</h3>
+            </div>
+            <p>{{profissional.profile.description}}</p>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row objective">
+            <div class="title">
+                <img ng-src="../assets/image/icon-objective.png" width="38" height="38" alt="icon-objective">
+                <h3>{{profissional.objective.title}}</h3>
+            </div>
+            <p>{{profissional.objective.description}}</p>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row personal-skill">
+            <div class="title">
+                <img ng-src="../assets/image/icon-personal-skill.png" width="38" height="38" alt="icon-personal-skill">
+                <h3>{{profissional.personalSkill.title}}</h3>
+            </div>
+            <div class="progress-row">
+                <div>
+                    <span>management</span>
+                    <progress max="100" value="{{profissional.personalSkill.management}}"></progress>
+                </div>
+                <div>
+                    <span>teamwork</span>
+                    <progress max="100" value="{{profissional.personalSkill.teamWork}}"></progress>
+                </div>
+                <div>
+                    <span>creative</span>
+                    <progress max="100" value="{{profissional.personalSkill.creative}}"></progress>
+                </div>
+                <div>
+                    <span>communication</span>
+                    <progress max="100" value="{{profissional.personalSkill.communication}}"></progress>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row contact-me">
+            <div class="title">
+                <img ng-src="../assets/image/icon-contact-me.png" width="38" height="38" alt="icon-contact-me">
+                <h3>{{profissional.contactMe.title}}</h3>
+            </div>
+            <address>
+                <div>
+                    <span class="address"></span>
+                    <p>{{profissional.contactMe.address}}</p>
+                </div>
+                <div>
+                    <span class="phone"></span>
+                    <p>{{profissional.contactMe.tel}}</p>
+                </div>
+                <div>
+                    <span class="email"></span>                
+                    <p>
+                        <a href="mailto:{{profissional.contactMe.email}}">{{profissional.contactMe.email}}</a>
+                    </p>
+                </div>
+                <div>
+                    <span class="website"></span>   
+                    <p>
+                        <a href="{{profissional.contactMe.webSite}}">{{profissional.contactMe.webSite}}</a>
+                    </p>
+                </div>
+            </address>
+        </div>
+    </section>
+</article>
+<article class="perfil-branco">
+    <section class="container">
+        <div class="row education">
+            <div class="title">
+                <img ng-src="../assets/image/icon-education.png" width="38" height="38" alt="icon-education">
+                <h3>{{profissional.education.title}}</h3>
+            </div>
+            <div class="university-row" ng-repeat="university in profissional.education.university">
+                <ul>
+                    <li class="university-date">
+                        <p>{{university.month}}</p>
+                        <p>{{university.year}}</p>
+                    </li>
+                    <li class="university-description">
+                        <h3>{{university.courseName}}</h3>
+                        <span>{{university.universityName}}, {{university.universityCity}}</span>
+                        <p>{{university.description}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row education">
+            <div class="title">
+                <img ng-src="../assets/image/icon-experience.png" width="38" height="38" alt="icon-experience">
+                <h3>{{profissional.experience.title}}</h3>
+            </div>
+            <div class="university-row" ng-repeat="company in profissional.experience.company">
+                <ul>
+                    <li class="university-date">
+                        <p>{{company.month}}</p>
+                        <p>{{company.year}}</p>
+                    </li>
+                    <li class="university-description">
+                        <h3>{{company.companyName}}</h3>
+                        <span>{{company.roleName}}, {{company.companyCity}}</span>
+                        <p>{{company.description}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row professional-skill">
+            <div class="title">
+                <img ng-src="../assets/image/icon-professional-skill.png" width="38" height="38" alt="icon-professional-skill">
+                <h3>{{profissional.professionalSkill.title}}</h3>
+            </div>
+            <div class="progress-row" >
+                <div ng-repeat="skill in profissional.professionalSkill.tools">
+                    <span>{{skill.toolName}}</span>
+                    <progress max="100" value="{{skill.toolsSkill}}"></progress>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="container">
+        <div class="row education">
+            <div class="title">
+                <img ng-src="../assets/image/icon-award.png" width="38" height="38" alt="icon-award">
+                <h3>{{profissional.award.title}}</h3>
+            </div>
+            <div class="university-row">
+                <ul>
+                    <li class="university-date">
+                        <p>{{profissional.award.month}}</p>
+                        <p>{{profissional.award.year}}</p>
+                    </li>
+                    <li class="university-description">
+                        <h3>{{profissional.award.awardName}}</h3>
+                        <span>{{profissional.award.projectName}}, {{profissional.award.city}}</span>
+                        <p>{{profissional.award.description}}</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+</article>

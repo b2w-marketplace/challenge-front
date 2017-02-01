@@ -1,0 +1,230 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  outline: none; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  font: normal 31.25% 'Open Sans', sans-serif; }
+
+html,
+body {
+  width: 100%;
+  height: 100%; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  display: block;
+  font-weight: normal; }
+
+ol, ul {
+  list-style: none; }
+
+address {
+  font-style: normal; }
+
+a,
+a:link,
+a:visited {
+  text-decoration: none; }
+
+.container:before,
+.container:after {
+  content: "";
+  display: table; }
+
+.container:after {
+  clear: both; }
+
+.container {
+  zoom: 1; }
+
+article {
+  width: 100%;
+  max-width: 500px;
+  padding: 9.0em 20px 5.0em;
+  float: left; }
+
+.perfil-verde {
+  color: #fff;
+  background-color: #49c5b1; }
+
+.perfil-verde a {
+  color: #fff; }
+
+section {
+  margin-top: 5.0em; }
+
+section:first-child {
+  margin-top: 0px; }
+
+.row p {
+  font-size: 2.33em;
+  line-height: 1.26em;
+  font-weight: 400; }
+
+.title {
+  display: inline-flex;
+  line-height: 38px;
+  margin-bottom: 2.2em; }
+
+.title img {
+  margin-right: 3.5em; }
+
+.title h3 {
+  text-transform: uppercase;
+  font-size: 3.87em;
+  font-weight: 300; }
+
+.identity {
+  text-align: center; }
+
+.identity img {
+  width: 100%;
+  max-width: 280px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  margin-bottom: 2.8em; }
+
+.identity h2 {
+  font-size: 5.16em;
+  line-height: 0.91em;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-bottom: 0.11em; }
+
+.identity h4 {
+  font-size: 3.0em;
+  font-weight: 400;
+  margin-bottom: 0.11em; }
+
+.personal-skill .progress-row {
+  padding: 0px 10px; }
+
+.personal-skill .progress-row div {
+  padding-top: 25px; }
+
+.personal-skill .progress-row div:first-child {
+  padding-top: 0px; }
+
+.personal-skill .progress-row span,
+.personal-skill .progress-row progress {
+  width: 50%;
+  float: left; }
+
+.personal-skill .progress-row span {
+  font-size: 2.58em;
+  line-height: 18px;
+  text-transform: uppercase; }
+
+.personal-skill .progress-row progress[value] {
+  position: relative;
+  height: 18px;
+  border: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+
+.personal-skill .progress-row progress[value]::-webkit-progress-bar {
+  background-color: #fff; }
+
+.personal-skill .progress-row progress[value]::-webkit-progress-value {
+  background-color: #a6a5a5; }
+
+.contact-me address {
+  padding: 0px 10px; }
+
+.contact-me address div span {
+  margin-right: 3.0em;
+  width: 22px;
+  height: 25px;
+  float: left; }
+
+.contact-me address div .address {
+  background: url("../image/icon-address.png") center no-repeat; }
+
+.contact-me address div .phone {
+  background: url("../image/icon-phone.png") center no-repeat; }
+
+.contact-me address div .email {
+  background: url("../image/icon-email.png") center no-repeat; }
+
+.contact-me address div .website {
+  background: url("../image/icon-website.png") center no-repeat; }
+
+.contact-me address div p {
+  line-height: 25px; }
+
+.perfil-branco .title {
+  color: #49c5b1;
+  padding: 0px 5px; }
+
+.education .university-row ul li {
+  float: left; }
+
+.education .university-date {
+  width: 15%; }
+
+.education .university-description {
+  width: 85%; }
+
+.education .university-date p {
+  color: #a6a5a5;
+  text-align: center;
+  text-indent: -12px; }
+
+.education .university-description h3 {
+  color: #000;
+  font-size: 2.3em;
+  font-weight: 700;
+  text-transform: uppercase; }
+
+.education .university-description span {
+  color: #4d4d4d;
+  font-size: 2.15em; }
+
+.education .university-description p {
+  color: #7d7d7d; }
+
+.professional-skill .progress-row {
+  padding: 0px 10px; }
+
+.professional-skill .progress-row div {
+  padding-top: 25px; }
+
+.professional-skill .progress-row div:first-child {
+  padding-top: 0px; }
+
+.professional-skill .progress-row span,
+.professional-skill .progress-row progress {
+  width: 50%;
+  float: left; }
+
+.professional-skill .progress-row span {
+  font-size: 2.58em;
+  line-height: 18px;
+  text-transform: uppercase; }
+
+.professional-skill .progress-row progress[value] {
+  position: relative;
+  height: 18px;
+  border: none;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none; }
+
+.professional-skill .progress-row progress[value]::-webkit-progress-bar {
+  background-color: #a6a5a5; }
+
+.professional-skill .progress-row progress[value]::-webkit-progress-value {
+  background-color: #49c5b1; }
