@@ -1,0 +1,59 @@
+section {
+  margin: 35px 0;
+
+  .title {
+    display: table;
+
+    > .icon {
+      background: #fff;
+      display: table-cell;
+      border-radius: 12px 0px;
+      height: 75px;
+      text-align: center;
+      vertical-align: middle;
+      width: 75px;
+    }
+
+    > .icon2 {
+      background: #49c5b1;
+    }
+
+    .text {
+      display: table-cell;
+      font-weight: normal;
+      padding: 0 0 0 20px;
+      text-transform: uppercase;
+      vertical-align: middle;
+    }
+  }
+
+  .items {
+    margin: 0 1px 0 0;
+    text-align: left;
+    list-style: none;
+    display: inline;
+    .key {
+      text-transform: uppercase;
+      display: inline-block;
+      width: 220px;
+    }
+    $h: 18px;
+    .progress {
+      display: inline-block;
+      width: 280px;
+      height: $h;
+      background: #fff;
+      > div {
+        background:#a6a5a5;
+        height: $h;
+      }
+    }
+
+    .progress2 {
+      background: #a6a5a5;
+      > div {
+        background: #49c5b1;
+      }
+    }
+  }
+}

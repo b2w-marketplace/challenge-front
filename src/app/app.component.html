@@ -1,0 +1,61 @@
+<div class="main" *ngIf="data">
+  <aside class="personal">
+    <div class="content">
+      <img [src]="data.thumb" />
+      <h1>{{data.name}}</h1>
+      <h3>{{data.profession}}</h3>
+
+      <info-text 
+        [icon]="'../assets/ico-profile.png'"
+        [title]="data ? data.profile.title : ''"
+        [description]="data ? data.profile.description : ''">
+      </info-text>
+      <info-text 
+        [icon]="'../assets/ico-objective.png'"
+        [title]="data ? data.objective.title : ''"
+        [description]="data ? data.objective.description : ''">
+      </info-text>
+      <info-progress 
+        [icon]="'../assets/ico-personal-skill.png'"
+        [title]="data ? data.personalSkill.title : ''"
+        [items]="data ? data.personalSkill.items : []">
+      </info-progress>
+      <info-contact
+        [icon]="'../assets/ico-contact-me.png'"
+        [title]="data ? data.contactMe.title : ''"
+        [address]="data ? data.contactMe.address : ''"
+        [email]="data ? data.contactMe.email : ''"
+        [tel]="data ? data.contactMe.tel : ''"
+        [webSite]="data ? data.contactMe.webSite : ''">
+      </info-contact>
+    </div>
+  </aside>
+  <aside class="professional">
+    <div class="content">
+      <info-xpwdate 
+        [iconStyle]="'icon2'"
+        [icon]="'../assets/ico-education.png'"
+        [title]="data ? data.education.title : ''"
+        [items]="data ? data.education.items: []">
+      </info-xpwdate>
+      <info-xpwdate 
+        [iconStyle]="'icon2'"
+        [icon]="'../assets/ico-experience.png'"
+        [title]="data ? data.experience.title : ''"
+        [items]="data ? data.experience.items: []">
+      </info-xpwdate>
+      <info-progress 
+        [iconStyle]="'icon2'"
+        [icon]="'../assets/ico-professional.png'"
+        [title]="data ? data.professionalSkill.title : ''"
+        [items]="data ? data.professionalSkill.items : []">
+      </info-progress>
+      <info-xpwdate 
+        [iconStyle]="'icon2'"
+        [icon]="'../assets/ico-award.png'"
+        [title]="data ? data.award.title : ''"
+        [items]="data ? data.award.items: []">
+      </info-xpwdate>
+    </div>
+  </aside>
+</div>
