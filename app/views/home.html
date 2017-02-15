@@ -1,0 +1,220 @@
+<div class="container-fluid">
+
+	<div class="overlay" ng-if="vm.loading === true">
+		<div class="loader"></div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-xs-12 col-md-6 col-princ one">
+			<div class="row">
+				<div class="col-xs-12 text-right">
+
+					<div class="row text-center space-b">
+						<div class="col-xs-12">
+							<img class="profileImage" src="{{vm.data.thumb}}" alt="Profile Image" />
+						</div>
+
+						<div class="col-xs-12 name">
+							{{ vm.data.name }}
+						</div>
+
+						<div class="col-xs-12 profession space-b">
+							{{ vm.data.profession }}
+						</div>	
+					</div>			
+
+					<div class="row section">
+						<div class="col-xs-12 space-b">	
+							<span class="section-Icon">
+								<i class="fa fa-user" aria-hidden="true"></i>
+							</span>
+							<span class="section-Title">{{ vm.data.profile.title }}</span>
+						</div>
+
+						<div class="col-xs-12">	
+							{{ vm.data.profile.description }}
+						</div>
+					</div>
+
+					<div class="row section">
+						<div class="col-xs-12 space-b">	
+							<span class="section-Icon">
+								<i class="fa fa-leaf" aria-hidden="true"></i>
+							</span>
+							<span class="section-Title">{{ vm.data.objective.title }}</span>
+						</div>
+
+						<div class="col-xs-12">	
+							{{ vm.data.objective.description }}
+						</div>
+					</div>	
+
+					<div class="row section persSkill">
+						<div class="col-xs-12 space-b">	
+							<span class="section-Icon">
+								<i class="fa fa-bolt" aria-hidden="true"></i>
+							</span>
+							<span class="section-Title">{{ vm.data.personalSkill.title }}</span>
+						</div>
+
+						<div class="col-xs-6 persSkillTitles">	
+							<p>management</p>
+							<p>teamWork</p>
+							<p>creative</p>
+							<p>communication</p>
+						</div>
+						<div class="col-xs-6">	
+
+							<div class="progress">
+							  <div class="progress-bar" role="progressbar" aria-valuenow="{{ vm.data.personalSkill.management }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ vm.data.personalSkill.management }}%;">
+							  </div>
+							</div>
+
+							<div class="progress">
+							  <div class="progress-bar" role="progressbar" aria-valuenow="{{ vm.data.personalSkill.teamWork }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ vm.data.personalSkill.teamWork }}%;">						 
+							  </div>
+							</div>
+
+							<div class="progress">
+							  <div class="progress-bar" role="progressbar" aria-valuenow="{{ vm.data.personalSkill.creative }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ vm.data.personalSkill.creative }}%;">						 
+							  </div>
+							</div>
+
+							 <div class="progress"> 
+							  <div class="progress-bar" role="progressbar" aria-valuenow="{{ vm.data.personalSkill.communication }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ vm.data.personalSkill.communication }}%;">
+							  </div>	
+							</div>					  						  						  
+							
+						</div>
+					</div>		
+					
+					<div class="row section">
+						<div class="col-xs-12 space-b">	
+							<span class="section-Icon">
+								<i class="fa fa-address-card-o" aria-hidden="true"></i>
+							</span>
+							<span class="section-Title">{{ vm.data.contactMe.title }}</span>
+						</div>
+
+						<div class="col-xs-12 contact">	
+							<p><i class="fa fa-map-marker" aria-hidden="true"></i>{{ vm.data.contactMe.address }}</p>
+							<p><i class="fa fa-phone" aria-hidden="true"></i>{{ vm.data.contactMe.tel }}</p>
+							<p><i class="fa fa-envelope" aria-hidden="true"></i>{{ vm.data.contactMe.email }}</p>
+							<p><i class="fa fa-futbol-o" aria-hidden="true"></i>{{ vm.data.contactMe.webSite }}</p>
+						</div>
+					</div>											
+
+
+				</div>
+			</div>
+		</div>
+
+		<div class="col-xs-12 col-md-6 col-princ two">
+		 	<div class="row">
+		 		<div class="col-xs-12">
+
+					<div class="row section">
+						<div class="col-xs-12 space-b">	
+							<span class="section-Icon">
+								<i class="fa fa-graduation-cap" aria-hidden="true"></i>
+							</span>
+							<span class="section-Title">{{ vm.data.education.title }}</span>
+						</div>
+
+						<div class="col-xs-12 education" ng-repeat="university in vm.data.education.university">	
+								<div class="date space-b">
+									<p>{{ university.month }}</p>
+									<p>{{ university.year }}</p></div>
+								<div>
+									<p class="nameCourse">{{ university.courseName }}</p>
+									<p class="adressCourse">{{ university.universityName }}, {{ university.universityCity }}</p>
+									<p>{{ university.description }}</p>
+								</div>
+						</div>
+					</div>	
+
+					<div class="row section">
+						<div class="col-xs-12 space-b">	
+							<span class="section-Icon">
+								<i class="fa fa-list-alt" aria-hidden="true"></i>
+							</span>
+							<span class="section-Title">{{ vm.data.experience.title }}</span>
+						</div>
+
+						<div class="col-xs-12 education" ng-repeat="company in vm.data.experience.company">	
+								<div class="date space-b">
+									<p>{{ company.month }}</p>
+									<p>{{ company.year }}</p></div>
+								<div>
+									<p class="nameCourse">{{ company.companyName }}</p>
+									<p class="adressCourse">{{ company.roleName }}, {{ company.companyCity }}</p>
+									<p>{{ company.description }}</p>
+								</div>
+						</div>
+					</div>	
+
+					<div class="row section persSkill">
+						<div class="col-xs-12 space-b">	
+							<span class="section-Icon">
+								<i class="fa fa-bolt" aria-hidden="true"></i>
+							</span>
+							<span class="section-Title">{{ vm.data.personalSkill.title }}</span>
+						</div>
+
+						<div class="col-xs-6 persSkillTitles">	
+							<p>management</p>
+							<p>teamWork</p>
+							<p>creative</p>
+							<p>communication</p>
+						</div>
+						<div class="col-xs-6">	
+
+							<div class="progress">
+							  <div class="progress-bar" role="progressbar" aria-valuenow="{{ vm.data.personalSkill.management }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ vm.data.personalSkill.management }}%;">
+							  </div>
+							</div>
+
+							<div class="progress">
+							  <div class="progress-bar" role="progressbar" aria-valuenow="{{ vm.data.personalSkill.teamWork }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ vm.data.personalSkill.teamWork }}%;">						 
+							  </div>
+							</div>
+
+							<div class="progress">
+							  <div class="progress-bar" role="progressbar" aria-valuenow="{{ vm.data.personalSkill.creative }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ vm.data.personalSkill.creative }}%;">						 
+							  </div>
+							</div>
+
+							 <div class="progress"> 
+							  <div class="progress-bar" role="progressbar" aria-valuenow="{{ vm.data.personalSkill.communication }}" aria-valuemin="0" aria-valuemax="100" style="width: {{ vm.data.personalSkill.communication }}%;">
+							  </div>	
+							</div>					  						  						  
+							
+						</div>
+					</div>					
+
+					<div class="row section">
+						<div class="col-xs-12 space-b">	
+							<span class="section-Icon">
+								<i class="fa fa-trophy" aria-hidden="true"></i>
+							</span>
+							<span class="section-Title">{{ vm.data.award.title }}</span>
+						</div>
+
+						<div class="col-xs-12 education">	
+								<div class="date space-b">
+									<p>{{ vm.data.award.month }}</p>
+									<p>{{ vm.data.award.year }}</p></div>
+								<div>
+									<p class="nameCourse">{{ vm.data.award.awardName }}</p>
+									<p class="adressCourse">{{ vm.data.award.projectName }}, {{ vm.data.award.city }}</p>
+									<p>{{ vm.data.award.description }}</p>
+								</div>
+						</div>
+					</div>								
+
+		 		</div>		
+		 	</div>
+		</div>	
+	</div>
+</div>
