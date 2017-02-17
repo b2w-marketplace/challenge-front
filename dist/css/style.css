@@ -1,0 +1,112 @@
+.progress {
+  height: 18px;
+  margin-bottom: 10px; }
+
+.progress-bar {
+  height: 18px;
+  background-image: linear-gradient(to bottom, #c2c2c2 0%, #c2c2c2 100%);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1); }
+
+.Sides {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  font-family: "Open Sans";
+  font-weight: 300; }
+  .Sides h1 {
+    text-transform: uppercase;
+    font-size: 2.4em;
+    font-family: "Open Sans";
+    font-weight: 300; }
+  .Sides h2 {
+    text-transform: uppercase;
+    font-size: 2em;
+    font-family: "Open Sans";
+    font-weight: 300;
+    margin-top: 10px;
+    margin-bottom: 20px; }
+  .Sides h3 {
+    font-size: 1.2em;
+    font-family: "Open Sans";
+    font-weight: 400; }
+
+.colorSide {
+  background-color: #49C5B1;
+  color: white;
+  height: 100%; }
+  .colorSide .paddinZero {
+    padding: 0; }
+  .colorSide .title {
+    font-family: "Open Sans";
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase; }
+  .colorSide .thumbPerfil {
+    background-color: #2aabd2;
+    max-width: 260px;
+    max-height: 260px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px; }
+  .colorSide .boxIcon {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+    .colorSide .boxIcon img {
+      width: 75%;
+      position: relative;
+      left: 6px;
+      top: 7px; }
+  .colorSide .marginBot {
+    margin-bottom: 20px; }
+  .colorSide form input {
+    margin-bottom: 15px; }
+  .colorSide form .btnsubmit {
+    background-color: #49C5B1;
+    border: 1px solid white;
+    border-radius: 0px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px; }
+    .colorSide form .btnsubmit :hover {
+      background-color: white;
+      border: 1px solid #49C5B1;
+      color: deeppink; }
+  .colorSide form .message {
+    height: 150px;
+    margin-bottom: 15px; }
+  .colorSide .iconContact {
+    width: 30px; }
+
+.otherSide h1, .otherSide h2, .otherSide h3 {
+  color: #49C5B1; }
+.otherSide .title {
+  font-family: "Open Sans";
+  font-weight: 600;
+  color: #000;
+  text-transform: uppercase; }
+.otherSide .subtitle {
+  font-family: "Open Sans";
+  font-weight: 400;
+  color: #4D4D4D;
+  text-transform: capitalize; }
+.otherSide .normalText {
+  font-family: "Open Sans";
+  font-weight: 400;
+  color: #7D7D7D; }
+.otherSide .marginBot {
+  margin-bottom: 20px; }
+.otherSide .paddinZero {
+  padding: 0; }
+.otherSide .boxIcon {
+  width: 50px;
+  height: 50px;
+  background-color: #49C5B1;
+  border-top-left-radius: 10px;
+  border-bottom-right-radius: 10px; }
+  .otherSide .boxIcon img {
+    width: 75%;
+    position: relative;
+    left: 6px;
+    top: 7px; }
+.otherSide .progress-bar {
+  background-image: linear-gradient(to bottom, #49C5B1 0%, #49C5B1 100%); }
