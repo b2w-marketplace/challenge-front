@@ -1,0 +1,15 @@
+main {
+  display: flex;
+  flex-direction: column; }
+
+.aboutDev {
+  width: 100%;
+  padding: 1em .5em; }
+
+.mySkills {
+  width: 100%; }
+
+.devData {
+  text-align: center; }
+  .devData .container-dev {
+    text-align: center; }

@@ -7,6 +7,7 @@
                 <h2 class="profession">{{data.profession}}</h2>
             </div>
         </div>
+        
         <!--Left side -->        
         <aside class="asideDevData">
             <nav>
@@ -38,7 +39,7 @@
                         <li ng-repeat="skill in data.personalSkill.skills track by $index">
                             <span>{{skill.toolName}}</span>
                             <div class="bar bg-1">
-                                <div class="fillbar bar-gray per-{{skill.toolSkill}}"></div>
+                                <div class="fillbar bar-gray-50 per-{{skill.toolSkill}}"></div>
                             </div>
                          </li>
                     </ul>
@@ -61,11 +62,11 @@
                         </li>
                         <li>
                             <i class="fa fa-envelope"></i>
-                            <span>{{data.contactMe.email}}</span>
+                            <a href="mailto:{{data.contactMe.email}}?Subject=Code%20Challenge" target="_top" class="mail">{{data.contactMe.email}}</a>
                         </li>
                         <li>
                             <i class="fa fa-dribbble"></i>
-                            <span>{{data.contactMe.webSite}}</span>
+                            <a href="{{data.contactMe.webSite}}" target="_blank" class="link">{{data.contactMe.webSite}}</a>
                         </li>
                     </ul>
                 </section>
@@ -91,8 +92,8 @@
                             </div>
                             <div>
                                 <label>{{college.courseName}}</label>
-                                <p>{{college.universityName}}, {{college.universityCity}}</p>
-                                <p>{{college.description}}</p>                                
+                                <p class="subtitle">{{college.universityName}}, {{college.universityCity}}</p>
+                                <p class="content">{{college.description}}</p>
                             </div>
                         </li>
                     </ul>
@@ -100,8 +101,10 @@
 
                 <!--experience-->
                 <section>
-                    <i class="container containerWaterBlue fa fa-suitcase fa-2x"></i>
-                    <label>{{data.experience.title}}</label>
+                    <div class="title">
+                        <i class="container containerWaterBlue fa fa-suitcase fa-2x"></i>
+                        <label>{{data.experience.title}}</label>
+                    </div>
                     <ul>
                         <li ng-repeat="xp in data.experience.company">
                             <div class="date">
@@ -110,8 +113,8 @@
                             </div>
                             <div>
                                 <label>{{xp.companyName}}</label>
-                                <p>{{xp.roleName}}, {{xp.companyCity}}</p>
-                                <p>{{xp.description}}</p>
+                                <p class="subtitle">{{xp.roleName}}, {{xp.companyCity}}</p>
+                                <p class="content">{{xp.description}}</p>
                             </div>
                         </li>
                     </ul>
@@ -119,8 +122,10 @@
 
                 <!--professional skills-->
                 <section>
-                    <i class="container containerWaterBlue fa fa-lightbulb-o fa-2x"></i>
-                    <label>{{data.professionalSkill.title}}</label>
+                    <div class="title">
+                        <i class="container containerWaterBlue fa fa-lightbulb-o fa-2x"></i>
+                        <label>{{data.professionalSkill.title}}</label>
+                    </div>
                     <ul class="professionalSkills">
                         <li ng-repeat="skill in data.professionalSkill.tools track by $index">
                             <span>{{skill.toolName}}</span>
@@ -133,18 +138,22 @@
 
                 <!--award-->
                 <section>
-                    <i class="container containerWaterBlue fa fa-certificate fa-2x"></i>
-                    <label>{{data.award.title}}</label><br>
-                    <div class="date">
-                        <p>{{data.award.month}}</p>
-                        <p>{{data.award.year}}</p>
+                    <div class="title">
+                        <i class="container containerWaterBlue fa fa-certificate fa-2x"></i>
+                        <label>{{data.award.title}}</label>
                     </div>
-                    <div>
-                        <label>{{data.award.awardName}}</label>
-                        <p>{{data.award.projectName}}</p> 
-                        <p>{{data.award.city}}</p>
-                        <p>{{data.award.description}}</p>
-                    </div>
+                    <ul>
+                        <li>
+                            <div class="date">
+                                <p>{{data.award.month}}</p>
+                                <p>{{data.award.year}}</p>
+                            </div>
+                            <div>
+                                <label>{{data.award.awardName}}</label>
+                                <p class="subtitle">{{data.award.projectName}}, {{data.award.city}}</p>
+                                <p class="content">{{data.award.description}}</p>
+                            </div>
+                        </li>
                 </section>
             </nav>
         </aside>

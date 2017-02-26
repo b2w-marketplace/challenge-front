@@ -15,7 +15,7 @@ main {
 .aboutDev {
     width: 46.4%;
     background-color: $waterGreen;
-    padding: 3rem 1.5rem;
+    padding: 3em 1.5em;
     color: $white;
     display: flex;
     flex-direction: column;
@@ -24,7 +24,7 @@ main {
 .mySkills {
     display: flex;
     flex-direction: column;
-    padding: 3rem 0 0 2.5em;
+    padding: 3em 2.5em 0;
 }
 
 .devData {
@@ -53,13 +53,12 @@ main {
 }
 
 aside {
+    //left side
     &.asideDevData {
         display: flex;
         flex-direction: row-reverse;        
         nav {
             padding: 1.5em .5em;
-            display: flex;
-            flex-direction: column;
             max-width: 350px;
             color: $white;
             section {
@@ -70,7 +69,6 @@ aside {
                 .title {
                     > label {
                         text-transform: uppercase;
-                        display: inline-block;
                         margin: 0 .5em;
                         font-size: 1.3em;
                     }
@@ -86,13 +84,15 @@ aside {
         ul.personalSkills {
             display: flex;
             flex-direction: column;
-            margin-top: .9em;            
-            span {
-                width: 150px;
-                font-weight: bold;
-            }
+            margin-top: .9em;
             li {
+                display: flex;
+                flex-direction: row;
                 margin: .2em 0;
+                span {
+                    font-weight: bold;
+                    width: 50%;
+                }
             }    
         }         
     }
@@ -100,41 +100,50 @@ aside {
     // Right side
     &.asideSkills {
         display: flex;
+        max-width: 80%;
         nav {
+            padding-top: 1.5em .5em;
             color: $white;
-            padding-top: 1rem;
             section {
-                border: 1px solid red;
                 display: flex;
+                flex-direction: column;
                 .title {
                     > label {
                         text-transform: uppercase;
-                        display: inline-block;
                         margin: 0 .5em;
                         font-size: 1.3em;
+                        color: $waterGreen;
                     }
                 }
                 ul li {
+                    display: flex;
+                    flex-direction: row;
                     margin-top: 1em;
+                    line-height: 1.3em;
                     div {
                         &.date {
                             text-align: center;
-                            color: $gray;
+                            color: $gray-50;
                         }
-                        display: inline-block;
                         margin-right: .8em;                        
                     }
                     label {
                         font-family: 'Arial', sans-serif;
                         font-weight: bold;
                     }
+                    .subtitle {
+                        color: $gray-100;
+                    }
+                    .content {
+                        color: $gray-150;
+                    }                    
                 }
                 font-weight: 600;
                 margin-bottom: 2.9em;
                 color: $black;
                 > label {
                     text-transform: uppercase;
-                    margin: 2rem 1em;
+                    margin: 2em 1em;
                     font-size: 1.5em;
                     color: $waterGreen;
                 }
@@ -144,7 +153,7 @@ aside {
                     margin-top: .5em;
                     font-size: .9em;
                     line-height: 1.4em;
-                    color: $gray;
+                    color: $gray-50;
                 }
             }  
         }
@@ -152,19 +161,39 @@ aside {
 }
 
 ul.professionalSkills {
+    max-width: 92%;
     span {
         text-transform: uppercase;
         font-family: 'Arial', sans-serif;
         font-weight: bold;        
-        display: inline-block;
-        width: 120px;
+        min-width: 50%;
         font-weight: bold;
     }
-    div { display: inline-block; }
     li {
         margin: .1em 0;
-        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;        
     }       
+}
+
+ul.contact {
+    margin-top: .9em;
+    display: flex;
+    flex-direction: column;
+    li {
+        font-weight: 600;
+        margin: .1em 0;
+        i {
+            width: 15px;
+            margin-right: 1.5em;
+            margin-top: .3em;
+        }
+        .mail, .link {
+            color: $white;
+            text-decoration: none;
+        }
+    }
 }
 
 i.container {
@@ -176,7 +205,7 @@ i.container {
     text-align: center;
     &.containerWhite {
         background-color: $white;
-        color: $waterGreen;    
+        color: $waterGreen;
     }
     &.containerWaterBlue {
         background-color: $waterGreen;
@@ -184,29 +213,20 @@ i.container {
     }        
 }
 
-ul.contact li {
-    font-weight: 600;
-    i {
-        width: 15px;
-        margin-right: 1.5em;
-        margin-top: .3em;
-    }
-}
-
 .bar {
-    width: 180px;
-    height: .6em;
+    margin-top: .2em;
+    min-width: 50%;
+    height: .8em;
     &.bg-1 { background-color: $white; }
-    &.bg-2 { background-color: $gray; }
+    &.bg-2 { background-color: $gray-75; }
     .fillbar {
-        top: 0;
-        left: 0;
         height: inherit;
-        &.bar-gray { background-color: $gray; }
+        &.bar-gray-50 { background-color: $gray-75;}
         &.bar-waterGreen { background-color: $waterGreen; }
     }
     .per-60 { @include width-bar(60%); }
     .per-70 { @include width-bar(70%); }
     .per-90 { @include width-bar(90%); }
     .per-95 { @include width-bar(95%); }
+
 }
