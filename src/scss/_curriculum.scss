@@ -78,6 +78,7 @@ aside {
                     margin-top: .9em;
                     font-size: .9em;
                     line-height: 1.4em;
+                    font-weight: lighter;
                 }
             }  
         }
@@ -90,7 +91,7 @@ aside {
                 flex-direction: row;
                 margin: .2em 0;
                 span {
-                    font-weight: bold;
+                    font-weight: lighter;
                     width: 50%;
                 }
             }    
@@ -113,6 +114,7 @@ aside {
                         margin: 0 .5em;
                         font-size: 1.3em;
                         color: $waterGreen;
+                        font-weight: lighter;
                     }
                 }
                 ul li {
@@ -133,9 +135,11 @@ aside {
                     }
                     .subtitle {
                         color: $gray-100;
+                        font-weight: lighter;
                     }
                     .content {
                         color: $gray-150;
+                        font-weight: lighter;
                     }                    
                 }
                 font-weight: 600;
@@ -184,6 +188,7 @@ ul.contact {
     li {
         font-weight: 600;
         margin: .1em 0;
+        font-weight: lighter;
         i {
             width: 15px;
             margin-right: 1.5em;

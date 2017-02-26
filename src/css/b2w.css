@@ -59,7 +59,8 @@ aside.asideDevData {
         text-align: justify;
         margin-top: .9em;
         font-size: .9em;
-        line-height: 1.4em; }
+        line-height: 1.4em;
+        font-weight: lighter; }
   aside.asideDevData ul.personalSkills {
     display: flex;
     flex-direction: column;
@@ -69,7 +70,7 @@ aside.asideDevData {
       flex-direction: row;
       margin: .2em 0; }
       aside.asideDevData ul.personalSkills li span {
-        font-weight: bold;
+        font-weight: lighter;
         width: 50%; }
 
 aside.asideSkills {
@@ -88,7 +89,8 @@ aside.asideSkills {
         text-transform: uppercase;
         margin: 0 .5em;
         font-size: 1.3em;
-        color: #49c5b1; }
+        color: #49c5b1;
+        font-weight: lighter; }
       aside.asideSkills nav section ul li {
         display: flex;
         flex-direction: row;
@@ -103,9 +105,11 @@ aside.asideSkills {
           font-family: 'Arial', sans-serif;
           font-weight: bold; }
         aside.asideSkills nav section ul li .subtitle {
-          color: #7E7E7E; }
+          color: #7E7E7E;
+          font-weight: lighter; }
         aside.asideSkills nav section ul li .content {
-          color: #4C4C4C; }
+          color: #4C4C4C;
+          font-weight: lighter; }
       aside.asideSkills nav section > label {
         text-transform: uppercase;
         margin: 2em 1em;
@@ -139,7 +143,8 @@ ul.contact {
   flex-direction: column; }
   ul.contact li {
     font-weight: 600;
-    margin: .1em 0; }
+    margin: .1em 0;
+    font-weight: lighter; }
     ul.contact li i {
       width: 15px;
       margin-right: 1.5em;
