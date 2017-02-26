@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="B2W">
+<head>
+    <meta charset="UTF-8">
+    <title>Code Challenge B2W</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/b2w.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300" rel="stylesheet">
+    <link rel="shortcut icon" href="./favicon.ico">
+</head>
+<body ng-cloak>
+
+    <ng-view></ng-view>
+
+    <script src="./lib/angular/angular.min.js"></script>
+    <script src="./lib/angular-route/angular-route.js"></script>
+    <script src="./js/route-config.js"></script>
+
+    <!-- services -->
+    <script src="./js/services/about-service.js"></script>
+
+    <!--controllers-->
+    <script src="./js/controllers/curriculum-controller.js"></script>
+</body>
+</html>

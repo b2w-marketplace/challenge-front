@@ -1,0 +1,152 @@
+<main>
+    <div class="aboutDev">
+        <div class="devData">
+            <div class="container-dev">
+                <img ng-src="{{data.thumb}}" class="img-dev" title="photo_{{data.name}}" />
+                <h1 class="dev-name">{{data.name}}</h1>
+                <h2 class="profession">{{data.profession}}</h2>
+            </div>
+        </div>
+        <!--Left side -->        
+        <aside class="asideDevData">
+            <nav>
+                <!--profile-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWhite fa fa-user fa-2x"></i>
+                        <label>{{data.profile.title}}</label>
+                    </div>
+                    <span>{{data.profile.description}}</span>
+                </section>
+
+                <!--objective-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWhite fa fa-leaf fa-2x"></i>
+                        <label>{{data.objective.title}}</label>
+                    </div>
+                    <span>{{data.objective.description}}</span>
+                </section>
+
+                <!--personal skills-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWhite fa fa-bolt fa-2x"></i>
+                        <label>{{data.personalSkill.title}}</label>
+                    </div>
+                    <ul class="personalSkills">
+                        <li ng-repeat="skill in data.personalSkill.skills track by $index">
+                            <span>{{skill.toolName}}</span>
+                            <div class="bar bg-1">
+                                <div class="fillbar bar-gray per-{{skill.toolSkill}}"></div>
+                            </div>
+                         </li>
+                    </ul>
+                </section>
+
+                <!--contact me-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWhite fa fa-id-card fa-2x"></i>
+                        <label>{{data.contactMe.title}}</label>
+                    </div>
+                    <ul class="contact">
+                        <li>
+                            <i class="fa fa-map-marker"></i>
+                            <span>{{data.contactMe.address}}</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span>{{data.contactMe.tel}}</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <span>{{data.contactMe.email}}</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-dribbble"></i>
+                            <span>{{data.contactMe.webSite}}</span>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+        </aside>         
+    </div>
+
+    <!--Right side -->
+    <div class="mySkills">
+        <aside class="asideSkills">
+            <nav>
+                <!--education-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWaterBlue fa fa-graduation-cap fa-2x"></i>
+                        <label>{{data.education.title}}</label>
+                    </div>
+                    <ul>
+                        <li ng-repeat="college in data.education.university">
+                            <div class="date">
+                                <p>{{college.month}}</p>
+                                <p>{{college.year}}</p>
+                            </div>
+                            <div>
+                                <label>{{college.courseName}}</label>
+                                <p>{{college.universityName}}, {{college.universityCity}}</p>
+                                <p>{{college.description}}</p>                                
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!--experience-->
+                <section>
+                    <i class="container containerWaterBlue fa fa-suitcase fa-2x"></i>
+                    <label>{{data.experience.title}}</label>
+                    <ul>
+                        <li ng-repeat="xp in data.experience.company">
+                            <div class="date">
+                                <p>{{xp.month}}</p>
+                                <p>{{xp.year}}</p>
+                            </div>
+                            <div>
+                                <label>{{xp.companyName}}</label>
+                                <p>{{xp.roleName}}, {{xp.companyCity}}</p>
+                                <p>{{xp.description}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!--professional skills-->
+                <section>
+                    <i class="container containerWaterBlue fa fa-lightbulb-o fa-2x"></i>
+                    <label>{{data.professionalSkill.title}}</label>
+                    <ul class="professionalSkills">
+                        <li ng-repeat="skill in data.professionalSkill.tools track by $index">
+                            <span>{{skill.toolName}}</span>
+                            <div class="bar bg-2">
+                                <div class="fillbar bar-waterGreen per-{{skill.toolsSkill}}"></div>
+                            </div>                               
+                         </li>
+                    </ul>
+                </section>
+
+                <!--award-->
+                <section>
+                    <i class="container containerWaterBlue fa fa-certificate fa-2x"></i>
+                    <label>{{data.award.title}}</label><br>
+                    <div class="date">
+                        <p>{{data.award.month}}</p>
+                        <p>{{data.award.year}}</p>
+                    </div>
+                    <div>
+                        <label>{{data.award.awardName}}</label>
+                        <p>{{data.award.projectName}}</p> 
+                        <p>{{data.award.city}}</p>
+                        <p>{{data.award.description}}</p>
+                    </div>
+                </section>
+            </nav>
+        </aside>
+    </div>
+</main>

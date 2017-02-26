@@ -1,0 +1,212 @@
+@mixin width-bar($width: 0%) {
+    width: $width;
+}
+
+html, body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.aboutDev {
+    width: 46.4%;
+    background-color: $waterGreen;
+    padding: 3rem 1.5rem;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+}
+
+.mySkills {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem 0 0 2.5em;
+}
+
+.devData {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 5em;
+    .container-dev {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .img-dev {
+            border-radius: 10% 0 10% 0;
+            height: 180px;
+            width: 180px;
+        }
+        .dev-name {
+            font-size: 2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: .3em 0;
+        }
+        .profession {
+            font-weight: bold;
+        }
+    }
+}
+
+aside {
+    &.asideDevData {
+        display: flex;
+        flex-direction: row-reverse;        
+        nav {
+            padding: 1.5em .5em;
+            display: flex;
+            flex-direction: column;
+            max-width: 350px;
+            color: $white;
+            section {
+                font-weight: 600;
+                margin-bottom: 2.9em;
+                display: flex;
+                flex-direction: column;
+                .title {
+                    > label {
+                        text-transform: uppercase;
+                        display: inline-block;
+                        margin: 0 .5em;
+                        font-size: 1.3em;
+                    }
+                }
+                > span {
+                    text-align: justify;
+                    margin-top: .9em;
+                    font-size: .9em;
+                    line-height: 1.4em;
+                }
+            }  
+        }
+        ul.personalSkills {
+            display: flex;
+            flex-direction: column;
+            margin-top: .9em;            
+            span {
+                width: 150px;
+                font-weight: bold;
+            }
+            li {
+                margin: .2em 0;
+            }    
+        }         
+    }
+
+    // Right side
+    &.asideSkills {
+        display: flex;
+        nav {
+            color: $white;
+            padding-top: 1rem;
+            section {
+                border: 1px solid red;
+                display: flex;
+                .title {
+                    > label {
+                        text-transform: uppercase;
+                        display: inline-block;
+                        margin: 0 .5em;
+                        font-size: 1.3em;
+                    }
+                }
+                ul li {
+                    margin-top: 1em;
+                    div {
+                        &.date {
+                            text-align: center;
+                            color: $gray;
+                        }
+                        display: inline-block;
+                        margin-right: .8em;                        
+                    }
+                    label {
+                        font-family: 'Arial', sans-serif;
+                        font-weight: bold;
+                    }
+                }
+                font-weight: 600;
+                margin-bottom: 2.9em;
+                color: $black;
+                > label {
+                    text-transform: uppercase;
+                    margin: 2rem 1em;
+                    font-size: 1.5em;
+                    color: $waterGreen;
+                }
+                > p {
+                    text-align: justify;
+                    margin-bottom: 2.9em;
+                    margin-top: .5em;
+                    font-size: .9em;
+                    line-height: 1.4em;
+                    color: $gray;
+                }
+            }  
+        }
+    }
+}
+
+ul.professionalSkills {
+    span {
+        text-transform: uppercase;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;        
+        display: inline-block;
+        width: 120px;
+        font-weight: bold;
+    }
+    div { display: inline-block; }
+    li {
+        margin: .1em 0;
+        width: 100%;
+    }       
+}
+
+i.container {
+    width: 65px;
+    padding: 1.1rem;
+    box-sizing: border-box;
+    color: $waterGreen;
+    border-radius: 10% 0 10% 0;
+    text-align: center;
+    &.containerWhite {
+        background-color: $white;
+        color: $waterGreen;    
+    }
+    &.containerWaterBlue {
+        background-color: $waterGreen;
+        color: $white;
+    }        
+}
+
+ul.contact li {
+    font-weight: 600;
+    i {
+        width: 15px;
+        margin-right: 1.5em;
+        margin-top: .3em;
+    }
+}
+
+.bar {
+    width: 180px;
+    height: .6em;
+    &.bg-1 { background-color: $white; }
+    &.bg-2 { background-color: $gray; }
+    .fillbar {
+        top: 0;
+        left: 0;
+        height: inherit;
+        &.bar-gray { background-color: $gray; }
+        &.bar-waterGreen { background-color: $waterGreen; }
+    }
+    .per-60 { @include width-bar(60%); }
+    .per-70 { @include width-bar(70%); }
+    .per-90 { @include width-bar(90%); }
+    .per-95 { @include width-bar(95%); }
+}
