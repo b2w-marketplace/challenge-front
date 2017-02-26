@@ -1,0 +1,48 @@
+/*  ==========================================================================
+    Variables
+    ========================================================================== */
+
+    /*  ==========================================================================
+        Grid
+        ========================================================================== */
+        $enable-grid-classes:        true;
+        $grid-columns:               12;
+        $grid-gutter-width-base:     30px;
+        $grid-breakpoints: (
+            xs: 0,
+            sm: 576px,
+            md: 768px,
+            lg: 992px,
+            xl: 1200px
+        );
+        $container-max-widths: (
+            sm: 540px,
+            md: 720px,
+            lg: 960px,
+            xl: 1140px
+        );
+
+    /*  ==========================================================================
+        Colors
+        ========================================================================== */
+        /* Default */
+        $color-white:         #f6f6f6;
+        $color-gray-lightest: #EEE;
+        $color-gray-light:    #CCC;
+        $color-gray:          #999;
+        $color-gray-dark:     #666;
+        $color-gray-darkest:  #444;
+        $color-black:         #222;
+        $color-default:       $color-gray;
+
+        /* Brand */
+        $color-aqua:        #4ac5b1;
+
+        $color-primary:       $color-aqua;
+        $color-secondary:     $color-white;
+        $color-tertiary:      $color-gray;
+
+    /*  Fonts
+        ========================================================================== */
+        $font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        $font-color:  $color-black;
