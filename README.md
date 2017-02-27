@@ -23,6 +23,7 @@ npm start
 ```
 
 O comando acima irá subir um server na porta [3000](http://localhost:3000).
+*obs: a página se ajusta ao seu dispositivo ;-)*
 
 Obrigado!
 
