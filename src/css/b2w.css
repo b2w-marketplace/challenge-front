@@ -1,6 +1,7 @@
 html, body {
   font-family: 'Quicksand', sans-serif;
-  font-size: 100%; }
+  font-size: 100%;
+  min-width: 400px; }
 
 main {
   display: flex;
