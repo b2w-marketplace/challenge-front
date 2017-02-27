@@ -1,19 +1,28 @@
-b2w.controller("CurriculumController", ['$scope', 'AboutService',
-function($scope, aboutSrv) {
+(function () {
+    'use strict';
 
-    $scope.data = {};
-    _gettingData();
+    angular
+        .module('b2wApp')
+        .controller("CurriculumController", CurriculumController);
 
-    /*
-        @author Adler Coelho
-        @date 2-26-2017
-        @description: function to get data user from API.
-    */
-    function _gettingData() {
-        aboutSrv.getData((data) => {
-            console.info("retorno", data);
-            $scope.data = data;
-        });
+    /* @ngInject */
+    function CurriculumController($scope, AboutService) {
+        var vm = this;
+
+        /*
+            @author Adler Coelho
+            @date 2-26-2017
+            @description: function to get data user from API.
+        */
+        function _gettingData() {
+            AboutService.getData(function (api) {
+                vm.data = api;
+            });
+        };
+
+        vm.data = {};
+        _gettingData();
     };
 
-}]);
+    CurriculumController.$inject = ["$scope", "AboutService"];
+})();

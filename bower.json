@@ -9,7 +9,10 @@
   "homepage": "https://github.com/coelhoadler/code-challenge-1",
   "private": true,
   "dependencies": {
-     "angular-route": "1.6.2"
-    ,"angular": "1.6.2"
+    "angular-route": "1.6.2",
+    "angular": "1.6.2"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.6.2"
   }
 }

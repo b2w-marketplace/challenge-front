@@ -5,7 +5,7 @@
 html, body {
     font-family: 'Quicksand', sans-serif;
     font-size: 100%;
-    min-width: 400px;
+    min-width: 300px;
 }
 
 main {
@@ -113,9 +113,15 @@ aside {
                     > label {
                         text-transform: uppercase;
                         margin: 0 .5em;
-                        font-size: 1.3em;
                         color: $waterGreen;
                         font-weight: lighter;
+                        @media screen and (min-width: 300px) {
+                            font-size: 1.2em;
+                        }
+
+                        @media screen and (min-width: 767px) {
+                            font-size: 1.3em;
+                        }
                     }
                 }
                 ul li {
