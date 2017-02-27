@@ -1,0 +1,47 @@
+body {
+  font-family: 'Open Sans', sans-serif; }
+  body:before {
+    width: 40%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: absolute;
+    content: "";
+    background-color: #49c5b1;
+    z-index: -1; }
+
+.sec {
+  width: 1150px;
+  margin: 0 auto; }
+  .sec .wrap-left {
+    width: 438px;
+    color: #fff; }
+    .sec .wrap-left h1 {
+      font-size: 51px;
+      font-weight: 300; }
+    .sec .wrap-left h2 {
+      font-size: 38px;
+      font-weight: 300; }
+    .sec .wrap-left h3 {
+      font-size: 30px;
+      font-weight: 400; }
+  @media screen and (max-width: 1150px) {
+    .sec {
+      width: 100%; }
+      .sec .wrap-left {
+        width: 40%; } }
+
+.left-header .lh-avatar {
+  width: 270px;
+  margin: 90px auto 0;
+  display: block;
+  border-radius: 30px 0 30px 0; }
+
+.left-header .lh-nome, .left-header .lh-prof {
+  text-align: center;
+  width: 100%;
+  float: left;
+  margin-bottom: 0; }
+
+.left-header .lh-prof {
+  margin-top: 10px; }

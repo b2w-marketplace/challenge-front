@@ -1,0 +1,17 @@
+{
+  "name": "code-challenge",
+  "homepage": "https://github.com/mesafael/code-challenge",
+  "description": "",
+  "author": "Rafael Melo",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.2",
+    "normalize-css": "^5.0.0"
+  }
+}
