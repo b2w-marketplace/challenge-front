@@ -1,0 +1,162 @@
+<i class="fa fa-cog fa-spin fa-2x fa-fw loader" ng-hide="cv.loader == false"></i>
+<main ng-show="!cv.loader">
+    <div class="aboutDev">
+        <div class="devData">
+            <div class="container-dev">
+                <img ng-src="{{cv.data.thumb}}" class="img-dev" title="photo_{{cv.data.name}}" />
+                <h1 class="dev-name">{{cv.data.name}}</h1>
+                <h2 class="profession">{{cv.data.profession}}</h2>
+            </div>
+        </div>
+        
+        <!--Left side -->        
+        <aside class="asideDevData">
+            <nav>
+                <!--profile-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWhite fa fa-user fa-2x"></i>
+                        <label>{{cv.data.profile.title}}</label>
+                    </div>
+                    <span>{{cv.data.profile.description}}</span>
+                </section>
+
+                <!--objective-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWhite fa fa-leaf fa-2x"></i>
+                        <label>{{cv.data.objective.title}}</label>
+                    </div>
+                    <span>{{cv.data.objective.description}}</span>
+                </section>
+
+                <!--personal skills-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWhite fa fa-bolt fa-2x"></i>
+                        <label>{{cv.data.personalSkill.title}}</label>
+                    </div>
+                    <ul class="personalSkills">
+                        <li ng-repeat="skill in cv.data.personalSkill.skills track by $index">
+                            <span>{{skill.toolName}}</span>
+                            <div class="bar bg-1">
+                                <div class="fillbar bar-gray-50 per-{{skill.toolSkill}}"></div>
+                            </div>
+                         </li>
+                    </ul>
+                </section>
+
+                <!--contact me-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWhite fa fa-id-card fa-2x"></i>
+                        <label>{{cv.data.contactMe.title}}</label>
+                    </div>
+                    <ul class="contact">
+                        <li>
+                            <i class="fa fa-map-marker"></i>
+                            <span>{{cv.data.contactMe.address}}</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            <span>{{cv.data.contactMe.tel}}</span>
+                        </li>
+                        <li>
+                            <i class="fa fa-envelope"></i>
+                            <a href="mailto:{{cv.data.contactMe.email}}?Subject=Code%20Challenge" target="_top" class="mail">{{cv.data.contactMe.email}}</a>
+                        </li>
+                        <li>
+                            <i class="fa fa-dribbble"></i>
+                            <a href="{{cv.data.contactMe.webSite}}" target="_blank" class="link">{{cv.data.contactMe.webSite}}</a>
+                        </li>
+                    </ul>
+                </section>
+            </nav>
+        </aside>         
+    </div>
+
+    <!--Right side -->
+    <div class="mySkills">
+        <aside class="asideSkills">
+            <nav>
+                <!--education-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWaterBlue fa fa-graduation-cap fa-2x"></i>
+                        <label>{{cv.data.education.title}}</label>
+                    </div>
+                    <ul>
+                        <li ng-repeat="college in cv.data.education.university">
+                            <div class="date">
+                                <p>{{college.month}}</p>
+                                <p>{{college.year}}</p>
+                            </div>
+                            <div>
+                                <label>{{college.courseName}}</label>
+                                <p class="subtitle">{{college.universityName}}, {{college.universityCity}}</p>
+                                <p class="content">{{college.description}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!--experience-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWaterBlue fa fa-suitcase fa-2x"></i>
+                        <label>{{cv.data.experience.title}}</label>
+                    </div>
+                    <ul>
+                        <li ng-repeat="xp in cv.data.experience.company">
+                            <div class="date">
+                                <p>{{xp.month}}</p>
+                                <p>{{xp.year}}</p>
+                            </div>
+                            <div>
+                                <label>{{xp.companyName}}</label>
+                                <p class="subtitle">{{xp.roleName}}, {{xp.companyCity}}</p>
+                                <p class="content">{{xp.description}}</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <!--professional skills-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWaterBlue fa fa-lightbulb-o fa-2x"></i>
+                        <label>{{cv.data.professionalSkill.title}}</label>
+                    </div>
+                    <ul class="professionalSkills">
+                        <li ng-repeat="skill in cv.data.professionalSkill.tools track by $index">
+                            <span>{{skill.toolName}}</span>
+                            <div class="bar bg-2">
+                                <div class="fillbar bar-waterGreen per-{{skill.toolsSkill}}"></div>
+                            </div>                               
+                         </li>
+                    </ul>
+                </section>
+
+                <!--award-->
+                <section>
+                    <div class="title">
+                        <i class="container containerWaterBlue fa fa-certificate fa-2x"></i>
+                        <label>{{cv.data.award.title}}</label>
+                    </div>
+                    <ul>
+                        <li>
+                            <div class="date">
+                                <p>{{cv.data.award.month}}</p>
+                                <p>{{cv.data.award.year}}</p>
+                            </div>
+                            <div>
+                                <label>{{cv.data.award.awardName}}</label>
+                                <p class="subtitle">{{cv.data.award.projectName}}, {{cv.data.award.city}}</p>
+                                <p class="content">{{cv.data.award.description}}</p>
+                            </div>
+                        </li>
+                </section>
+            </nav>
+        </aside>
+    </div>
+</main>

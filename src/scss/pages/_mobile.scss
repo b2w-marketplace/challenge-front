@@ -1,0 +1,52 @@
+html, body {
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+.aboutDev {
+    width: 100%;
+    padding: 3em .5em 0;
+}
+
+.mySkills {
+    width: 100%;
+}
+
+.devData {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    .container-dev {
+        text-align: center;
+    }
+}
+
+aside {
+    //left side
+    &.asideDevData {    
+        nav {
+            max-width: 100%;
+            section {
+                width: 95%;
+            }  
+        }
+        ul.personalSkills {
+            li {
+                justify-content: space-between;
+            }    
+        }        
+    }
+    // Right side
+    &.asideSkills {
+        max-width: 95%;
+        nav {
+            section {
+                width: 95%;
+            }  
+        }
+    }
+}

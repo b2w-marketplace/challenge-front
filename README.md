@@ -1,26 +1,31 @@
-# Desafio Frontend BIT - SP
+# Configurando ambiente
 
-Para o teste, pedimos que seja entrega em até 3 dias, mas de acordo com a experiência e/ou ferramentas escolhidas por você, talvez precise de mais tempo para concluir o desafio, nos avise!
+Para configurarmos o projeto, primeiramente temos que ter instalado o [Node.js](https://nodejs.org/en/) em nossa máquina. _(No meu ambiente estou utilizando a versão 6.9.5)_.
 
-Para ajudá-lo, temos algumas dicas:
+Em seguida, depois de realizar o _git clone_ do respectivo repositório, vamos executar no terminal os seguintes comandos, estando na *raiz do projeto*.
 
-O layout do desafio é [esse](https://ucarecdn.com/a3d9551d-8bb1-4e58-b152-0832dbffd5a2/testeb2w.jpg)
+Para instalarmos as dependências do Node.js que estão no _package.json_, digitaremos:
+```
+npm install
+```
 
+Para instalarmos as dependências do nosso Front-End que estão no _bower.json_, digitaremos:
+```
+bower install
+```
+*obs: Muito importante ter o [bower](https://bower.io/) instalado corretamente.*
 
-Aqui temos o arquivo .psd para [download](https://drive.google.com/open?id=0BwJHZ1PdHAcGZ0hLMnpBNXNUcjQ)
+## Iniciando o projeto no browser:
 
-Aqui, o link para [API](http://www.mocky.io/v2/587935ac260000420e1c3644)
+Realizado os passos ditos anteriormente, basta digitarmos o seguinte comando no terminal, estando na raiz do projeto:
+```
+npm start
+```
 
-## Desafio:
-Desenvolver a página seguindo o [layout](https://ucarecdn.com/a3d9551d-8bb1-4e58-b152-0832dbffd5a2/testeb2w.jpg), que atenda os seguintes critérios:
-- Código HTML semântico
-- Validação de formulário
-- Utilize alguma metodologia css e um pré-processador, de preferência Sass
-- Faça que sua página tenha uma ótima experiência para o usuário, independente do dispositivo que ele esteja usando.
-- Utilize o framework [AngularJS](https://angularjs.org/)
-- Use algum task manager, aqui gostamos muito do [Gulp](http://gulpjs.com/)
-- Seria ótimo se escrevesse testes unitários
+O comando acima irá subir um server na porta [3000](http://localhost:3000).
 
-Crie um Fork desse repositório e nos envie um **pull request**
+*obs: a página se ajusta ao seu dispositivo ;-)*
 
-Não esqueça de ensinar como rodamos seu projeto :sunglasses:
+Obrigado!
+
+Adler Coelho Santos.

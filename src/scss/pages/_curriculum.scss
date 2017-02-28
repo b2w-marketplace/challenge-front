@@ -1,0 +1,248 @@
+html, body {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 100%;
+    min-width: 300px;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $waterGreen;
+    z-index: 9999;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+}
+
+.aboutDev { 
+    width: 46.4%;
+    background-color: $waterGreen;
+    padding: 3em 1.5em;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+}
+
+.mySkills {
+    display: flex;
+    flex-direction: column;
+    padding: 3em 2.5em 0;
+}
+
+.devData {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 5em;
+    .container-dev {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        .img-dev {
+            border-radius: 10% 0 10% 0;
+            height: 180px;
+            width: 180px;
+        }
+        .dev-name {
+            font-size: 2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            margin: .3em 0;
+        }
+        .profession {
+            font-weight: bold;
+        }
+    }
+}
+
+aside {
+    //left side
+    &.asideDevData {
+        display: flex;
+        flex-direction: row-reverse;        
+        nav {
+            padding: 1.5em .5em;
+            max-width: 350px;
+            color: $white;
+            section {
+                font-weight: 600;
+                margin-bottom: 2.9em;
+                display: flex;
+                flex-direction: column;
+                .title {
+                    > label {
+                        text-transform: uppercase;
+                        margin: 0 .5em;
+                        font-size: 1.3em;
+                    }
+                }
+                > span {
+                    text-align: justify;
+                    margin-top: .9em;
+                    font-size: .9em;
+                    line-height: 1.4em;
+                    font-weight: lighter;
+                }
+            }  
+        }
+        ul.personalSkills {
+            display: flex;
+            flex-direction: column;
+            margin-top: .9em;
+            li {
+                display: flex;
+                flex-direction: row;
+                margin: .2em 0;
+                span {
+                    font-weight: lighter;
+                    width: 50%;
+                }
+            }    
+        }         
+    }
+
+    // Right side
+    &.asideSkills {
+        display: flex;
+        max-width: 80%;
+        nav {
+            padding-top: 1.5em .5em;
+            color: $white;
+            section {
+                display: flex;
+                flex-direction: column;
+                .title {
+                    > label {
+                        text-transform: uppercase;
+                        margin: 0 .5em;
+                        color: $waterGreen;
+                        font-weight: lighter;
+                        @media screen and (min-width: 300px) {
+                            font-size: 1.2em;
+                        }
+
+                        @media screen and (min-width: 767px) {
+                            font-size: 1.3em;
+                        }
+                    }
+                }
+                ul li {
+                    display: flex;
+                    flex-direction: row;
+                    margin-top: 1em;
+                    line-height: 1.3em;
+                    div {
+                        &.date {
+                            text-align: center;
+                            color: $gray-50;
+                        }
+                        margin-right: .8em;                        
+                    }
+                    label {
+                        font-family: 'Arial', sans-serif;
+                        font-weight: bold;
+                    }
+                    .subtitle {
+                        color: $gray-100;
+                        font-weight: lighter;
+                    }
+                    .content {
+                        color: $gray-150;
+                        font-weight: lighter;
+                    }                    
+                }
+                font-weight: 600;
+                margin-bottom: 2.9em;
+                color: $black;
+                > label {
+                    text-transform: uppercase;
+                    margin: 2em 1em;
+                    font-size: 1.5em;
+                    color: $waterGreen;
+                }
+                > p {
+                    text-align: justify;
+                    margin-bottom: 2.9em;
+                    margin-top: .5em;
+                    font-size: .9em;
+                    line-height: 1.4em;
+                    color: $gray-50;
+                }
+            }  
+        }
+    }
+}
+
+ul.professionalSkills {
+    max-width: 92%;
+    span {
+        text-transform: uppercase;
+        font-family: 'Arial', sans-serif;
+        font-weight: bold;        
+        min-width: 50%;
+        font-weight: bold;
+    }
+    li {
+        margin: .1em 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;        
+    }       
+}
+
+ul.contact {
+    margin-top: .9em;
+    display: flex;
+    flex-direction: column;
+    li {
+        font-weight: 600;
+        margin: .1em 0;
+        font-weight: lighter;
+        i {
+            width: 15px;
+            margin-right: 1.5em;
+            margin-top: .3em;
+        }
+        .mail, .link {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+i.container {
+    width: 65px;
+    padding: 1.1rem;
+    box-sizing: border-box;
+    color: $waterGreen;
+    border-radius: 10% 0 10% 0;
+    text-align: center;
+    &.containerWhite {
+        background-color: $white;
+        color: $waterGreen;
+    }
+    &.containerWaterBlue {
+        background-color: $waterGreen;
+        color: $white;
+    }        
+}
+
+.bar {
+    margin-top: .2em;
+    min-width: 50%;
+    height: .8em;
+    &.bg-1 { background-color: $white; }
+    &.bg-2 { background-color: $gray-75; }
+    .fillbar {
+        height: inherit;
+        &.bar-gray-50 { background-color: $gray-75;}
+        &.bar-waterGreen { background-color: $waterGreen; }
+    }
+    .per-60 { @include width-bar(60%); }
+    .per-70 { @include width-bar(70%); }
+    .per-90 { @include width-bar(90%); }
+    .per-95 { @include width-bar(95%); }
+}
