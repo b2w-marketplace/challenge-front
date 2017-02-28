@@ -1,0 +1,61 @@
+/*  ==========================================================================
+    Icons
+    ========================================================================== */
+
+    [class^="ico-"], [class*=" ico-"] {
+        background-image: url("../img/sprite/sprite.png");
+        background-repeat: no-repeat;
+        display: inline-block;
+        line-height: 20px;
+        vertical-align: text-top;
+    }
+
+    .icobg {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 6px 0;
+        .side-left & { background-color: $color-white; }
+        .side-right & { background-color: $color-primary; }
+    }
+
+    [class*="ico-"] {
+        .icobg > & {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .contact .item & {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+
+
+    {{#items}}
+
+    {{name}} {
+        width: {{px.width}};
+        height: {{px.height}};
+        background-position: {{px.offset_x}} {{px.offset_y}};
+    }
+
+    {{/items}}
+
+    /*  HD devices
+        ========================================================================== */
+
+        @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+            //[class^="ico-"], [class*=" ico-"] { background-size: 0 0; }
+        }

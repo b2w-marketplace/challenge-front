@@ -1,13 +1,124 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html ng-app="portfolioApp" lang="pt-br">
 <head>
 	<meta charset="UTF-8">
 	<title>B2W Desafio</title>
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="/build/css/main.min.css">
-	<script src="/build/js/scripts.min.js"></script>
+	<script src="/build/js/scripts.js"></script>
 </head>
 <body>
 	
-
+	<div class="container" ng-controller="mainController">
+		<div class="row">
+			<div class="side side-left">
+				<div ng-cloak ng-show="user.name" class="featured">
+					<img class="thumbnail" ng-src="{{user.thumb}}" alt="">
+					<h1 class="title">
+						{{user.name}}
+						<span class="subtitle">{{user.profession}}</span>
+					</h1>
+				</div>
+				<section ng-cloak ng-show="user.name" class="featured profile">
+					<h2 class="title"><div class="icobg"><i class="ico-profile"></i></div>{{user.profile.title}}</h2>
+					<p class="description">
+						{{user.profile.description}}
+					</p>
+				</section>
+				<section ng-cloak ng-show="user.name" class="featured objective">
+					<h2 class="title"><div class="icobg"><i class="ico-objective"></i></div>{{user.objective.title}}</h2>
+					<p class="description">
+						{{user.objective.description}}
+					</p>
+				</section>
+				<section ng-cloak ng-show="user.name" class="featured personal skillset">
+					<h2 class="title"><div class="icobg"><i class="ico-personalskill"></i></div>{{user.personalSkill.title}}</h2>
+					<ul class="list">
+						<li class="item" ng-repeat="(key, skill) in user.personalSkill" ng-if="key != 'title'">
+						<span class="level-title">{{key}}</span>
+						<span level-bar='skill'></span>
+					</li>
+					</ul>
+				</section>
+				<section ng-cloak ng-show="user.name" class="featured contact">
+					<h2 class="title"><div class="icobg"><i class="ico-contact"></i></div>{{user.contactMe.title}}</h2>
+					<ul class="list">
+						<li class="item" ng-repeat="(key, contact) in user.contactMe" ng-if="key != 'title'"><i class="ico-{{key}}"></i>{{contact}}</li>
+					</ul>
+				</section>
+				<section ng-cloak ng-show="user.name" class="featured contact">
+					<h2 class="title"><div class="icobg"><i class="ico-contact"></i></div>Contact</h2>
+					<form name="userForm" class="form-contact" ng-submit="submitForm()" novalidate>
+						<!-- NAME -->
+				        <div class="form-group" ng-class="{ 'has-error' : userForm.name.$invalid }">
+				            <input type="text" name="name" placeholder="Nome" class="input" ng-model="name" required>
+				        </div>
+				        <div class="form-group" ng-class="{ 'has-error' : userForm.email.$invalid }">
+				            <input type="email" name="email" placeholder="Email" class="input" ng-model="email" required>
+				        </div>
+				        <div class="form-group" ng-class="{ 'has-error' : userForm.subject.$invalid }">
+				            <input type="text" name="subject" placeholder="Subject" class="input" ng-model="subject" required>
+				        </div>
+				        <div class="form-group" ng-class="{ 'has-error' : userForm.message.$invalid }">
+				        	<textarea class="textarea" name="message" ng-model="message" placeholder="Message" id="message" cols="30" rows="10" required></textarea>
+				        </div>
+						<input class="btn" type="submit" value="Send" ng-disabled="userForm.$invalid">
+					</form>
+				</section>
+			</div>
+			<div ng-cloak ng-show="user.name" class="side side-right">
+				<section class="featured education">
+					<h2 class="title"><div class="icobg"><i class="ico-education"></i></div>{{user.education.title}}</h2>
+					<ul class="list">
+						<li class="item" ng-repeat="university in user.education.university">
+							<span class="date">{{university.month}}<br>{{university.year}}</span>
+							<div class="content">
+								<h3 class="title">{{university.courseName}}</h3>
+								<span class="local">{{university.universityName}}, {{university.universityCity}}</span>
+								<p class="description">{{university.description}}</p>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section class="featured experience">
+					<h2 class="title"><div class="icobg"><i class="ico-experience"></i></div>{{user.experience.title}}</h2>
+					<ul class="list">
+						<li class="item" ng-repeat="company in user.experience.company">
+							<span class="date">{{company.month}}<br>{{company.year}}</span>
+							<div class="content">
+								<h3 class="title">{{company.roleName}}</h3>
+								<span class="local">{{company.companyName}}, {{company.companyCity}}</span>
+								<p class="description">{{company.description}}</p>
+							</div>
+						</li>
+					</ul>
+				</section>
+				<section class="featured professional skillset">
+					<h2 class="title"><div class="icobg"><i class="ico-professionalskill"></i></div>{{user.professionalSkill.title}}</h2>
+					<ul class="list">
+						<li class="item" ng-repeat="tool in user.professionalSkill.tools">
+							<span class="level-title">{{tool.toolName}}</span>
+							<span level-bar='tool.toolsSkill'></span>
+						</li>
+					</ul>
+				</section>
+				<section class="featured award">
+					<h2 class="title"><div class="icobg"><i class="ico-award"></i></div>{{user.award.title}}</h2>
+					<ul class="list">
+						<li class="item">
+							<span class="date">{{user.award.month}}<br>{{user.award.year}}</span>
+							<div class="content">
+								<h3 class="title">{{user.award.projectName}}</h3>
+								<span class="local">{{user.award.awardName}}, {{user.award.city}}</span>
+								<p class="description">{{user.award.description}}</p>
+							</div>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

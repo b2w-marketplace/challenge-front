@@ -1,0 +1,132 @@
+    [class^="ico-"], [class*=" ico-"] {
+        background-image: url("../img/sprite/sprite.png");
+        background-repeat: no-repeat;
+        display: inline-block;
+        line-height: 20px;
+        vertical-align: text-top;
+    }
+
+    .icobg {
+        width: 70px;
+        height: 70px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        border-radius: 6px 0;
+        .side-left & { background-color: $color-white; }
+        .side-right & { background-color: $color-primary; }
+    }
+
+    [class*="ico-"] {
+        .icobg > & {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+
+        .contact .item & {
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+
+
+
+    .ico-address {
+        width: 17px;
+        height: 25px;
+        background-position: -57px -42px;
+    }
+
+
+    .ico-award {
+        width: 34px;
+        height: 36px;
+        background-position: -131px -38px;
+    }
+
+
+    .ico-contact {
+        width: 48px;
+        height: 39px;
+        background-position: 0px -38px;
+    }
+
+
+    .ico-education {
+        width: 57px;
+        height: 38px;
+        background-position: 0px 0px;
+    }
+
+
+    .ico-email {
+        width: 21px;
+        height: 17px;
+        background-position: -74px -42px;
+    }
+
+
+    .ico-experience {
+        width: 43px;
+        height: 34px;
+        background-position: 0px -77px;
+    }
+
+
+    .ico-objective {
+        width: 42px;
+        height: 42px;
+        background-position: -57px 0px;
+    }
+
+
+    .ico-personalskill {
+        width: 24px;
+        height: 45px;
+        background-position: 0px -111px;
+    }
+
+
+    .ico-professionalskill {
+        width: 32px;
+        height: 46px;
+        background-position: -99px 0px;
+    }
+
+
+    .ico-profile {
+        width: 34px;
+        height: 38px;
+        background-position: -131px 0px;
+    }
+
+
+    .ico-tel {
+        width: 22px;
+        height: 22px;
+        background-position: -131px -74px;
+    }
+
+
+    .ico-webSite {
+        width: 22px;
+        height: 21px;
+        background-position: -99px -46px;
+    }
+
+
+    /*  HD devices
+        ========================================================================== */
+
+        @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+            //[class^="ico-"], [class*=" ico-"] { background-size: 0 0; }
+        }

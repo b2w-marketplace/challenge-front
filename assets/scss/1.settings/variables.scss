@@ -5,7 +5,8 @@
     /*  ==========================================================================
         Grid
         ========================================================================== */
-        $enable-grid-classes:        true;
+        $enable-flex:                true;
+        $enable-grid-classes:        false;
         $grid-columns:               12;
         $grid-gutter-width-base:     30px;
         $grid-breakpoints: (
@@ -36,7 +37,7 @@
         $color-default:       $color-gray;
 
         /* Brand */
-        $color-aqua:        #4ac5b1;
+        $color-aqua:          #4ac5b1;
 
         $color-primary:       $color-aqua;
         $color-secondary:     $color-white;

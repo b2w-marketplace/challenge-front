@@ -1,0 +1,32 @@
+.input,
+.textarea {
+	width: 90%;
+	margin-bottom: 20px;
+	font-size: 1.2em;
+	color: $color-gray-dark;
+	padding: 10px;
+	border-radius: 2px;
+	border: 1px solid $color-gray;
+}
+.btn {
+	border: 1px solid;
+	color: $color-white;
+	background-color: transparent;
+	font-size: 1.4em;
+	padding: 6px 20px;
+	border-radius: 5px 0;
+	&:hover {
+		background-color: $color-white;
+		color: $color-primary;
+	}
+	&[disabled] {
+		opacity: 0.7;
+		color: $color-white;
+		background-color: transparent;
+	}
+}
+
+.ng-dirty.ng-invalid {
+	color: red;
+	border-color: red;
+}
