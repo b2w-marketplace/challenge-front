@@ -110,6 +110,14 @@ var gulp 		= require('gulp'),
             });
     	});
 
+
+        gulp.task('connect', function() {
+            plugins.connect.server({
+                root: [__dirname],
+                livereload: true
+            });
+        });
+
 	// WATCH -------------------------------------------------------------
     	gulp.task('watch', function() {
 
@@ -131,7 +139,7 @@ var gulp 		= require('gulp'),
     	});
 
 	// RUN TASKS ---------------------------------------------------------
-    	gulp.task('default', 	['watch', 'copy']);
+    	gulp.task('default', 	['connect', 'watch', 'copy']);
     	gulp.task('sync', 		['watch', 'browser-sync']);
         gulp.task('images',     ['sprite']);
     	gulp.task('css', 		['sass']);
