@@ -14,9 +14,22 @@
             @description: function to get data user from API.
         */
         function _gettingData() {
-            AboutService.getData(function (api) {
-                vm.data = api;
-                vm.loader = false;
+            AboutService.getProfile().then(function(response) {
+                if (response.status === 200) {
+                    var objs = [];
+                    for (var x in response.data.personalSkill) {
+                        if (x.toUpperCase() !== 'TITLE') {
+                            var obj = {
+                                 toolName  : x.toUpperCase()
+                                ,toolSkill : response.data.personalSkill[x]
+                            };
+                            objs.push(obj);
+                        }
+                        response.data.personalSkill.skills = objs;
+                    }
+                    vm.data = response.data;
+                    vm.loader = false;
+                }
             });
         }
 
