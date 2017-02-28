@@ -1,2 +1,5 @@
 angular
-    .module("b2wApp", []);
+    .module('b2wApp', [
+        'ngRoute', 
+        'api.b2w'
+    ]);

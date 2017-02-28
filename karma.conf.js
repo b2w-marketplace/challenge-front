@@ -18,7 +18,7 @@ module.exports = function(config) {
       'src/lib/angular/angular.js',
       'src/lib/angular-route/angular-route.js',
       'src/lib/angular-mocks/angular-mocks.js',
-      'src/js/route-config.js',
+      'src/js/app.js',
       'src/js/services/about-service.js',      
       'src/js/controllers/curriculum-controller.js',
       'src/*.js',

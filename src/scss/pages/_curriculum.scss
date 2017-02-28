@@ -1,11 +1,16 @@
-@mixin width-bar($width: 0%) {
-    width: $width;
-}
-
 html, body {
     font-family: 'Quicksand', sans-serif;
     font-size: 100%;
     min-width: 300px;
+}
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $waterGreen;
+    z-index: 9999;
 }
 
 main {
@@ -13,7 +18,7 @@ main {
     flex-direction: row;
 }
 
-.aboutDev {
+.aboutDev { 
     width: 46.4%;
     background-color: $waterGreen;
     padding: 3em 1.5em;
@@ -240,5 +245,4 @@ i.container {
     .per-70 { @include width-bar(70%); }
     .per-90 { @include width-bar(90%); }
     .per-95 { @include width-bar(95%); }
-
 }

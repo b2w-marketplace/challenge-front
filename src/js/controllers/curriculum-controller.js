@@ -3,11 +3,10 @@
 
     angular
         .module('b2wApp')
-        .controller("CurriculumController", CurriculumController);
+        .controller('CurriculumController', CurriculumController);
 
     /* @ngInject */
-    function CurriculumController($scope, AboutService) {
-        var vm = this;
+    function CurriculumController(AboutService) {
 
         /*
             @author Adler Coelho
@@ -17,12 +16,16 @@
         function _gettingData() {
             AboutService.getData(function (api) {
                 vm.data = api;
+                vm.loader = false;
             });
-        };
+        }
 
+        var vm = this;
+        vm.loader = true;
         vm.data = {};
-        _gettingData();
-    };
 
-    CurriculumController.$inject = ["$scope", "AboutService"];
+        _gettingData();
+    }
+
+    CurriculumController.$inject = ['AboutService'];
 })();

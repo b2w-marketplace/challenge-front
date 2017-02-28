@@ -58,3 +58,7 @@
     clip: auto;
   }
 }
+
+@mixin width-bar($width: 0%) {
+    width: $width;
+}
