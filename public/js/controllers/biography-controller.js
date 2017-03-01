@@ -58,12 +58,5 @@ angular.module('biography').controller('BiographyController', function ($http, $
 	}).error(function (error) {
 		console.log(error);
 	});
-
-	/*var promise = $http.get('http://localhost:3000/v1/fotos');
-	promise.then(function (response) {
-		$scope.fotos = response.data;
-	}).catch(function (error) {
-		console.log(error);
-	});*/
-
+	
 });

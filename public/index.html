@@ -40,7 +40,7 @@
                         <section>
                             <div class="row">
                                 <div class="col-md-9 col-md-offset-3">
-                                    <h3 class="glyphicon glyphicon-user fonteUppercase">&nbsp;{{profile.title}}</h3>
+                                    <h3 class="glyphicon glyphicon-user fonteUppercase" style="font-family: Arial, Glyphicons Halflings;">&nbsp;{{profile.title}}</h3>
                                 </div>
                             </div>
                             <div class="row">
@@ -108,27 +108,27 @@
                         <footer>
                             <div class="row">
                                 <div class="col-md-9 col-md-offset-3">
-                                    <h3 class="glyphicon glyphicon-phone-alt fonteUppercase">&nbsp;{{contactMe.title}}</h3>
+                                    <h3 class="glyphicon glyphicon-list-alt fonteUppercase">&nbsp;{{contactMe.title}}</h3>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-9 col-md-offset-3">
-                                    <h5>{{contactMe.address}}</h5>
+                                    <h5><span class="glyphicon glyphicon-tree-deciduous"> {{contactMe.address}}</span></h5>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-9 col-md-offset-3">
-                                    <h5>{{contactMe.tel}}</h5>
+                                    <h5><span class="glyphicon glyphicon-phone-alt"> {{contactMe.tel}}</span></h5>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-9 col-md-offset-3">
-                                    <h5>{{contactMe.email}}</h5>
+                                    <h5><span class="glyphicon glyphicon-envelope"> {{contactMe.email}}</span></h5>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-md-9 col-md-offset-3">
-                                    <h5>{{contactMe.webSite}}</h5>
+                                    <h5><span class="glyphicon glyphicon-globe"> {{contactMe.webSite}}</span></h5>
                                 </div>
                             </div>
                         </footer>
@@ -139,7 +139,7 @@
                 <div class="col-md-6 distanciaDoTopo">
                     <!-- EDUCATION -->
                     <section>
-                        <h3 class="glyphicon glyphicon-book fonteUppercase">&nbsp;{{education.title}}</h3>
+                        <h3 class="glyphicon glyphicon-education fonteUppercase">&nbsp;{{education.title}}</h3>
                         <div ng-repeat="un in education.university">
                             <div class="row">
                                 <div class="col-md-3 centralizaTexto">
@@ -157,7 +157,7 @@
 
                     <!-- EXPERIENCES -->
                     <section>
-                        <h3 class="glyphicon glyphicon-book fonteUppercase">&nbsp;{{experience.title}}</h3>
+                        <h3 class="glyphicon glyphicon-briefcase fonteUppercase">&nbsp;{{experience.title}}</h3>
                         <div ng-repeat="exp in experience.company">
                             <div class="row">
                                 <div class="col-md-3 centralizaTexto">
