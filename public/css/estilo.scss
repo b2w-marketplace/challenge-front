@@ -1,0 +1,37 @@
+$cor_da_fonte_lado_esquerdo: white;
+$altura_barradeprogresso: 15px;
+$distancia_do_topo: 25px;
+$borda_arredondada: 25px 0 25px 0;
+
+@mixin borda_arredondada($borda_arredondada) {
+	border-radius: $borda_arredondada;
+}
+
+.corDaFonteLadoEsquerdo {
+	color: $cor_da_fonte_lado_esquerdo;
+}
+
+.fonteUppercase {
+	text-transform: uppercase;
+	font-family: Arial, Glyphicons Halflings;
+}
+
+.alturaBarraDeProgresso {
+	height: $altura_barradeprogresso;
+}
+
+.distanciaDoTopo {
+	padding-top: $distancia_do_topo;
+}
+
+.centralizaTexto {
+	text-align: center;
+}
+
+.textoJustificado {
+	text-align: justify;
+}
+
+.bordaArredondada {
+	@include borda_arredondada($borda_arredondada);
+}

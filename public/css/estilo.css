@@ -1,0 +1,23 @@
+.corDaFonteLadoEsquerdo {
+  color: white; }
+
+.fonteUppercase {
+  text-transform: uppercase;
+  font-family: Arial, Glyphicons Halflings; }
+
+.alturaBarraDeProgresso {
+  height: 15px; }
+
+.distanciaDoTopo {
+  padding-top: 25px; }
+
+.centralizaTexto {
+  text-align: center; }
+
+.textoJustificado {
+  text-align: justify; }
+
+.bordaArredondada {
+  border-radius: 25px 0 25px 0; }
+
+/*# sourceMappingURL=estilo.css.map */

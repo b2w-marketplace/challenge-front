@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="biography">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Teste - B2W Marketplace</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/estilo.css">
+        <script src="js/lib/angular.min.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/controllers/biography-controller.js"></script>
+        <script src="js/services/biographyService.js"></script>
+    </head>
+    <body ng-controller="BiographyController as vm">
+        <div class="container">
+            <div class="row">
+                <!-- SIDE I -->
+                <div class="col-md-6 corDaFonteLadoEsquerdo distanciaDoTopo" style="background-color: #4AC5B1;">
+                    <div style="float: right;">
+                        <!-- IMAGE, NAME AND PROFESSION -->
+                        <header class="centralizaTexto">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <img src="{{vm.profile.thumb}}" alt="Imagem" class="image-responsive center-block bordaArredondada">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h1 class="fonteUppercase">{{vm.profile.name}}</h1>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <h4>{{vm.profile.profession}}</h4>
+                                </div>
+                            </div>
+                        </header>
+
+                        <!-- PROFILE -->
+                        <section>
+                            <div class="row">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <h3 class="glyphicon glyphicon-user fonteUppercase" style="font-family: Arial, Glyphicons Halflings;">&nbsp;{{vm.profile.title}}</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <h5 class="textoJustificado">{{vm.profile.description}}</h5>
+                                </div>
+                            </div>
+                        </section>
+                        <section>
+                            <div class="row">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <h3 class="glyphicon glyphicon-check fonteUppercase">&nbsp;{{vm.objective.title}}</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <h5 class="textoJustificado">{{vm.objective.description}}</h5>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- OBJECTIVES -->
+                        <section>
+                            <div class="row">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <h3 class="glyphicon glyphicon-flash fonteUppercase">&nbsp;{{vm.personalSkill.title}}</h3>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3 col-md-offset-3">MANAGEMENT</div>
+                                <div class="col-md-6">
+                                    <div class="progress alturaBarraDeProgresso">
+                                        <div class="progress-bar alturaBarraDeProgresso" role="progressbar" aria-valuenow="{{vm.personalSkill.management}}" aria-valuemin="0" aria-valuemax="100" style="width: {{vm.personalSkill.management}}%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-md-offset-3">TEAMWORK</div>
+                                <div class="col-md-6">
+                                    <div class="progress alturaBarraDeProgresso">
+                                        <div class="progress-bar alturaBarraDeProgresso" role="progressbar" aria-valuenow="{{vm.personalSkill.teamWork}}" aria-valuemin="0" aria-valuemax="100" style="width: {{vm.personalSkill.teamWork}}%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-md-offset-3">CREATIVE</div>
+                                <div class="col-md-6">
+                                    <div class="progress alturaBarraDeProgresso">
+                                        <div class="progress-bar alturaBarraDeProgresso" role="progressbar" aria-valuenow="{{vm.personalSkill.creative}}" aria-valuemin="0" aria-valuemax="100" style="width: {{vm.personalSkill.creative}}%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-3 col-md-offset-3">COMMUNICATION</div>
+                                <div class="col-md-6">
+                                    <div class="progress alturaBarraDeProgresso">
+                                        <div class="progress-bar alturaBarraDeProgresso" role="progressbar" aria-valuenow="{{vm.personalSkill.communication}}" aria-valuemin="0" aria-valuemax="100" style="width: {{vm.personalSkill.communication}}%;"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <!-- PERSONAL SKILL -->
+                        <footer>
+                            <div class="row">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <h3 class="glyphicon glyphicon-list-alt fonteUppercase">&nbsp;{{vm.contactMe.title}}</h3>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <h5><span class="glyphicon glyphicon-tree-deciduous"> {{vm.contactMe.address}}</span></h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <h5><span class="glyphicon glyphicon-phone-alt"> {{vm.contactMe.tel}}</span></h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <h5><span class="glyphicon glyphicon-envelope"> {{vm.contactMe.email}}</span></h5>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <h5><span class="glyphicon glyphicon-globe"> {{vm.contactMe.webSite}}</span></h5>
+                                </div>
+                            </div>
+                        </footer>
+                    </div>
+                </div>
+                
+                <!-- SIDE II -->
+                <div class="col-md-6 distanciaDoTopo">
+                    <!-- EDUCATION -->
+                    <section>
+                        <h3 class="glyphicon glyphicon-education fonteUppercase">&nbsp;{{vm.education.title}}</h3>
+                        <div ng-repeat="un in vm.education.university">
+                            <div class="row">
+                                <div class="col-md-3 centralizaTexto">
+                                    <h5>{{un.month}}</h5>
+                                    <h5>{{un.year}}</h5>
+                                </div>
+                                <div class="col-md-9">
+                                    <h4><strong>{{un.courseName}}</strong></h4>
+                                    <h5>{{un.universityName}}, {{un.universityCity}}</h5>
+                                    <h5>{{un.description}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- EXPERIENCES -->
+                    <section>
+                        <h3 class="glyphicon glyphicon-briefcase fonteUppercase">&nbsp;{{vm.experience.title}}</h3>
+                        <div ng-repeat="exp in vm.experience.company">
+                            <div class="row">
+                                <div class="col-md-3 centralizaTexto">
+                                    <h5>{{exp.month}}</h5>
+                                    <h5>{{exp.year}}</h5>
+                                </div>
+                                <div class="col-md-9">
+                                    <h4><strong>{{exp.companyName}}</strong></h4>
+                                    <h5>{{exp.companyCity}}, {{exp.roleName}}</h5>
+                                    <h5>{{exp.description}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- PROFESSIONAL SKILL -->
+                    <section>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h3 class="glyphicon glyphicon-wrench fonteUppercase">&nbsp;{{vm.professionalSkill.title}}</h3>
+                            </div>
+                            <br>
+                            <div ng-repeat="pro in vm.professionalSkill.tools">
+                                <div class="row">
+                                    <div class="col-md-3 textoJustificado" style="margin: 10px 0 0 25px;">
+                                        <span class="fonteUppercase">{{pro.toolName}}</span>
+                                    </div>
+                                    <div class="col-md-6" style="margin: 10px 0 0 25px;">
+                                        <div class="progress alturaBarraDeProgresso">
+                                            <div class="progress-bar alturaBarraDeProgresso" role="progressbar" aria-valuenow="{{pro.toolsSkill}}" aria-valuemin="0" aria-valuemax="100" style="width: {{pro.toolsSkill}}%;"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- AWARD -->
+                    <footer>
+                        <h3 class="glyphicon glyphicon-king fonteUppercase">&nbsp;{{vm.award.title}}</h3>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="centralizaTexto">
+                                    <h5>{{vm.award.month}}</h5>
+                                    <h5>{{vm.award.year}}</h5>
+                                </div>
+                            </div>
+                            <div class="col-md-9">
+                                <div>
+                                    <h4><strong>{{vm.award.awardName}}</strong></h4>
+                                    <h5>{{vm.award.awardCity}}, {{vm.award.awardName}}</h5>
+                                    <h5>{{vm.award.description}}</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div> <!-- fim container -->        
+    </body>
+</html>
