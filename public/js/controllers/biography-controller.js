@@ -1,62 +1,62 @@
-angular.module('biography').controller('BiographyController', function ($http, $scope) {
+angular.module('biography').controller('BiographyController', BiographyController);
 
-	$http.get('http://www.mocky.io/v2/587935ac260000420e1c3644').success(function (response) {
+function BiographyController(biographyService) {
+	let vm = this;
 
-		$scope.profile = {
-			thumb: response.thumb,
-			name: response.name,
-			profession: response.profession,
-			title: response.profile.title,
-			description: response.profile.description
+	biographyService.ReturnBiography().then(function onSuccess(response) {
+		vm.profile = {
+			thumb: response.data.thumb,
+			name: response.data.name,
+			profession: response.data.profession,
+			title: response.data.profile.title,
+			description: response.data.profile.description
 		};
 
-		$scope.objective = {
-			title: response.objective.title,
-			description: response.objective.description,
+		vm.objective = {
+			title: response.data.objective.title,
+			description: response.data.objective.description,
 		};
 
-		$scope.personalSkill = {
-			title: response.personalSkill.title,
-			management: response.personalSkill.management,
-			teamWork: response.personalSkill.teamWork,
-			creative: response.personalSkill.creative,
-			communication: response.personalSkill.communication
+		vm.personalSkill = {
+			title: response.data.personalSkill.title,
+			management: response.data.personalSkill.management,
+			teamWork: response.data.personalSkill.teamWork,
+			creative: response.data.personalSkill.creative,
+			communication: response.data.personalSkill.communication
 		};
 
-		$scope.contactMe = {
-			title: response.contactMe.title,
-			address: response.contactMe.address,
-			tel: response.contactMe.tel,
-			email: response.contactMe.email,
-			webSite: response.contactMe.webSite
+		vm.contactMe = {
+			title: response.data.contactMe.title,
+			address: response.data.contactMe.address,
+			tel: response.data.contactMe.tel,
+			email: response.data.contactMe.email,
+			webSite: response.data.contactMe.webSite
 		};
 
-		$scope.education = {
-			title: response.education.title,
-			university: response.education.university
+		vm.education = {
+			title: response.data.education.title,
+			university: response.data.education.university
 		};
 
-		$scope.experience = {
-			title: response.experience.title,
-			company: response.experience.company
+		vm.experience = {
+			title: response.data.experience.title,
+			company: response.data.experience.company
 		};
 
-		$scope.professionalSkill = {
-			title: response.professionalSkill.title,
-			tools: response.professionalSkill.tools
+		vm.professionalSkill = {
+			title: response.data.professionalSkill.title,
+			tools: response.data.professionalSkill.tools
 		};
 
-		$scope.award = {
-			title: response.award.title,
-			month: response.award.month,
-			year: response.award.year,
-			awardName: response.award.awardName,
-			awardCity: response.award.city,
-			description: response.award.description
+		vm.award = {
+			title: response.data.award.title,
+			month: response.data.award.month,
+			year: response.data.award.year,
+			awardName: response.data.award.awardName,
+			awardCity: response.data.award.city,
+			description: response.data.award.description
 		};
-
-	}).error(function (error) {
-		console.log(error);
+	}, function onError(erro) {
+		console.log(erro);
 	});
-	
-});
+}
