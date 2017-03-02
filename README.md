@@ -6,10 +6,12 @@
  - Bower
 
 **Instalando as dependências node:**
-    npm install
+
+    `npm install`
     
 **Baixando as dependência sdo Front-End:**
-    bower install
+
+    `bower install`
 
 **Rodando o projeto:**
 
