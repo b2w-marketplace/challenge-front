@@ -1,0 +1,36 @@
+.inp,textarea{
+	width: 95%;
+	height: 45px;
+	padding: 0 2.5%;
+	margin-top: 25px;
+	background: #fff;
+	color: #7b7b7b;
+	border: 1px solid #fff;
+	
+}
+.ng-submitted{
+	.ng-invalid{
+		border-color: red;
+	}
+}
+textarea{
+	padding: 15px 2.5%;
+	height: 170px;
+}
+
+
+
+.btn{
+
+	border: 1px solid #fff;
+	border-radius: 10px 0 10px 0;
+	color: #fff;
+	background: none;
+	padding: 10px 20px;
+	cursor: pointer;
+	transition: 0.3s all ease;
+	&:hover{
+		background: #fff;
+		color: #49c5b1;
+	}
+}

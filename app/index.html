@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en"  ng-app="codeChallenge">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+
+	<title>Code Challenge</title>
+
+	<!-- reset -->
+	<link rel="stylesheet" href="bower_components/normalize-css/normalize.css">
+	<!-- css -->
+	<link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body ng-controller="homeCtrl">
+	<!-- conteudo -->
+	<main class="main">
+		<!-- section/container lado esquerdo -->
+		<section class="wrap-left">
+			<div class="left-header">
+				<img class="lh-avatar" src="{{user.thumb}}" alt="" >
+				<h1 class="lh-nome" ng-bind="user.name"></h1>
+				<h3 class="lh-prof" ng-bind="user.profession"></h3>
+			</div>
+			<div class="left-box left-profile">
+				
+				<div class="lb-ico"><img src="images/profile.jpg" alt=""></div>
+				<h2 class="lb-tt">Profile</h2>
+				<p class="lb-text" ng-bind="user.profile.description"></p>
+			</div>
+			<div class="left-box left-objective">
+				<div class="lb-ico"><img src="images/objective.jpg" alt=""></div>
+				<h2 class="lb-tt">Objective</h2>
+				<p class="lb-text" ng-bind="user.objective.description"></p>
+			</div>
+			<div class="left-box left-personal_skill">
+				<div class="lb-ico"><img src="images/personal_skill.jpg" alt=""></div>
+				<h2 class="lb-tt">Personal Skill</h2>
+				
+					<ul>
+						<li class="">Management <span class="bars bars-gray bars-{{user.personalSkill.management}}"></span></li>
+						<li class="">Teamwork	 <span class="bars bars-gray bars-{{user.personalSkill.teamWork}}"></span></li>
+						<li class="">Creative <span class="bars bars-gray bars-{{user.personalSkill.creative}}"></span></li>
+						<li class="">Communication <span class="bars bars-gray bars-{{user.personalSkill.communication}}"></span></li>
+						
+					</ul>
+					
+			</div>
+			<div class="left-box left-contact_me">
+				<div class="lb-ico"><img src="images/contact.jpg" alt=""></div>
+				<h2 class="lb-tt">Contact Me</h2>
+				<p><i class="fa fa-map-marker" aria-hidden="true"></i> <span ng-bind="user.contactMe.address"></span></p>
+				<p><i class="fa fa-phone" aria-hidden="true"></i> <span ng-bind="user.contactMe.tel"></span></p>
+				<p><i class="fa fa-envelope" aria-hidden="true"></i> <span ng-bind="user.contactMe.email"></span></p>
+				<p><i class="fa fa-dribbble" aria-hidden="true"></i> <span ng-bind="user.contactMe.webSite"></span></p>
+			</div>
+
+			<div class="left-box left-contact">
+				<div class="lb-ico"><img src="images/contact.jpg" alt=""></div>
+				<h2 class="lb-tt">Contact</h2>
+				<form novalidate="">
+					<input class="inp" type="text" placeholder="Name" required="" ng-model="contact.name">
+					<input class="inp" type="email" placeholder="Email" required="" ng-model="contact.email">
+					<input class="inp" type="text" placeholder="Subject" required="" ng-model="contact.subject">
+					<textarea class="textarea" placeholder="Message" required="" ng-model="contact.message"></textarea>
+					<input class="btn" type="submit" value="Send">
+				</form>
+			</div>
+		</section>
+		<!-- section/container lado direito -->
+		<section class="wrap-right">
+			<div class="right-box right-education">
+			
+				<div class="rb-ico"><img src="images/education.png" alt="">
+				</div>
+				<h2 class="rb-tt">EDUCATION</h2>
+			
+				
+					<div class="rb-display" ng-repeat="university in user.education.university">
+						<div class="rb-display_left">
+							<span class="rb-display_month" ng-bind="university.month"></span>
+							<span class="rb-display_year" ng-bind="university.year"></span>
+						</div>
+						<div class="rb-display_right">
+							<h4 class="rb-display_tt" ng-bind="university.courseName"></h4>
+							<p class="rb-display_company" ng-bind="university.universityName"></p>
+							<p class="rb-display_text" ng-bind="university.description"></p>
+						</div>
+					</div>
+					
+					
+				
+					
+			</div>
+			<div class="right-box right-experience">
+				
+				<div class="rb-ico"><img src="images/experience.png" alt=""></div>
+				<h2 class="rb-tt">EXPERIENCE</h2>
+				<div class="rb-display" ng-repeat="company in user.experience.company">
+					<div class="rb-display_left">
+						<span class="rb-display_month" ng-bind="company.month"></span>
+						<span class="rb-display_year" ng-bind="company.year"></span>
+					</div>
+					<div class="rb-display_right">
+						<h4 class="rb-display_tt" ng-bind="company.roleName"></h4>
+						<p class="rb-display_company" ng-bind="company.companyName"></p>
+						<p class="rb-display_text" ng-bind="company.description"></p>
+					</div>
+				</div>
+			</div>
+			<div class="right-box right-professional_skill">
+				<div class="rb-ico"><img src="images/professional_skill.png" alt=""></div>
+				<h2 class="rb-tt">Professional Skill</h2>
+					<ul>
+						<li class="" ng-repeat="tool in user.professionalSkill.tools"><span ng-bind="tool.toolName"></span><span class="bars bars-green bars-{{tool.toolsSkill}}"></span></li>
+						
+						
+					</ul>	
+			</div>
+			<div class="right-box right-award">
+				
+				<div class="rb-ico"><img src="images/award.png" alt=""></div>
+				<h2 class="rb-tt">Award</h2>
+				<div class="rb-display"">
+						<div class="rb-display_left">
+							<span class="rb-display_month" ng-bind="user.award.month"></span>
+							<span class="rb-display_year" ng-bind="user.award.year"></span>
+						</div>
+						<div class="rb-display_right">
+							<h4 class="rb-display_tt" ng-bind="user.award.projectName"></h4>
+							<p class="rb-display_company" ng-bind="user.award.awardName"></p>
+							<p class="rb-display_text" ng-bind="user.award.description"></p>
+						</div>
+					</div>
+			</div>
+		</section>
+	</main>
+	
+
+	<!-- open sans -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+
+	<!-- font  -->
+	<link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
+
+	
+<!-- angular -->
+	<script src="bower_components/angular/angular.js"></script>
+	<script src="scripts/app.js"></script>
+	<script src="scripts/homeCtrl.js"></script>
+	<script src="scripts/userService.js"></script>
+	
+	
+	
+</body>
+</html>
+
+
+	

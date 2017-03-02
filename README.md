@@ -1,26 +1,19 @@
-# Desafio Frontend BIT - SP
+# Configurando ambiente #
 
-Para o teste, pedimos que seja entrega em até 3 dias, mas de acordo com a experiência e/ou ferramentas escolhidas por você, talvez precise de mais tempo para concluir o desafio, nos avise!
+**Ferramentas necessarias:**
+ - Node.js
+ - Gulp
+ - Bower
 
-Para ajudá-lo, temos algumas dicas:
+**Instalando as dependências node:**
 
-O layout do desafio é [esse](https://ucarecdn.com/a3d9551d-8bb1-4e58-b152-0832dbffd5a2/testeb2w.jpg)
+    `npm install`
+    
+**Baixando as dependência sdo Front-End:**
 
+    `bower install`
 
-Aqui temos o arquivo .psd para [download](https://drive.google.com/open?id=0BwJHZ1PdHAcGZ0hLMnpBNXNUcjQ)
+**Rodando o projeto:**
 
-Aqui, o link para [API](http://www.mocky.io/v2/587935ac260000420e1c3644)
-
-## Desafio:
-Desenvolver a página seguindo o [layout](https://ucarecdn.com/a3d9551d-8bb1-4e58-b152-0832dbffd5a2/testeb2w.jpg), que atenda os seguintes critérios:
-- Código HTML semântico
-- Validação de formulário
-- Utilize alguma metodologia css e um pré-processador, de preferência Sass
-- Faça que sua página tenha uma ótima experiência para o usuário, independente do dispositivo que ele esteja usando.
-- Utilize o framework [AngularJS](https://angularjs.org/)
-- Use algum task manager, aqui gostamos muito do [Gulp](http://gulpjs.com/)
-- Seria ótimo se escrevesse testes unitários
-
-Crie um Fork desse repositório e nos envie um **pull request**
-
-Não esqueça de ensinar como rodamos seu projeto :sunglasses:
+    gulp w
+Sera aberto um servidor local com o endereço: `http://localhost:800`

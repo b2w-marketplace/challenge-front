@@ -1,0 +1,94 @@
+.right-box{
+	width: 86%;
+	margin: 0 2.5% 50px;
+	margin-bottom: 50px;
+	.rb-ico{
+		float: left;
+		width: 75px;
+		height: 75px;
+		background-color: #49c5b1;
+		line-height: 100px;
+		text-align: center;
+		border-radius: 5px 0 5px 0;
+		margin-right: 30px;
+	}
+	.rb-text{
+		margin: 15px 0 0 0;
+	}
+	@media screen and (max-width: 1036px) {
+		width: 95%;
+		max-width: 500px;
+		margin: 0 auto 50px;
+	}
+	@media screen and (max-width: 450px) {
+		.rb-ico{
+			float: none;
+			margin: 0 auto;
+			display: table;
+			line-height: 75px;
+			img{
+				top: 12px;
+				position: relative;
+			}
+		}
+		.rb-tt{
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
+.right-education{
+	margin-top: 85px;
+}
+.right-professional_skill{
+	ul{
+	font-size: 20px;
+	text-transform: uppercase;
+	list-style: none;
+	padding: 0;
+	line-height: 34px;
+	color: #020303;
+		.bars{
+			width: 50%;
+			float: right;
+
+		}
+	}
+	@media screen and (max-width: 450px) {
+		ul{
+			.bars{
+			width: 100%;
+			margin-bottom: 10px;
+		}
+		}
+	}
+}
+.rb-display{
+	width: 100%;
+	float: left;
+	margin-top: 25px;
+	display: inline-block;
+	&:last-child{
+		margin-bottom: 25px;
+	}
+	.rb-display_left{
+		width: 75px;
+		float: left;
+		font-size: 14px;
+		text-align: center;
+		.rb-display_month,.rb-display_year{
+			width: 100%;
+			display: block;
+		}
+	}
+	.rb-display_right{
+		width: calc(94% - 75px);
+		float: right;
+		.rb-display_tt,.rb-display_company,.rb-display_text{
+			margin: 0 0 5px;
+		}
+		.rb-display_company{
+			color: #7d7d7d;
+		}
+	}
+}

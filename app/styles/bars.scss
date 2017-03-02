@@ -1,0 +1,34 @@
+
+//barras de porcentagem
+.bars{
+	height: 18px;
+	width: 100%;
+	display: inline-block;
+	&.bars-gray{
+		background: #fff;
+		&:before{
+			background: #a6a5a5;
+		}
+	}
+	&.bars-green{
+		background: #a6a5a5;
+		&:before{
+			background: #49c5b1;
+		}
+	}
+	&:before{
+		height: 18px;
+		float: left;
+		content: "";
+		display: inline-block;
+	}
+
+	//loop para gerar valor de 0% a 100%
+	@for $i from 0 through 100{
+		&.bars-#{$i}:before{
+		    	width: 0% + $i
+		    }	
+		}
+
+
+}
