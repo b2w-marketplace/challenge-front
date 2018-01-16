@@ -4,12 +4,9 @@
 
 Nosso teste consiste em implementar uma aplicação client-side, que consulte uma API e mostre os dados do perfil de um usuário. Esta aplicação deve funcionar nos navegadores mais recentes do mercado.
 
-Para ajudá-lo, temos algumas dicas:
-
 Nesse link você encontra o [layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg) do desafio:
 
 ![Layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg)
-
 
 
 Aqui temos o arquivo .psd para [download](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.psd).
