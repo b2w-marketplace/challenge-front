@@ -11,7 +11,7 @@ Nesse link você encontra o [layout](https://github.com/b2w-marketplace/code-cha
 
 Aqui temos o arquivo .psd para [download](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.psd).
 
-Esse é o link da [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5)
+Esse é o link da [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5).
 
 ## Desafio:
 
