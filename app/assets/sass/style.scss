@@ -1,0 +1,220 @@
+@import 'variables';
+
+
+@font-face {
+    font-family: 'OpenSans-Light';
+    src: url('../fonts/OpenSans-Light.ttf') format('truetype'),
+
+}
+@font-face {
+    font-family: 'OpenSans-Regular';
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype'),
+}
+
+body {
+	font-family: 'OpenSans-Regular';
+}
+
+
+
+.col-princ {
+	padding: 50px 20px;
+
+	&.one {
+		font-family: 'OpenSans-Light';
+		background-color: $azul;
+		color: $branco;
+	    padding-left: 25%;
+
+		.profileImage {
+			width: 200px;
+		    border-radius: 25px 0px;
+		}	    
+
+	    .name {
+		font-size: 33px;
+		    text-transform: uppercase;
+		    margin: 10px 0px 0px 0px;
+		}
+
+		.profession {
+			font-size: 23px;
+		}
+
+		.contact {
+			i {
+				width: 14px;
+			    margin-right: 20px;
+			    font-size: 20px;
+			    margin-left: 8px;
+			}
+		}
+	}
+
+	&.two {
+		padding-left: 40px;
+	    padding-right: 125px;
+	    padding-bottom: 0px;
+
+	    .section-Icon {
+	    	color: $branco;
+	    	background-color: $azul;
+	    }
+
+    	.section-Title {
+			color: $azul;
+		}
+
+		.persSkill {
+			.persSkillTitles {
+				p {
+					font-weight: 600;
+				}
+			}
+
+			.progress {
+
+				background-color: $cinza-escuro;
+		    	.progress-bar {
+		    		background-color: $azul;
+		    	}
+			}
+		}
+	}
+}
+
+
+.section {
+	margin-bottom: 25px;
+	text-align: left;
+
+	.section-Icon {
+		background-color: $branco;
+		color: $azul;
+	    border-radius: 5px 0px;
+	    width: 45px;
+	    display: block;
+	    height: 45px;
+	    float: left;
+	    margin-right: 20px;
+
+		i {
+			font-size: 25px;
+		    position: relative;
+		    top: 11px;
+		    left: 7px;
+		    width: 29px;
+		    text-align: center;
+		}
+	}
+
+	.section-Title {
+		font-size: 30px;
+		text-transform: uppercase;
+	}	
+}
+
+
+.persSkill {
+	.persSkillTitles {
+		p {
+			font-size: 16px;
+    		text-transform: uppercase;
+		}
+	}
+
+	.progress {
+    height: 14px;
+    border-radius: 0px;
+    margin-top: 1px;
+    margin-bottom: 18px;
+
+    	.progress-bar {
+    		background-color: #A7A5A6;
+    	}
+	}
+}
+
+
+
+.education {
+	color:$cinza-claro;
+
+	.date {
+	    width: 45px;
+	    float: left;
+	    text-align: center;
+	    font-size: 11px;
+	    margin-right: 23px;
+	    margin-bottom: 30px;
+	}
+
+	.nameCourse {
+		color: #313131;
+	    text-transform: uppercase;
+	    font-weight: 700;
+	    font-size: 18px;
+	    margin-bottom: 0px;
+	}
+
+	.adressCourse {
+		color: $cinza-escuro;
+		margin-bottom: 0px;
+	}
+}
+
+
+.space-b {
+	margin-bottom: 15px;
+}
+
+.space-t {
+	margin-top: 15px;
+}
+
+
+
+
+@media (max-width: 1024px) { 
+
+	.col-princ {
+
+		padding-left: 40px!important;
+		padding-right: 40px!important;
+	}
+
+}
+
+.overlay {
+    background: #737373;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    opacity: 0.5;
+    z-index: 999;
+        height: 100%;
+	.loader {
+	  position: absolute;
+	  top: 250px;
+	  left: 50%;		
+	  border: 16px solid #f3f3f3;
+	  border-radius: 50%;
+	  border-top: 16px solid #333333;
+	  width: 100px;
+	  height: 100px;
+	  -webkit-animation: spin 1s linear infinite;
+	  animation: spin 1s linear infinite;
+	}
+
+	@-webkit-keyframes spin {
+	  0% { -webkit-transform: rotate(0deg); }
+	  100% { -webkit-transform: rotate(360deg); }
+	}
+
+	@keyframes spin {
+	  0% { transform: rotate(0deg); }
+	  100% { transform: rotate(360deg); }
+	}
+}
