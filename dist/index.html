@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Desafio Bit</title>
+</head>
+
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;subset=latin-ext" rel="stylesheet">
+<link rel="stylesheet" href="css/allcss.css">
+<link rel="stylesheet" href="css/style.css">
+
+
+<body ng-app="BitModule">
+    <content id="content" ng-controller="BitCtrl as vm" >
+
+        <div class="col-xs-12 col-sm-6 Sides colorSide">
+            <div class="col-sm-1"></div>
+            <div class="col-xs-12 col-sm-11 paddinZero">
+                <div class="col-xs-12 paddinZero marginBot text-center">
+                    <img src={{vm.perfil.thumb}} alt="foto de perfil" class="thumbPerfil">
+                    <h1>{{vm.perfil.name}}</h1>
+                    <h3>{{vm.perfil.profession}}</h3>
+                </div>
+                <div class="col-xs-12 paddinZero marginBot">
+                    <div class="col-xs-3 paddinZero boxIcon">
+                        <img src="img/icon_profile.png" alt="">
+                    </div>
+                    <div class="col-xs-9">
+                        <h2>{{vm.perfil.profile.title}}</h2>
+                    </div>
+
+                    <p class="col-xs-12 text-justify">{{vm.perfil.profile.description}}</p>
+                </div>
+                <div class="col-xs-12 paddinZero marginBot">
+                    <div class="col-xs-3 paddinZero boxIcon">
+                        <img src="img/icon_objective.png" alt="">
+                    </div>
+                    <div class="col-xs-9">
+                        <h2>{{vm.perfil.objective.title}}</h2>
+                    </div>
+                    <p class="col-xs-12 text-justify">{{vm.perfil.objective.description}}</p>
+                </div>
+                <div class="col-xs-12 paddinZero marginBot">
+                    <div class="col-xs-3 paddinZero boxIcon">
+                        <img src="img/icon_skill.png" alt="">
+                    </div>
+                    <div class="col-xs-9">
+                        <h2>{{vm.perfil.personalSkill.title}}</h2>
+                    </div>
+
+                    <div class="col-xs-6 text-left paddinZero">
+                        <p class="title">management</p>
+                        <p class="title">teamWork</p>
+                        <p class="title">creative</p>
+                        <p class="title">communication</p>
+                    </div>
+                    <div class="col-xs-6 paddinZero text-left">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:{{vm.perfil.personalSkill.management}}%">
+                                <span class="sr-only">70% Complete</span>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:{{vm.perfil.personalSkill.teamWork}}%">
+                                <span class="sr-only">70% Complete</span>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:{{vm.perfil.personalSkill.creative}}%">
+                                <span class="sr-only">70% Complete</span>
+                            </div>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:{{vm.perfil.personalSkill.communication}}%">
+                                <span class="sr-only">70% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 paddinZero marginBot">
+                    <div class="col-xs-3 paddinZero boxIcon">
+                        <img src="img/icon_contact.png" alt="">
+                    </div>
+                    <div class="col-xs-9">
+                        <h2>{{vm.perfil.contactMe.title}}</h2>
+                    </div>
+
+                    <p class="col-xs-12 paddinZero">
+                        <img src="img/pin.png" alt="" class="iconContact">
+                        {{vm.perfil.contactMe.address}}
+                    </p>
+                    <p class="col-xs-12 paddinZero">
+                        <img src="img/phone.png" alt="" class="iconContact">
+                        {{vm.perfil.contactMe.tel}}
+                    </p>
+                    <p class="col-xs-12 paddinZero">
+                        <img src="img/mail.png" alt="" class="iconContact">
+                        {{vm.perfil.contactMe.email}}
+                    </p>
+                    <p class="col-xs-12 paddinZero">
+                        <img src="img/www.png" alt="" class="iconContact">
+                        {{vm.perfil.contactMe.webSite}}
+                    </p>
+                </div>
+                <div class="col-xs-12 paddinZero marginBot">
+                    <div class="col-xs-3 paddinZero boxIcon">
+                        <img src="img/icon_contact.png" alt="">
+                    </div>
+                    <div class="col-xs-9">
+                        <h2>CONTACT</h2>
+                    </div>
+                    <form action="">
+                        <input type="text" class="form-control" placeholder="Name" required>
+                        <input type="email" class="form-control" placeholder="Email" required>
+                        <input type="text" class="form-control" placeholder="Subject" required>
+                        <textarea class="form-control message" placeholder="Message" required></textarea>
+                        <button type="submit" class="btn btn-lg btnsubmit" > Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 Sides otherSide">
+            <div class="col-xs-12 marginBot">
+                <div class="col-xs-2 paddinZero boxIcon">
+                    <img src="img/icon_education.png" alt="">
+                </div>
+                <div class="col-xs-10">
+                    <h2>{{vm.perfil.education.title}}</h2>
+                </div>
+
+                <div class="col-xs-12 paddinZero marginBot" ng-repeat="university in vm.perfil.education.university" >
+                    <div class="col-xs-2 paddinZero text-center">
+                        <p>{{university.month}} <br>
+                        <spam>{{university.year}}</spam></p>
+                    </div>
+                    <div class="col-xs-10">
+                        <p class="title">{{university.courseName}}<br>
+                            <spam class="subtitle">{{university.universityName}} - {{university.universityCity}}</spam>
+                        </p>
+
+                        <spam class="normalText">{{university.description}}</spam>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 marginBot">
+                <div class="col-xs-2 paddinZero boxIcon">
+                    <img src="img/icon_expirience.png" alt="">
+                </div>
+                <div class="col-xs-10">
+                    <h2>{{vm.perfil.experience.title}}</h2>
+                </div>
+
+                <div class="col-xs-12 paddinZero marginBot" ng-repeat="company in vm.perfil.experience.company" >
+                    <div class="col-xs-2 paddinZero text-center">
+                        <p>{{company.month}}<br>
+                        <spam>{{company.year}}</spam>
+                        </p>
+                    </div>
+                    <div class="col-xs-10">
+                        <p class="title">{{company.companyName}} <br>
+                            <spam class="subtitle">{{company.roleName}} - {{company.companyCity}}</spam>
+                        </p>
+
+                        <spam class="normalText">{{company.description}}</spam>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 marginBot">
+                <div class="col-xs-2 paddinZero boxIcon">
+                    <img src="img/icon_lampada.png" alt="">
+                </div>
+                <div class="col-xs-10">
+                    <h2>{{vm.perfil.professionalSkill.title}}</h2>
+                </div>
+                <div class="col-xs-12" ng-repeat="tools in vm.perfil.professionalSkill.tools">
+                    <div class="col-xs-4 paddinZero text-left" >
+                        <p class="title">{{tools.toolName}}</p>
+                    </div>
+                    <div class="col-xs-8 text-right">
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="70"
+                                 aria-valuemin="0" aria-valuemax="100" style="width:{{tools.toolsSkill}}%">
+                                <span class="sr-only">70% Complete</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 marginBot">
+                <div class="col-xs-2 paddinZero boxIcon">
+                    <img src="img/icon_award.png" alt="">
+                </div>
+                <div class="col-xs-10">
+                    <h2>{{vm.perfil.award.title}}</h2>
+                </div>
+
+                <div class="col-xs-12 paddinZero marginBot">
+                    <div class="col-xs-2 paddinZero text-center">
+                        <p>{{vm.perfil.award.month}} <br>
+                        <spam>{{vm.perfil.award.year}}</spam></p>
+                    </div>
+                    <div class="col-xs-10">
+                        <p class="title">{{vm.perfil.award.awardName}} <br>
+                            <spam class="subtitle">{{vm.perfil.award.projectName}} - {{vm.perfil.award.city}}</spam>
+                        </p>
+
+                        <spam class="normalText">{{vm.perfil.award.description}}</spam>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </content>
+
+</body>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="all.js"></script>
+</html>
