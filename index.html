@@ -1,0 +1,137 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Teste - B2W</title>
+        <link rel="stylesheet" href="css/all.css" type="text/css" media="screen">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+    </head>
+    <body ng-app="appProfile">    
+        <div class="container" ng-controller="profileCtrl">
+            <div class="row"> 
+                <!-- coluna esquerda -->
+                <div class="col-md-6 col-esquerda">
+                    <header class="text-center">
+                        <img src="{{ jsonApi.thumb }}" alt="foto de {{ jsonApi.name }}" class="photo" />
+                        <h1>{{ jsonApi.name }}</h1>
+                        <p>{{ jsonApi.profession }}</p>
+                    </header>
+                    <section>
+                        <img src="img/ic-profile.png" alt="icone profile" class="ico-title" />
+                        <h2>{{ jsonApi.profile.title }}</h2>
+                        <p class="clearfix">{{ jsonApi.profile.description }}</p>
+                    </section>
+                    <section>
+                        <img src="img/ic-objective.png" alt="icone profile" class="ico-title" />
+                        <h2>{{ jsonApi.objective.title }}</h2>
+                        <p class="clearfix">{{ jsonApi.objective.description }}</p>
+                    </section>
+                    <section>
+                        <img src="img/ic-personal.png" alt="icone profile" class="ico-title" />
+                        <h2>{{ jsonApi.personalSkill.title }}</h2>
+                        <p class="clearfix">MANAGEMENT 
+                            <span class="bar-progress" style="background-position:-{{ jsonApi.personalSkill.management }}%"></span>
+                        </p>
+                        <p class="clearfix">TEAMWORK 
+                            <span class="bar-progress" style="background-position:-{{ jsonApi.personalSkill.teamWork }}%"></span>
+                        </p>
+                        <p class="clearfix">CREATIVE 
+                            <span class="bar-progress" style="background-position:-{{ jsonApi.personalSkill.creative }}%"></span>
+                        </p>
+                        <p class="clearfix">COMMUNICATION 
+                            <span class="bar-progress" style="background-position:-{{ jsonApi.personalSkill.communication }}%"></span>
+                        </p>
+                    </section>
+                    <!-- contact me -->
+                    <section class="contact-me">
+                        <img src="img/ic-contact.png" alt="icone profile" class="ico-title" />
+                        <h2 id="triggerContactMobile">{{ jsonApi.contactMe.title }}</h2>
+                        <p class="clearfix">
+                            <img src="img/ic-map.png" alt="icone map" />
+                            {{ jsonApi.contactMe.address }}
+                        </p>
+                        <p class="clearfix">
+                            <img src="img/ic-tel.png" alt="icone tel" />
+                            {{ jsonApi.contactMe.tel }}
+                        </p>
+                        <p class="clearfix">
+                            <img src="img/ic-mail.png" alt="icone mail" />
+                            {{ jsonApi.contactMe.email }}
+                        </p>
+                        <p class="clearfix">
+                            <img src="img/ic-web.png" alt="icone web" />
+                            {{ jsonApi.contactMe.webSite }}
+                        </p>
+                    </section>
+                </div>
+                <!-- coluna direita -->
+                <div class="col-md-6 col-direita">
+                    <section>
+                        <img src="img/ic-education.png" alt="icone education" class="ico-title" />
+                        <h2>{{ jsonApi.education.title }}</h2>
+                        <div class="row" ng-repeat="item in jsonApi.education.university">
+                            <div class="col-md-3 data">
+                                <p>{{ item.month +' '+ item.year }} </p>
+                            </div>
+                            <div class="col-md-9">
+                                <h3>{{ item.courseName }}</h3>
+                                <p class="destaque">{{ item.universityName +', '+ item.universityCity }}</p>
+                                <p>{{ item.description }}</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <img src="img/ic-experience.png" alt="icone experience" class="ico-title" />
+                        <h2>{{ jsonApi.experience.title }}</h2>
+                        <div class="row" ng-repeat="item in jsonApi.experience.company">
+                            <div class="col-md-3 data">
+                                <p>{{ item.month +' '+ item.year }} </p>
+                            </div>
+                            <div class="col-md-9">
+                                <h3>{{ item.roleName }}</h3>
+                                <p class="destaque">{{ item.companyName +', '+ item.companyCity }}</p>
+                                <p>{{ item.description }}</p>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="skill">
+                        <img src="img/ic-professional.png" alt="icone professional" class="ico-title" />
+                        <h2>{{ jsonApi.professionalSkill.title }}</h2>
+                        <p class="clearfix" ng-repeat="item in jsonApi.professionalSkill.tools">
+                            {{ item.toolName }}
+                            <span class="bar-progress" style="background-position:-{{ item.toolsSkill }}%"></span>
+                        </p>
+                    </section>
+                    <section>
+                        <img src="img/ic-award.png" alt="icone award" class="ico-title" />
+                        <h2>{{ jsonApi.award.title }}</h2>
+                        <div class="row">
+                            <div class="col-md-3 data">
+                                <p>{{ jsonApi.award.month +' '+ jsonApi.award.year }} </p>
+                            </div>
+                            <div class="col-md-9">
+                                <h3>{{ jsonApi.award.awardName }}</h3>
+                                <p class="destaque">{{ jsonApi.award.projectName +', '+ jsonApi.award.city }}</p>
+                                <p>{{ jsonApi.award.description }}</p>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        
+        <!-- footer >
+        <footer>
+            <div class="container"> 
+                <div class="row">
+                    &nbsp;
+                </div>
+            </div>
+        </footer-->
+        
+		<!-- js -->
+        <!--script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script-->
+        <script src="js/all.js"></script>
+    </body>
+</html>
