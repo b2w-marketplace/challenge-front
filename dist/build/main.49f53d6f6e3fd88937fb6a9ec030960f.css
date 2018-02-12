@@ -19,11 +19,17 @@
       @media (max-width: 768px) {
         .portfolio .container-portfolio .row .grid-left {
           padding-right: 0; } }
+      @media (min-width: 769px) and (max-width: 1279px) {
+        .portfolio .container-portfolio .row .grid-left {
+          padding-right: 0; } }
       .portfolio .container-portfolio .row .grid-left .header-about {
         padding: 85px 50px 50px; }
         @media (max-width: 768px) {
           .portfolio .container-portfolio .row .grid-left .header-about {
             padding: 85px 15px 50px; } }
+        @media (min-width: 769px) and (max-width: 1279px) {
+          .portfolio .container-portfolio .row .grid-left .header-about {
+            padding: 85px 20px 50px; } }
         .portfolio .container-portfolio .row .grid-left .header-about .avatar {
           border: 5px solid #ffffff;
           display: block;
@@ -41,6 +47,10 @@
             .portfolio .container-portfolio .row .grid-left .header-about .avatar {
               width: 100px;
               height: 100px; } }
+          @media (min-width: 769px) and (max-width: 1279px) {
+            .portfolio .container-portfolio .row .grid-left .header-about .avatar {
+              width: 150px;
+              height: 150px; } }
           .portfolio .container-portfolio .row .grid-left .header-about .avatar img {
             transform: rotate(-45deg);
             -ms-transform: rotate(-45deg);
@@ -67,6 +77,9 @@
           @media (max-width: 768px) {
             .portfolio .container-portfolio .row .grid-left .header-about .title {
               font-size: 30px; } }
+          @media (min-width: 769px) and (max-width: 1279px) {
+            .portfolio .container-portfolio .row .grid-left .header-about .title {
+              font-size: 35px; } }
         .portfolio .container-portfolio .row .grid-left .header-about .profession {
           text-transform: uppercase; }
       .portfolio .container-portfolio .row .grid-left .separator {
@@ -77,8 +90,14 @@
           .portfolio .container-portfolio .row .grid-left .separator {
             margin-left: -15px;
             margin-right: 0; } }
+        @media (min-width: 769px) and (max-width: 1279px) {
+          .portfolio .container-portfolio .row .grid-left .separator {
+            margin-right: 0; } }
       .portfolio .container-portfolio .row .grid-left .content-about {
         padding: 70px 30px; }
+        @media (min-width: 769px) and (max-width: 1279px) {
+          .portfolio .container-portfolio .row .grid-left .content-about {
+            padding: 70px 0px 70px 5px; } }
         .portfolio .container-portfolio .row .grid-left .content-about .description {
           margin: 0 0 40px; }
           @media (max-width: 768px) {
@@ -125,6 +144,9 @@
           .portfolio .container-portfolio .row .grid-left .content-about .contact .mail p {
             word-break: normal; }
             @media (max-width: 768px) {
+              .portfolio .container-portfolio .row .grid-left .content-about .contact .mail p:last-child {
+                word-break: break-word; } }
+            @media (max-width: 769px) and (max-width: 1279px) {
               .portfolio .container-portfolio .row .grid-left .content-about .contact .mail p:last-child {
                 word-break: break-word; } }
         .portfolio .container-portfolio .row .grid-left .content-about .skills {
@@ -188,4 +210,4 @@
     color: #312e2d;
     background-color: #ffffff; }
 
-/*# sourceMappingURL=main.8938968f75589b33a37e3dab17bb3310.css.map*/
+/*# sourceMappingURL=main.49f53d6f6e3fd88937fb6a9ec030960f.css.map*/

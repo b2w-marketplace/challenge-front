@@ -14,11 +14,18 @@
         @media (max-width: 768px) {
           padding-right: 0;
         }
+
+        @media (min-width: 769px) and (max-width: 1279px) {
+          padding-right: 0;
+        }
         .header-about {
           padding: 85px 50px 50px;
 
           @media (max-width: 768px) {
             padding: 85px 15px 50px;
+          }
+          @media (min-width: 769px) and (max-width: 1279px) {
+            padding: 85px 20px 50px;
           }
           .avatar {
             border: 5px solid $secondary-color;
@@ -35,6 +42,10 @@
             @media (max-width: 768px) {
               width: 100px;
               height: 100px;
+            }
+            @media (min-width: 769px) and (max-width: 1279px) {
+              width: 150px;
+              height: 150px;
             }
             img {
               transform: rotate(-45deg);
@@ -63,6 +74,9 @@
             @media (max-width: 768px) {
               font-size: 30px;
             }
+            @media (min-width: 769px) and (max-width: 1279px) {
+              font-size: 35px;
+            }
           }
           .profession {
             text-transform: uppercase;
@@ -76,9 +90,15 @@
             margin-left: -15px;
             margin-right: 0;
           }
+          @media (min-width: 769px) and (max-width: 1279px) {
+            margin-right: 0;
+          }
         }
         .content-about {
           padding: 70px 30px;
+          @media (min-width: 769px) and (max-width: 1279px) {
+            padding: 70px 0px 70px 5px;
+          }
           .description {
             margin: 0 0 40px;
             @media (max-width: 768px) {
@@ -133,6 +153,9 @@
                 word-break: normal;
                 &:last-child {
                   @media (max-width: 768px) {
+                    word-break: break-word;
+                  }
+                  @media (max-width: 769px) and (max-width: 1279px){
                     word-break: break-word;
                   }
                 }
