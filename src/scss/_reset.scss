@@ -1,0 +1,47 @@
+p,
+a,
+a:focus,
+em,
+i,
+strong,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+figure,
+video,
+img,
+caption,
+audio,
+ul,
+li,
+ol,
+article,
+table,
+thead,
+tbody,
+th,
+tr,
+td,
+input {
+  font-weight: normal;
+  font-size: inherit;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  outline: none;
+}
+
+ul,
+li,
+ol,
+dt,
+dl {
+	list-style: none;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}

@@ -1,0 +1,157 @@
+
+@import "variables";
+@import "reset";
+@import "mixins";
+@import "global";
+
+#layout{
+    font-family: $open-sans;
+    text-align: center;
+    #menu{
+        width: 30%;
+        background-color: $preto;
+        display: inline-block;
+        color: #fff;
+        max-width: 378px;
+        min-width: 378px;
+        @media only screen and (max-width: 860px){
+            width: 100%;
+            min-width: auto;
+            max-width: auto;
+        }
+        .header{
+            padding: 0 65px;
+            line-height: 40px;
+            border-bottom: 2px solid #fff;
+            padding-top: 50px;
+            .image-header{
+                position: relative;
+                width: 249px;
+                height: 230px;
+                .moldura-image{
+                    width: 140px;
+                    height: 140px;
+                    margin-top: 50px;
+                    margin-left: 50px;
+                    -webkit-transform: rotate(-45deg);
+                    -ms-transform: rotate(-45deg);
+                    transform: rotate(-45deg);
+                    border: solid 2px #fff;
+                    position: absolute;
+                }
+                figure{
+                    top: 55px;
+                    position: relative;
+                    left: 55px;
+                    right: 0;
+                    bottom: 0;
+                    transform: rotate(-45deg);
+                    border: solid 2px #fff;
+                    width: 130px;
+                    height: 130px;
+                    overflow: hidden;
+                    img{
+                        transform: rotate(45deg);
+                        width: 240px;
+                        left: -88px;
+                        top: -45px;
+                        position: absolute;
+                    }
+                }
+            }
+            .sidebar-header{
+                padding: 30px;
+                text-transform: uppercase;
+                letter-spacing: 2px; 
+            }
+            .nome{
+                font-size: 37px;
+                font-weight: bold;
+                line-height: 1.3;
+            }
+        }
+        .title-sidebar{
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: solid 2px #fff;
+            width: 45%;
+            padding: 25px 10px;
+            margin: 0 auto;
+            letter-spacing: 2px;
+        }
+        .sidebar{
+            padding: 20px 60px;
+            line-height: 1.8;
+            letter-spacing: 1px;
+            .contatos-final{
+                padding-bottom: 20px; 
+            }
+        }
+        .sidebar-habilidades{
+            padding: 15px 70px;
+            line-height: 1.8;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            @for $i from 0 through 100{
+                li.habilidade-#{$i}{
+                    .barra{
+                        span{
+                            width: 1% * $i;
+                        }
+                    } 
+                }
+            }
+            .barra{
+                background-color: $preto;
+                border: solid 1px #fff;
+                display: block;
+                width: 100%;
+                height: 17px;
+                margin: 10px 0;
+                span{
+                    display: block;
+                    height: 100%;
+                    background-color: #fff;
+                }
+            }
+        }
+    }
+    #main{
+        width: 60%;
+        background-color: #fff;
+        display: inline-block;
+        margin: 0 5%;
+        text-align: left;
+        max-width: 600px;
+        min-width: 600px;
+        @media only screen and (max-width: 860px){
+            width: 100%;
+            min-width: auto;
+            max-width: auto;
+            margin: 0 auto;
+        }
+
+        .main-title{
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            border-bottom: 2px solid $preto;
+            margin-bottom: 35px;
+            line-height: 3.5;
+        }
+        .main-atividades{
+            line-height: 1.8;
+            .title-atividade{
+                font-size: 13px;
+                font-weight: bold;
+                text-transform: uppercase;
+            }
+            .texto-atividade{
+                padding-bottom: 50px;
+                text-align: justify;
+                padding-top: 5px;
+            }
+        }
+    }
+}
