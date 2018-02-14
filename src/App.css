@@ -1,0 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+@media screen and (max-width: 992px) {
+  .isVisible {
+    display: block; }
+  .isInvisible {
+    display: none; } }

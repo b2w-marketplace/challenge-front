@@ -1,0 +1,30 @@
+.content {
+  padding: 60px 50px 0 50px; }
+  @media screen and (max-width: 992px) {
+    .content {
+      display: none;
+      position: relative; } }
+  .content h1, .content h2, .content span, .content p {
+    color: #231f20; }
+  .content i {
+    display: none;
+    color: #231f20;
+    font-size: 1.875rem;
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    left: 0; }
+    @media screen and (max-width: 992px) {
+      .content i {
+        display: block; } }
+  .content .section {
+    margin-bottom: 70px; }
+    @media screen and (max-width: 992px) {
+      .content .section {
+        margin-top: 30px; } }
+    .content .section h1 {
+      padding-bottom: 15px;
+      margin-bottom: 40px;
+      border-bottom: 3px solid #231f20;
+      text-transform: uppercase;
+      font-size: 1.375rem; }

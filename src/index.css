@@ -1,0 +1,15 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif; }
+
+.app_container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+	.app_container {
+		display: flex;
+	}
+}
