@@ -14,17 +14,21 @@
 
 ### Como rodar o projeto
 
-- Dentro do prjeto há umas pasta 'dist' com o build do projeto
+- Dentro do projeto há uma pasta 'dist' com o build do projeto
 
 #### Passos:
 1º) Instalar um servidor local (caso ainda não tenha algum instalado) rodando no terminal o comando: *npm install -g serve*
+
 2°) Acessar a pasta do projeto
+
 3º) Levantar o servidor rodando no terminal o comando: *serve -s dist*
 
 Para rodar o projeto como desenvolvedor:
 
 1º) Acessar a pasta do projeto
+
 2º) Rodar no terminal o comando *npm install*
+
 3º) Rodar no terminal o comando *npm start*
 
 Qualquer dúvida, fico a disposição! 
