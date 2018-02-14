@@ -1,27 +1,25 @@
-# <> Desafio Frontend BIT - SP </>
+# code-challenge
 
-## Sobre
+> A Vue.js project
 
-Nosso teste consiste em implementar uma aplicação client-side, que consulte uma [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5) e mostre os dados do perfil de um usuário. Esta aplicação deve funcionar nos navegadores mais recentes do mercado.
+## Demo
+https://emunhoz.github.io/#/
 
-Nesse link você encontra o [layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg) do desafio:
+## Build Setup
 
-![Layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg)
+``` bash
+# install dependencies
+npm install
 
+# serve with hot reload at localhost:8080
+npm run dev
 
-Aqui temos o arquivo .psd para [download](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.psd).
+# build for production with minification
+npm run build
 
-Esse é o link da [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5).
+# build for production and view the bundle analyzer report
+npm run build --report
 
-## Desafio:
+```
 
-Desenvolva a página seguindo os seguintes critérios:
-
-- Utilize algum pré-processador pro seu css, de preferência sass. (Se quiser, fique a vontade para usar alguma lib/framework css)
-- Faça que sua página tenha uma ótima experiência para o usuário, independente do dispositivo que ele esteja usando.
-- Você pode usar Angular ou React para o desenvolvimento.
-- Crie um build do seu projeto em uma pasta chamada 'dist'
-
-Crie um Fork desse repositório e nos envie um **pull request**
-
-Não esqueça de nos ensinar como rodar seu projeto :sunglasses:
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).

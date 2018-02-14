@@ -1,0 +1,12 @@
+.division {
+  float: right;
+  width: 110%;
+  right: -30px;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+.diamond-mask {
+  -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
