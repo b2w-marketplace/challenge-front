@@ -15,6 +15,7 @@
 ### Como rodar o projeto
 
 - Dentro do projeto há uma pasta 'dist' com o build do projeto
+- Ou é possível acessar o projeto funcionando pelo link: http://julianopadilha.com/b2w/?
 
 #### Passos:
 1º) Instalar um servidor local (caso ainda não tenha algum instalado) rodando no terminal o comando: *npm install -g serve*
