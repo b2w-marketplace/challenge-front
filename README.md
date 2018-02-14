@@ -2,7 +2,7 @@
 
 > A Vue.js project
 
-##Demo
+## Demo
 https://emunhoz.github.io/#/
 
 ## Build Setup
