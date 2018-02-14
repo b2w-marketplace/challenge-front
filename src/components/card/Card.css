@@ -1,0 +1,8 @@
+.card {
+  margin-bottom: 40px; }
+  .card .card_title {
+    text-transform: uppercase;
+    font-size: 1.25rem;
+    padding-bottom: 8px; }
+  .card .card_description {
+    padding-top: 8px; }

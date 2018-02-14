@@ -1,0 +1,141 @@
+.profile {
+	padding: 70px 0;
+	text-align: center;
+	@media screen and(max-width: 992px) {
+		padding: 50px 0;
+	}
+	> * {
+		color: #fff;
+	}
+
+	.profile_avatar {
+		border: 3px solid #fff;
+		display: inline-block;
+		transform: rotate(45deg);
+		width: 100px;
+		overflow: hidden;
+		height: 100px;
+		background-color: #DADADA;
+		position: relative;
+		margin-bottom: 30px;
+
+		img {
+			transform: rotate(-45deg);
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+	}
+
+	.profile_avatar,
+	.profile_details {
+		text-align: center;
+	}
+
+	.profile_details {
+		margin: 0 auto 50px 0;
+		position: relative;
+		padding-bottom: 50px;
+
+		&:after {
+			content: "";
+			position: absolute;
+			max-width: 95%;
+			width: 100%;
+			height: 2px;
+			background-color: #ccc;
+			right: 0;
+			bottom: 0;
+			@media screen and(max-width: 992px) {
+				max-width: 100%;
+			}
+		}
+
+		h1, h4 {
+			text-transform: uppercase;
+		}
+
+		h1 {
+			font-size: 3.125rem;
+			margin: 0 auto;
+			text-align: center;
+		}
+
+		h4 {
+			font-size: 0.875rem;
+			font-weight: normal;
+		}
+	}
+
+	.profile_section {
+		margin-bottom: 20px;
+		h2 {
+			position: relative;
+			margin-bottom: 15px;
+			padding-bottom: 15px;
+			font-size: 1.25rem;
+			text-transform: uppercase;
+		}
+
+		> p {
+			padding: 0 60px 10px 60px;
+		}
+
+		h2:after {
+			content: "";
+			position: absolute;
+			width: 140px;
+			height: 2px;
+			background-color: #ccc;
+			right: 0;
+			left: 0;
+			margin-left: auto;
+			margin-right: auto;
+			bottom: 0;
+		}
+
+		.profile_phone,
+		.profile_address,
+		.profile_contact {
+			margin-bottom: 20px;
+			p {
+				padding: 0 60px;
+			}
+		}
+
+		.profile_phone,
+		.profile_contact {
+			p {
+				line-height: 24px;
+			}
+		}
+
+		.profile_contact {
+			margin-bottom: 50px;
+		}
+	}
+
+	.skill {
+		max-width: 250px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+
+		.skill_name {
+			padding-bottom: 10px;
+		}
+
+		.skill_bar {
+			border: 1px solid #fff;
+		}
+
+		.skill_value {
+			background-color: #fff;
+			height: 12px;
+			display: block;
+		}
+	}
+
+}

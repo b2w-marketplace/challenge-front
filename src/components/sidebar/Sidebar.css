@@ -1,0 +1,14 @@
+.sidebar {
+  background-color: #333; }
+  @media screen and (min-width: 992px) {
+    .sidebar {
+      max-width: 30%; } }
+  .sidebar i {
+    display: none;
+    color: #fff;
+    font-size: 1.875rem;
+    text-align: right;
+    padding: 20px; }
+    @media screen and (max-width: 992px) {
+      .sidebar i {
+        display: block; } }

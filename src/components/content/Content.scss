@@ -1,0 +1,38 @@
+.content {
+	padding: 60px 50px 0 50px;
+	@media screen and(max-width: 992px) {
+		display: none;
+		position: relative;
+	}
+
+	h1, h2, span, p {
+		color: #231f20;
+	}
+
+	i {
+		display: none;
+		color: #231f20;
+		font-size: 1.875rem;
+		padding: 20px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		@media screen and(max-width: 992px) {
+			display: block;
+		}
+	}
+
+	.section {
+		margin-bottom: 70px;
+		@media screen and(max-width: 992px) {
+			margin-top: 30px;
+		}
+		h1 {
+			padding-bottom: 15px;
+			margin-bottom: 40px;
+			border-bottom: 3px solid #231f20;
+			text-transform: uppercase;
+			font-size: 1.375rem;
+		}
+	}
+}

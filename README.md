@@ -1,27 +1,35 @@
 # <> Desafio Frontend BIT - SP </>
 
-## Sobre
+## Juliano Padilha Marques da Silva
 
-Nosso teste consiste em implementar uma aplicação client-side, que consulte uma [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5) e mostre os dados do perfil de um usuário. Esta aplicação deve funcionar nos navegadores mais recentes do mercado.
+### Detalhes do projeto:
 
-Nesse link você encontra o [layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg) do desafio:
+- Pré-processador CSS: SASS
+- Biblioteca JavaScript: React
 
-![Layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg)
+### Observações
 
+- Utilização do create-react-app
+- Apesar do projeto ser pequeno, busquei fazer a separação de alguns elementos em componentes
 
-Aqui temos o arquivo .psd para [download](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.psd).
+### Como rodar o projeto
 
-Esse é o link da [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5).
+- Dentro do projeto há uma pasta 'dist' com o build do projeto
+- Ou é possível acessar o projeto funcionando pelo link: http://julianopadilha.com/b2w/?
 
-## Desafio:
+#### Passos:
+1º) Instalar um servidor local (caso ainda não tenha algum instalado) rodando no terminal o comando: *npm install -g serve*
 
-Desenvolva a página seguindo os seguintes critérios:
+2°) Acessar a pasta do projeto
 
-- Utilize algum pré-processador pro seu css, de preferência sass. (Se quiser, fique a vontade para usar alguma lib/framework css)
-- Faça que sua página tenha uma ótima experiência para o usuário, independente do dispositivo que ele esteja usando.
-- Você pode usar Angular ou React para o desenvolvimento.
-- Crie um build do seu projeto em uma pasta chamada 'dist'
+3º) Levantar o servidor rodando no terminal o comando: *serve -s dist*
 
-Crie um Fork desse repositório e nos envie um **pull request**
+Para rodar o projeto como desenvolvedor:
 
-Não esqueça de nos ensinar como rodar seu projeto :sunglasses:
+1º) Acessar a pasta do projeto
+
+2º) Rodar no terminal o comando *npm install*
+
+3º) Rodar no terminal o comando *npm start*
+
+Qualquer dúvida, fico a disposição! 
