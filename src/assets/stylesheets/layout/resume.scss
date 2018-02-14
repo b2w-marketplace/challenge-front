@@ -1,0 +1,64 @@
+.user-info {
+  margin-bottom: 50px;
+  img {
+    margin-bottom: 40px;
+    width: 154px;
+    height: 154px;
+  }
+}
+
+.name {
+  font-size: 40px;
+  letter-spacing: 1.5px;
+  line-height: 48px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.profession {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+}
+
+.profile-info {
+  display: inline-block;
+  font-size: 12px;
+  line-height: 26px;
+  .subtitle {
+    border-bottom: 1px solid #fff;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 1.5px;
+    min-width: 140px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+  }
+  .profile,
+  .contact,
+  .skills {
+    max-width: 240px;
+    margin-bottom: 20px;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .skill {
+    text-transform: uppercase;
+    progress {
+      width: 200px;
+      border: 1px solid #fff;
+      background-color: #333;
+    }
+    progress::-webkit-progress-bar {
+      background: #333;
+    }
+    progress::-webkit-progress-value {
+      background: #fff;
+    } 
+    progress::-moz-progress-bar {
+      background: #333;
+    }
+  }
+}
