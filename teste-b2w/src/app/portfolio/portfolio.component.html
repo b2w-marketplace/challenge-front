@@ -1,0 +1,54 @@
+<main>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-5 aside" >
+        <aside class="aside-content">
+          <div class="box01-aside col-12">
+            <figure class="avatar">
+              <!-- {{ _item?.image }} -->
+              <img src="https://raw.githubusercontent.com/b2w-marketplace/code-challenge/master/files/avatar-dev.png" >
+            </figure>
+            <h1 class="name">{{ _item?.name }}</h1>
+            <p class="profession">{{ _item?.profession }}</p>
+          </div>
+          <h2 class="title-aside"> Profile</h2>
+          <p class="aside-info">{{ _item?.description }}</p>
+          <h2 class="title-aside title-aside-contact">Contact</h2>
+          <address class="aside-info">
+            <p>{{ _item?.contact.tel }} <br /> {{ _item?.contact.cel }}</p>
+            <p class="address">{{ _item?.contact.address }}</p>
+          </address>    
+          <p class="address-digital">
+            <a class="aside-info" [href]="'http://'+item?.contact.website">{{ _item?.contact.website }}</a> <br />
+            <a class="aside-info" [href]="'mailto:'+item?.contact.mail"> {{ _item?.contact.mail }}</a>
+          </p>                
+          <h2 class="title-aside title-aside-skill">Skills</h2>
+          <div *ngFor="let sk of _skills" class="skills">
+            <span class="skill-name">{{ sk.name }}</span>
+            <span class="skill-box">
+              <span class="skill-value" [ngStyle]="{'width': sk.value}"></span>
+            </span>
+          </div>
+        </aside>
+      </div>
+      <div class="col-12 col-lg-7 content-profile">
+        <section>
+          <h2> Work experience </h2>
+          <div *ngFor="let exp of _experience"> 
+            <h3>{{ exp.name }} </h3>
+            <time>{{ exp.date }}</time>
+            <p>{{ exp.description }}</p>
+          </div>
+        </section>
+        <section>
+          <h2> education </h2>
+          <div *ngFor="let educ of _education"> 
+            <h3>{{ educ.name }} </h3>
+            <time>{{ educ.date }}</time>
+            <p>{{ educ.description }}</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+ </main>
