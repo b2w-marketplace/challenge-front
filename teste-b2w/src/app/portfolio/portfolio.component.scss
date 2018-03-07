@@ -1,0 +1,213 @@
+  $color-aside-details: #FFF;
+  $bg-aside: #333;
+  $color-content-profile: #010101;
+  $bg-content-profile: #FFF;
+  $mq-lg: "(min-width: 992px)";
+
+main {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+.container {
+  padding: 0;
+}
+.row {
+  margin: 0
+}
+.aside {
+  color: $color-aside-details;
+  text-align: center;
+  padding: 0;
+  background-color:  $bg-aside;
+  @media #{$mq-lg} {
+    max-width: 408px;
+    padding: 16px 0 60px 5px;
+  }
+}
+.box01-aside {
+  border-bottom: 2px $color-aside-details solid;
+  padding-bottom: 47px;
+  padding-right: 0;
+  padding-left: 0;
+}
+.avatar {
+  background-image: url('img/bg-avatar.png');
+  width: 238px;
+  height: 238px;
+  margin: 30px auto 49px;
+  position: relative;
+  @media #{$mq-lg} {
+    margin-top: 54px
+  }
+  img {
+    position: absolute;
+    left: 50%;
+    margin-top: -59px;
+    top: 50%;
+    margin-left: -51px;
+  }
+}
+h1.name {
+  font-weight: bold;
+  padding: 0px 0px 0 13px;
+  font-size: 3em;
+  letter-spacing: 7px;
+  line-height: 62px;
+  text-transform: uppercase;
+}
+.profession {
+  margin-top: 19px;
+  font-size: .8em;
+  letter-spacing: 5px;
+  padding-left: 6px;
+  text-transform: uppercase;
+}
+h2.title-aside {
+  margin-top: 76px;
+  font-size: 1.3em;
+  letter-spacing: 2.7px;
+  margin-left: 4px;
+  text-transform: uppercase;
+  padding-bottom: 22px;
+  position: relative;
+  font-weight: 550;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 170px;
+    height: 2px;
+    background-color: $color-aside-details;
+    bottom: 2px;
+    left: 50%;
+    margin-left: -85px;
+  }
+}
+h2.title-aside-contact {
+  margin-top: 33px;
+}
+h2.title-aside-skill {
+  margin-bottom: 25px;
+}
+.aside-info {
+  font-size: .9em;
+  margin-top: 17px;
+  display: block;
+  padding: 0;
+  letter-spacing: 1.3px;
+  line-height: 27px;
+}
+address {
+  margin-top: 21px;
+  display: block;
+  letter-spacing: 5px;
+  font-size: .9em;
+  margin-left: 7px;
+  line-height: 26px;
+  p.address {
+    margin-top: 32px;
+    letter-spacing: 4.1px;
+  }
+}
+.address-digital {
+  margin-top: 45px;
+  line-height: 10px;
+  a {
+    line-height: 0;
+    letter-spacing: 5px;
+    margin-left: 15px;
+  }
+}
+.aside-info {
+  color: $color-aside-details;
+  @media #{$mq-lg} {
+    padding: 0px 67px 0px 66px;
+  }
+}
+.skill-box {
+  display: block;
+  max-width: 255px;
+  border: 2px $color-aside-details solid;
+  height: 19px;
+  margin: 0 auto;
+}
+.skill-value {
+  display: block;
+  background: $color-aside-details;
+  height: 15px
+}
+.skills {
+  margin-bottom: 28px;
+  .skill-box {
+    margin-top: 13px
+}
+.skill-name {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  }
+}
+.content-profile{
+  background:   $bg-content-profile;
+  color: $color-content-profile;
+  padding: 20px;
+  @media #{$mq-lg} {
+    padding-top: 85px;
+    padding-left: 53px;
+  }
+  h2 {
+    font-size: 1.4em;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1.4px;
+    border-bottom: 2px $color-content-profile solid;
+    padding-bottom: 10px;
+    text-indent: 0;
+    margin-bottom: 35px;
+    @media #{$mq-lg} {
+      max-width: 606px;
+      text-indent: 0;
+      padding-bottom: 19px; 
+    }
+  }
+  h3 {
+    font-weight: 600;
+    font-size: 1.2em;
+    text-indent: 0;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    @media #{$mq-lg} {
+      text-indent: 6px;
+    }
+  }
+  time{
+    text-indent: 0;
+    display: inherit;
+    font-size: .9em;
+    letter-spacing: 3.3px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    @media #{$mq-lg} {
+      text-indent: 7px;
+    }
+  }
+  p {
+    padding: 0 4px;
+    line-height: 27px;
+    letter-spacing: 1.4px;
+    font-size: .9em;
+    font-weight: 500;
+    margin-bottom: 60px;
+  }
+}   
+.row {
+  @media #{$mq-lg} {
+    margin-right: -15px;
+    margin-left: -15px;
+  }
+}
+.container {
+  @media #{$mq-lg} {
+    padding-left: 15px;  
+    padding-right: 15px;  
+  }
+}
