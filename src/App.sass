@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700,800')
+
+$left-column-bg: #353535
+$left-column-color: #fff
+$right-column-bg: #fff
+$right-column-color: #242424
+
+html
+	box-sizing: border-box
+	font-family: Montserrat, sans-serif
+	text-rendering: optimizeLegibility !important
+	-webkit-font-smoothing: antialiased !important
+	*
+		box-sizing: inherit
+
+body
+	margin: 0
+
+#root
+	width: 100%
+
+.app
+	display: flex
+
+a
+	text-decoration: none
+	color: inherit
+
+section
+
+	article
+		margin-bottom: 48px
+
+	.title
+		margin-top: 0
+		letter-spacing: 2px
+		text-transform: uppercase
+		font-weight: 700
+		font-size: 18px
+		span
+			display: inline-block
+			width: 135px
+			padding-bottom: 12px
+			border-bottom-width: 2px
+			border-bottom-style: solid
+	
+	p
+		margin: 0 0 1.6em
+		line-height: 1.8
+		letter-spacing: 1px
+		font-weight: 700
+		font-size: 11px
+		&:last-of-type
+			margin-bottom: 0
+
+.left-column
+	display: flex
+	flex-flow: column
+	align-items: flex-end
+	width: 35%
+	min-height: 100vh
+	padding-top: 48px
+	background-color: $left-column-bg
+	text-align: center
+	color: $left-column-color
+	
+	header,
+	section
+		max-width: 320px
+		padding: 48px 64px
+	
+	.title
+		span
+			border-bottom-color: #fff
+	
+	header
+		padding-top: 0
+		border-bottom: 2px solid #fff
+		text-transform: uppercase
+		h1
+			margin-bottom: 10px
+			letter-spacing: 4px
+			font-size: 36px
+		span
+			font-size: 12px
+			letter-spacing: 1px
+		.user-pic
+			position: relative
+			display: inline-block
+			width: 160px
+			height: 160px
+			&:after
+				content: ''
+				z-index: 2
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate3D(-50%,-50%,0) rotateZ(-45deg)
+				display: inline-block
+				width: 120px
+				height: 120px
+				border: 2px solid #fff
+			.user-pic-mask
+				z-index: 1
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background: linear-gradient(45deg, $left-column-bg 25%, transparent 25%, transparent 75%, $left-column-bg 75%), linear-gradient(-45deg, $left-column-bg 25%, transparent 25%, transparent 75%, $left-column-bg 75%) transparent
+			.user-pic-img
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				background-position: center
+				background-repeat: no-repeat
+				background-size: auto
+				background-color: #dadada
+		
+
+.right-column
+	width: 65%	
+	display: flex
+	flex-flow: column
+	padding: 48px 48px
+	background-color: $right-column-bg
+	color: $right-column-color
+	
+	section
+		max-width: 490px
+		&:first-of-type
+			padding-top: 0
+	
+	.title
+		span
+			display: block
+			width: 100%
+
+@media screen and (max-width: 930px)
+	
+	.app
+		flex-wrap: wrap
+	
+	.left-column,
+	.right-column
+		width: 100%
+		align-items: center
+		flex-wrap: wrap

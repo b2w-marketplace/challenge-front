@@ -1,0 +1,15 @@
+.detail-container {
+  margin: 32px 0 48px; }
+  .detail-container .detail-role {
+    margin: 0.6em 0;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 16px; }
+  .detail-container .detail-date {
+    font-weight: 700;
+    font-size: 14px; }
+  .detail-container p {
+    text-align: justify; }
+
+/*# sourceMappingURL=Detail.css.map */
