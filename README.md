@@ -1,3 +1,3 @@
-Projeto iniciado com o comando create-react-app, então para testar podemos simplesmente rodar o comando npm start.
+Para fazer o download das dependências utilizados e gravados na package.json, rodar o comando *npm install*
 
-Para fazer a requisição foi utilizado o axios.
+Como o projeto foi realizado com o comando *create-react-app*, para testar podemos simplesmente rodar o comando *npm start* após a instalação da dependências.
