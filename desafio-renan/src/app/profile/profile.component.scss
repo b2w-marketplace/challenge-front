@@ -1,4 +1,5 @@
 @import '/../../assets/sass/colors';
+@import '/../../assets/sass/breakpoint';
 
 .aside{
     display: flex;
@@ -6,6 +7,20 @@
     background-color: $color3;
     color: $color5;
     padding: 100px 0px 0px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $color5;
+    color: $color1;
+    padding: 60px 0px 0px;
+}
+@media (min-width: $sizeMd){
+    .content{
+        align-items: flex-end;
+    }
 }
 
 #intro{
@@ -18,4 +33,14 @@
 }
 #detail{
     padding: 30px 0px;
+}
+
+#profile-content{
+    width: 98%;
+    margin-bottom: 50px;
+}
+@media (min-width: $sizeMd){
+    #profile-content{
+        width: 95%;
+    }
 }

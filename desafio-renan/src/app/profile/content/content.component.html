@@ -1,0 +1,9 @@
+<section class="profile-content">
+  <h2>{{ contentTitle }}</h2>
+  <div class="profile-content-item"
+      *ngFor="let item of contentData">
+      <h3>{{ item.name }}</h3>
+      <h5>{{ item.date }}</h5>
+      <p>{{ item.description }}</p>
+  </div>
+</section>

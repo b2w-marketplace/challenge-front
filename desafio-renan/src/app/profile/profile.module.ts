@@ -8,6 +8,7 @@ import { IntroComponent } from './intro/intro.component';
 import { LineBreakerPipe } from './../pipes/line-breaker.pipe';
 import { DetailComponent } from './detail/detail.component';
 import { BarChartComponent } from '../shared/bar-chart/bar-chart.component';
+import { ContentComponent } from './content/content.component';
 
 @NgModule({
   imports: [
@@ -22,7 +23,8 @@ import { BarChartComponent } from '../shared/bar-chart/bar-chart.component';
     IntroComponent,
     LineBreakerPipe,
     DetailComponent,
-    BarChartComponent
+    BarChartComponent,
+    ContentComponent
   ],
   exports: [
     ProfileComponent

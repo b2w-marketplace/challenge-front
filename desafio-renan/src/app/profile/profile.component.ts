@@ -13,6 +13,8 @@ export class ProfileComponent implements OnInit {
   private profile: any;
   private intro: any = {};
   private detail: any = {};
+  private experience: any = [];
+  private education: any = [];
 
   constructor(private profileService: ProfileService){ }
 
@@ -39,6 +41,8 @@ export class ProfileComponent implements OnInit {
             "contact": profile.contact,
             "skills": profile.skills
           }
+          this.experience = profile.experience;
+          this.education = profile.education;
         },
         error => {
           console.log(error);
