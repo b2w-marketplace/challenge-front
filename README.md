@@ -4,7 +4,7 @@
 
 Renan Maciel de Lima - @thelimarenan
 
-### Estrução para rodar aplicação :computer:
+### Instrução para rodar aplicação :computer:
 - Baixar e Instalar o [NodeJS](https://nodejs.org);
 - Executar o comando ( via terminal ou cmd ): 
 `  npm install http-server -g `;
