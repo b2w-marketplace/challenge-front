@@ -1,26 +1,29 @@
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
-import { Http } from '@angular/http';
+import { Injectable, EventEmitter } from '@angular/core';
+import { Http, Response } from '@angular/http';
+import { Observable } from 'rxjs/Rx';
+import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/catch';
+
 
 @Injectable()
 export class ProfileService {
 
   private readonly endpoint: string = "http://www.mocky.io/v2";
-  private readonly defaultParam: string = "/5a5e38f3330000b0261923a5";
-  private params: string;
-
+  
   constructor(private http: Http) { }
-
-  getProfile(params?: string) {
+  
+  getProfile(params?: string): Observable<any> {
     
-    if(params && params != ""){
-      this.params = "/" + params;
-    }else{
-      this.params = this.defaultParam;
-    }
+    let param: string;
+    const defaultParam: string = "/5a5e38f3330000b0261923a5";
+    
+    params = params && params != "" ? "/" + params : defaultParam;;
 
-    return this.http.get(this.endpoint + this.params)
-      .map((response) => response.json());
+    let url = this.endpoint + params;
+    
+    return this.http.get(url)
+      .map((response: Response) => response.json().profile)
+      .catch((error: any) => Observable.throw(error.json().error || 'Server Error :('))
   }
 
 }

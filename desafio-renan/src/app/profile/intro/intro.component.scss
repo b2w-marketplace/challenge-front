@@ -1,0 +1,46 @@
+@import '/../../../assets/sass/colors';
+#avatar-profile{
+    display: flex;
+    justify-content: center;
+    .avatar-frame{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        width: 150px;
+        height: 150px;
+        overflow: hidden;
+        background-color: $color5;
+        transform: rotate(45deg);
+        &::after{
+            content: '';
+            position: absolute;
+            width: 96%;
+            height: 96%;
+            border: solid $color3 0.3em;
+            align-self: center;
+        }
+        .avatar{
+            width: unset;
+            height: 100%;
+            transform: rotate(-45deg);
+            line-height: 0px;
+            flex-shrink: 2;
+        }
+    }
+}
+#name-profile{
+    margin: 60px auto 20px;
+    text-align: center;
+    h1{
+        font-weight: 700;
+        font-size: 3.5em;
+        text-transform: uppercase;
+    }
+}
+#profession-profile{
+    text-align: center;
+    h5{
+        font-size: 0.9em;
+        text-transform: uppercase;
+    }
+}

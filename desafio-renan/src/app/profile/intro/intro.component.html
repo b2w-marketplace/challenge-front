@@ -1,0 +1,19 @@
+<div id="avatar-profile">
+  <figure class="text-center avatar-frame">
+    <img *ngIf="introData?.image"
+    [src]="introData?.image"
+    onError="this.src='./assets/images/avatar-placeholder.png'"
+    class="rounded avatar" 
+    alt="Avatar">
+  </figure>
+</div>
+
+<div id="name-profile">
+  <h1 [innerHTML]="introData?.name | lineBreaker"></h1>
+</div>
+
+<div id="profession-profile">
+  <h5>
+    {{ introData?.profession }}
+  </h5>
+</div>

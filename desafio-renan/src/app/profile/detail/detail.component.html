@@ -1,0 +1,27 @@
+<div id="description-profile" class="detail-topic">
+  <h2>Profile</h2>
+  <p>
+    {{ detailData?.description }}
+  </p>
+</div>
+<div id="contact-profile" class="detail-topic">
+  <h2>Contact</h2>
+  <p>
+    {{ detailData?.contact?.tel }} <br>
+    {{ detailData?.contact?.cel }} <br>
+  </p>
+  <p>
+    {{ detailData?.contact?.address }}
+  </p>
+  <p>
+    {{ detailData?.contact?.website }} <br>
+    {{ detailData?.contact?.mail }} <br>
+  </p>
+</div>
+<div id="skills-profile" class="detail-topic">
+  <h2>Skills</h2>
+  <div *ngFor="let skill of detailData?.skills">
+    <p>{{ skill.name | uppercase }}</p>
+    <bar-chart [filled]="skill.value"></bar-chart>
+  </div>
+</div>
