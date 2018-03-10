@@ -1,5 +1,18 @@
 # <> Desafio Frontend BIT - SP </>
 
+## Desafiante
+
+Renan Maciel de Lima - @thelimarenan
+
+### Estrução para rodar aplicação :computer:
+- Baixar e Instalar o [NodeJS](https://nodejs.org);
+- Executar o comando ( via terminal ou cmd ): 
+`  npm install http-server -g `;
+- Após a instalação, executar o comando: 
+` http-server dist ` ( na raiz do projeto);
+- Acessar via Browser o link http://localhost:8080;
+
+
 ## Sobre
 
 Nosso teste consiste em implementar uma aplicação client-side, que consulte uma [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5) e mostre os dados do perfil de um usuário. Esta aplicação deve funcionar nos navegadores mais recentes do mercado.
