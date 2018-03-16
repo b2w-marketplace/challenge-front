@@ -1,0 +1,22 @@
+@import './src/assets/css/baseline.scss';
+
+.main-copy__wrapper {
+  width: 100%;
+  margin-bottom: baseline(5);
+}
+
+.main-copy__title {
+  font-weight: bold; // TO-DO: ADD FONT-MIXIN
+  text-transform: uppercase;
+  margin-bottom: baseline(.5);
+}
+
+.main-copy__period {
+  letter-spacing: 2px;
+  font-size: baseline(1);
+  margin-bottom: baseline(.5);
+}
+
+.main-copy__job-description {
+  line-height: 2rem;
+}

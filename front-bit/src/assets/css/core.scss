@@ -1,0 +1,10 @@
+@import './src/assets/css/ress-reset.scss';
+@import './src/assets/css/variables.scss';
+@import './src/assets/css/baseline.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: baseline(1.2);
+}
