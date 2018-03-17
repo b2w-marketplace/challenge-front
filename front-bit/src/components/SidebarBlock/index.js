@@ -5,7 +5,11 @@ class SidebarBlock extends Component {
   render() {
     return (
       <div className="sidebar-block__wrapper">
-        Contact
+        <h3 className="sidebar-block__section-title">
+          {this.props.title}
+        </h3>
+
+        {this.props.children}
       </div>
     );
   }

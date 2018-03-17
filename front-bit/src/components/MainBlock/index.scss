@@ -1,5 +1,9 @@
 @import './src/assets/css/baseline.scss';
 
+.main-block__wrapper {
+  padding: 0 baseline(9);
+}
+
 .main-block__section-title {
   font-size: baseline(2);
   text-transform: uppercase;

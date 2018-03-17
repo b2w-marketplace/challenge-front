@@ -3,15 +3,16 @@ import MainCopy from '../MainCopy';
 import './index.css';
 
 class MainBlock extends Component {
+
   render() {
     return (
-      <div className="main-block__wrapper">
+      <section className="main-block__wrapper">
+        <h1 className="main-block__section-title">
+          {this.props.title}
+        </h1>
         
-        <h1 className="main-block__section-title">Work Experience</h1>
-        <MainCopy />
-        <MainCopy />
-        <MainCopy />
-      </div>
+        {this.props.children}
+      </section>
     );
   }
 }
