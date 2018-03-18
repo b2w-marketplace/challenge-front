@@ -10,9 +10,9 @@ const SkillBar = (props) => {
 
       <div className="skill__bar">
         <div 
-          className="skill__bar-fill" 
-          aria-label={`Skill level: ${ props.value }`} 
+          className="skill__bar-fill"
           style={{width: props.value }}>
+          <span className="visuallyhidden">{`Skill level: ${ props.value }`}</span>
         </div>
       </div>
     </div>

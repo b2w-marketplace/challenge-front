@@ -78,11 +78,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="sidebar">
-          <div className="sidebar__holder">
+          <section className="sidebar__holder">
             <SidebarSummary content={this.state.summary} />
             
             <SidebarBlock title="Profile"> 
-              {this.state.loading ? <Loader /> : this.state.description}
+              {this.state.loading ? <Loader /> : <p>{ this.state.description }</p>}
             </SidebarBlock>
 
             <SidebarBlock title="Contact"> 
@@ -92,7 +92,7 @@ class App extends Component {
             <SidebarBlock title="Skills"> 
               {this.state.loading ? <Loader /> : this.renderSkills(this.state.skills)}
             </SidebarBlock>
-          </div>
+          </section>
         </div>
 
         <main className="main">

@@ -7,11 +7,29 @@ const Contact = (props) => {
       <div className="contact__block">
         <p 
         className="contact__phone-number"
-        aria-label="Phone number">{ props.content.tel }</p>
-
+        aria-label="Phone number">
+          <a 
+          href={`tel:${ props.content.tel }`}
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="contact__link"
+          title="Phone number">
+            { props.content.tel }
+          </a>
+        </p>
+        
         <p 
         className="contact__phone-number"
-        aria-label="Mobile number">{ props.content.tel }</p>
+        aria-label="Mobile number">
+           <a 
+          href={`tel:${ props.content.cel }`}
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="contact__link"
+          title="Mobile number">
+            { props.content.cel }
+          </a>
+        </p>
       </div>
 
       <div className="contact__block">

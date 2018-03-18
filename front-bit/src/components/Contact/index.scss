@@ -10,10 +10,6 @@
   margin-bottom: baseline(2);
 }
 
-.contact__phone-number {
-  margin-bottom: baseline(.5);
-}
-
 .contact__link {
   color: var(--base-1);
   text-decoration: none;
@@ -36,7 +32,9 @@
 
   &:hover {
     background-image: gradient( linear, left top, right top, color-stop(0, #f2f), color-stop(1, #2ff) );
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f2f), color-stop(1, #2ff) );
     color: transparent;
+    -webkit-background-clip: text;
     background-clip: text;
     transition: all 0.3s ease-in-out;
 

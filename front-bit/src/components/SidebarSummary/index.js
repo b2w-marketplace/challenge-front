@@ -14,12 +14,12 @@ const SidebarSummary = (props) => {
         </div>
       </div>
       <div className="summary__user-info">
-        <div className="summary__user-name">
+        <h1 className="summary__user-name">
           { props.content.name }
-        </div>
-        <div className="summary__user-profession">
+        </h1>
+        <p className="summary__user-profession">
           { props.content.profession }
-        </div>
+        </p>
       </div>
     </div>
   );

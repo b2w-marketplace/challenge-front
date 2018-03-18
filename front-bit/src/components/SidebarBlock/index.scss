@@ -10,6 +10,10 @@
   @media (min-width: 1024px) {
     padding: 0 baseline(6);
     margin-bottom: baseline(3);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
