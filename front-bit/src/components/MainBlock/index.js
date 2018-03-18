@@ -1,5 +1,4 @@
 import React from 'react';
-import MainCopy from '../MainCopy';
 import './index.css';
 
 const MainBlock = (props) => {

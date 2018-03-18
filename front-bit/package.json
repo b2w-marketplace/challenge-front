@@ -1,10 +1,10 @@
 {
   "name": "front-bit",
   "version": "0.1.0",
-  "author": { 
-    "name" : "Nayara Alves Pereira",
-    "email" : "nayara.nap@gmail.com",
-    "url" : "http://github.com/diemoritat/"
+  "author": {
+    "name": "Nayara Alves Pereira",
+    "email": "nayara.nap@gmail.com",
+    "url": "http://github.com/diemoritat/"
   },
   "private": true,
   "dependencies": {
@@ -12,7 +12,8 @@
     "npm-run-all": "^4.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-scripts": "1.1.1"
+    "react-scripts": "1.1.1",
+    "react-test-renderer": "^16.2.0"
   },
   "scripts": {
     "build-css": "node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/",

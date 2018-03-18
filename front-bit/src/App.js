@@ -25,7 +25,7 @@ class App extends Component {
 
   componentDidMount() {
     window.setTimeout(() => {
-      fetch('http://www.mocky.io/v2/5aad2b482f00006000204942')
+      fetch('http://www.mocky.io/v2/5aadcb062f00003a00273cb7')
       .then(response => {
         if (response.ok) {
           return response.json();
