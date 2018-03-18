@@ -3,8 +3,14 @@
 .sidebar-block__wrapper {
   width: 100%;
   text-align: center;
-  padding: 0 baseline(8);
-  margin-bottom: baseline(3);
+  padding: 0 baseline(3);
+  margin-bottom: baseline(2);
+  letter-spacing: 1px;
+
+  @media (min-width: 1024px) {
+    padding: 0 baseline(6);
+    margin-bottom: baseline(3);
+  }
 }
 
 .sidebar-block__section-title {

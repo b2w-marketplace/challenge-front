@@ -1,7 +1,12 @@
 @import './src/assets/css/baseline.scss';
 
 .main-block__wrapper {
-  padding: 0 baseline(9);
+  padding: 0 baseline(3);
+
+  @media (min-width: 1024px) {
+    padding: 0 baseline(9);
+    margin-bottom: baseline(4);
+  }
 }
 
 .main-block__section-title {

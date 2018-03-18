@@ -1,24 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './index.css';
 
-class MainCopy extends Component {
-
-  render() {
-    return (
-      <div className="main-copy__wrapper">
-        <div className="main-copy__title">
-          { this.props.name }
-        </div>
-        <div className="main-copy__period">
-          { this.props.date }
-        </div>
-
-        <div className="main-copy__job-description">
-          { this.props.description }
-        </div>
+const MainCopy = (props) => {
+  return (
+    <div className="main-copy__wrapper">
+      <div className="main-copy__title">
+        { props.name }
       </div>
-    );
-  }
+      <div className="main-copy__period">
+        { props.date }
+      </div>
+
+      <div className="main-copy__job-description">
+        { props.description }
+      </div>
+    </div>
+  );
 }
 
 export default MainCopy;

@@ -1,6 +1,11 @@
 {
   "name": "front-bit",
   "version": "0.1.0",
+  "author": { 
+    "name" : "Nayara Alves Pereira",
+    "email" : "nayara.nap@gmail.com",
+    "url" : "http://github.com/diemoritat/"
+  },
   "private": true,
   "dependencies": {
     "node-sass-chokidar": "^1.1.1",
@@ -14,7 +19,7 @@
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-scripts start",
     "start": "npm-run-all -p watch-css start-js",
-    "build-js": "react-scripts build",
+    "build-js": "react-scripts build && mv build dist",
     "build": "npm-run-all build-css build-js",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"

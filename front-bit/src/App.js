@@ -78,29 +78,33 @@ class App extends Component {
     return (
       <div className="App">
         <div className="sidebar">
-          <SidebarSummary content={this.state.summary} />
-          
-          <SidebarBlock title="Profile"> 
-            {this.state.loading ? <Loader /> : this.state.description}
-          </SidebarBlock>
+          <div className="sidebar__holder">
+            <SidebarSummary content={this.state.summary} />
+            
+            <SidebarBlock title="Profile"> 
+              {this.state.loading ? <Loader /> : this.state.description}
+            </SidebarBlock>
 
-          <SidebarBlock title="Contact"> 
-            {this.state.loading ? <Loader /> : <Contact content={this.state.contactInfo}/>}
-          </SidebarBlock>
+            <SidebarBlock title="Contact"> 
+              {this.state.loading ? <Loader /> : <Contact content={this.state.contactInfo}/>}
+            </SidebarBlock>
 
-          <SidebarBlock title="Skills"> 
-            {this.state.loading ? <Loader /> : this.renderSkills(this.state.skills)}
-          </SidebarBlock>
+            <SidebarBlock title="Skills"> 
+              {this.state.loading ? <Loader /> : this.renderSkills(this.state.skills)}
+            </SidebarBlock>
+          </div>
         </div>
 
-        <main className="main-content">
-          <MainBlock title="Experience">
-            {this.state.loading ? <Loader /> : this.renderBlocks(this.state.experience)}
-          </MainBlock>
+        <main className="main">
+          <div className="main__holder">
+            <MainBlock title="Experience">
+              {this.state.loading ? <Loader /> : this.renderBlocks(this.state.experience)}
+            </MainBlock>
 
-          <MainBlock title="Education">
-          {this.state.loading ? <Loader /> : this.renderBlocks(this.state.education)}
-          </MainBlock>
+            <MainBlock title="Education">
+            {this.state.loading ? <Loader /> : this.renderBlocks(this.state.education)}
+            </MainBlock>
+          </div>
         </main>
       </div>
     );

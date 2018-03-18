@@ -3,6 +3,10 @@
 .main-copy__wrapper {
   width: 100%;
   margin-bottom: baseline(5);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 .main-copy__title {

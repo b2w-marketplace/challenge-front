@@ -6,13 +6,11 @@
   flex-direction: column;
   align-items: center;
   padding-bottom: baseline(5);
-  //padding-right: baseline(1);
-  //margin-left: baseline(2);
   margin-bottom: baseline(7);
   border-bottom: 1px solid #fff;
 }
 
-.summary__image-holder {
+.summary__image {
   display: flex;
   justify-content: space-around;
   box-sizing: content-box;
@@ -25,13 +23,21 @@
   transform: rotate(45deg);
 }
 
-.summary__image-content {
+.summary__image-holder {
   overflow: hidden;
   width: 100%;
   height: 100%;
+}
+
+.summary__image-content {
+  transform: rotate(-45deg);
+  width: 140%;
+  height: 140%;
+  margin-top: -20%;
+  margin-left: -20%;
   background-color: #fff;
-  background-image: url('https://raw.githubusercontent.com/b2w-marketplace/code-challenge/master/files/avatar-dev.png');
-  background-size: contain;
+  background-image: url('http://via.placeholder.com/350x350');
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
@@ -44,9 +50,9 @@
 
 .summary__user-name {
   font-weight: bold;
-  font-size: baseline(5);
+  font-size: baseline(4);
   letter-spacing: 6px;
-  line-height: baseline(6);
+  line-height: baseline(5);
   text-transform: uppercase;
   margin-bottom: baseline(1);
 }

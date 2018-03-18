@@ -1,18 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './index.css';
 
-class SidebarBlock extends Component {
-  render() {
-    return (
-      <div className="sidebar-block__wrapper">
-        <h3 className="sidebar-block__section-title">
-          {this.props.title}
-        </h3>
+const SidebarBlock = (props) => {
+  return (
+    <div className="sidebar-block__wrapper">
+      <h3 className="sidebar-block__section-title">
+        { props.title }
+      </h3>
 
-        {this.props.children}
-      </div>
-    );
-  }
+      { props.children }
+    </div>
+  );
 }
 
 export default SidebarBlock;
