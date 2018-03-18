@@ -1,27 +1,42 @@
-# <> Desafio Frontend BIT - SP </>
+# <> Desafio Frontend BIT - SP | Nayara </>
 
-## Sobre
+## Sobre o desafio:
 
-Nosso teste consiste em implementar uma aplicação client-side, que consulte uma [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5) e mostre os dados do perfil de um usuário. Esta aplicação deve funcionar nos navegadores mais recentes do mercado.
+Esse teste consiste em implementar uma aplicação client-side, que consulte uma [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5) e mostre os dados do perfil de um usuário. Esta aplicação deve funcionar nos navegadores mais recentes do mercado.
 
-Nesse link você encontra o [layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg) do desafio:
-
+Layout de referência para o teste:
 ![Layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg)
 
 
-Aqui temos o arquivo .psd para [download](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.psd).
-
-Esse é o link da [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5).
-
-## Desafio:
+## Requisitos:
 
 Desenvolva a página seguindo os seguintes critérios:
 
-- Utilize algum pré-processador pro seu css, de preferência sass. (Se quiser, fique a vontade para usar alguma lib/framework css)
-- Faça que sua página tenha uma ótima experiência para o usuário, independente do dispositivo que ele esteja usando.
-- Você pode usar Angular ou React para o desenvolvimento.
-- Crie um build do seu projeto em uma pasta chamada 'dist'
+- Pré-processador de CSS (de preferência sass);
+- Boa UX, design responsivo; 
+- Angular ou React para o desenvolvimento;
+- Build do projeto na pasta 'dist'.
 
-Crie um Fork desse repositório e nos envie um **pull request**
+## Detalhes do projeto:
 
-Não esqueça de nos ensinar como rodar seu projeto :sunglasses:
+- Pré-processador CSS: SASS;
+- Biblioteca JavaScript: React (utilizando `create-react-app`);
+- Testes de a11y foram realizados utilizando o VoiceOver como leitor de tela;
+- Importante: No [link original da API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5), o endereço da imagem está apontando para a *página* da imagem, não para a imagem em si, que tem um link diferente. Por isso, acabei utilizando esse [mock alterado](http://www.mocky.io/v2/5aadcb062f00003a00273cb7), com o link editado e apontando diretamente para a imagem correta.
+
+## Como rodar o projeto:
+
+- Clone ou baixe o repositório.
+
+  - *Rodando a build:* Há uma build na pasta `dist` que pode ser *** utilizando Node e [serve](https://github.com/zeit/serve) (`npm install -g serve` caso não tenha instalado):
+
+  `serve -s dist` na pasta do projeto.
+
+  - *Rodando o src:* Na pasta raíz do projeto, rode os seguintes comandos no terminal:
+
+  `npm install`
+  `npm start`
+
+  Isso irá inicializar o projeto na porta 3000. Acesse [localhost:3000](http://localhost:3000/) para visualizar.
+
+- Para rodar os testes (feitos em [Jest](https://facebook.github.io/jest/)), após o `npm install` e ainda na pasta raíz, rode `npm test` e os resultados dos testes aparecerão no terminal.

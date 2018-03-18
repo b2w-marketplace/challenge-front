@@ -1,0 +1,17 @@
+// Baseline
+//
+// The `baseline()` is the vertical / y-axis unit of measurement:
+//
+// ```
+// margin-bottom: baseline(2);
+// padding-bottom: baseline(1);
+// ```
+//
+// `baseline()` is only used for properties dealing with the y-axis.
+//
+
+$baselineUnit: 0.75rem; // 12px
+
+@function baseline($multiplier: 1) {
+  @return $baselineUnit * $multiplier;
+}

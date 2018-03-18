@@ -1,0 +1,53 @@
+@import './src/assets/css/core.scss';
+
+.App {
+  display: block;
+  width: 100%;
+
+  @media (min-width: 1024px) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.sidebar {
+  background-color: var(--base-4);
+  color: var(--base-1);
+  padding: baseline(5) 0 baseline(2) baseline(1);
+
+  @media (min-width: 1024px) {
+    width: 35%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 35vw;
+    max-width: 450px;
+    padding: baseline(10) 0 baseline(10) baseline(2);
+  }
+}
+
+.sidebar__holder,
+.main__holder {
+
+  @media (min-width: 768px) {
+    max-width: 425px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1024px) {
+    max-width: none;
+  }
+}
+
+.main {
+  background-color: var(--base-1);
+  color: var(--base-5);
+  padding: baseline(5) 0 baseline(4);
+
+  @media (min-width: 1024px) {
+    width: 65%;
+    flex-grow: 1;
+    flex-basis: 65vw;
+    max-width: 820px;
+    padding-top: baseline(7);
+  }
+}

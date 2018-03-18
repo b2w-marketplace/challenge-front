@@ -1,0 +1,15 @@
+// CSS Variables
+//
+// All the CSS variables should be located here.
+//
+
+:root { 
+  --base-1: #fff;
+  --base-2: #eeeeee;
+  --base-3: #d8d8d8;
+  --base-4: #333;
+  --base-5: #010101;
+
+  --border-1: 1px solid var(--base-1);
+  --border-2: 1px solid var(--base-5);
+}
