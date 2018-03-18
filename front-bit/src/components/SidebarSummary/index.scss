@@ -7,7 +7,7 @@
   align-items: center;
   padding-bottom: baseline(5);
   margin-bottom: baseline(7);
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--base-1);
 }
 
 .summary__image {
@@ -19,7 +19,7 @@
   padding: 5px;
   margin-bottom: baseline(5);
   background-color: transparent;
-  border: 2px solid white;
+  border: 2px solid var(--base-1);
   transform: rotate(45deg);
 }
 
@@ -35,7 +35,7 @@
   height: 140%;
   margin-top: -20%;
   margin-left: -20%;
-  background-color: #fff;
+  background-color: var(--base-1);
   background-image: url('http://via.placeholder.com/350x350');
   background-size: cover;
   background-position: center;

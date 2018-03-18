@@ -13,7 +13,7 @@
   height: baseline(1);
   margin: 0 baseline(0.5);
   border-radius: 100%;
-  background-color: rgb(216, 216, 216);
+  background-color: var(--base-3);
   animation: loader-bounce 1.4s infinite ease-in-out both;
 
   &--one {

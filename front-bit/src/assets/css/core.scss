@@ -8,7 +8,7 @@
 body {
   font-family: 'Montserrat', sans-serif;
   font-size: baseline(1.2);
-  background-color: rgb(238, 238, 238);
+  background-color: var(--body-bg-color);
 }
 
 @keyframes loader-bounce {

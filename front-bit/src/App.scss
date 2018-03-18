@@ -11,8 +11,8 @@
 }
 
 .sidebar {
-  background-color: var(--dark-bg-color);
-  color: var(--light-font-color);
+  background-color: var(--base-4);
+  color: var(--base-1);
   padding: baseline(5) 0 baseline(2) baseline(1);
 
   @media (min-width: 1024px) {
@@ -39,8 +39,8 @@
 }
 
 .main {
-  background-color: var(--light-bg-color);
-  color: var(--dark-font-color);
+  background-color: var(--base-1);
+  color: var(--base-5);
   padding: baseline(5) 0 baseline(4);
 
   @media (min-width: 1024px) {

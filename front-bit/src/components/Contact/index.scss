@@ -15,7 +15,7 @@
 }
 
 .contact__link {
-  color: #fff;
+  color: var(--base-1);
   text-decoration: none;
   display: inline-block;
   padding-bottom: 1px;
@@ -25,7 +25,7 @@
   &:after {
     display: inline-block;
     content: '';
-    background-color: #fff;
+    background-color: var(--base-1);
     position: absolute;
     bottom: 0;
     left: 0;
