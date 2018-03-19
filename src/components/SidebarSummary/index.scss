@@ -1,4 +1,4 @@
-@import './src/assets/css/baseline.scss';
+@import './src/assets/css/core.scss';
 
 .summary__wrapper {
   width: 100%;
@@ -49,10 +49,7 @@
 }
 
 .summary__user-name {
-  font-weight: bold;
-  font-size: baseline(4);
-  letter-spacing: 6px;
-  line-height: baseline(5);
+  @include font(bold, 4, 5, 6);
   text-transform: uppercase;
   margin-bottom: baseline(1);
 }

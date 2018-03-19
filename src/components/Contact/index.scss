@@ -1,9 +1,8 @@
-@import './src/assets/css/baseline.scss';
+@import './src/assets/css/core.scss';
 
 .contact__holder {
   width: 100%;
-  font-style: normal;
-  letter-spacing: 3px;
+  @include font(400, 1.2, 0, 3);
 }
 
 .contact__block {

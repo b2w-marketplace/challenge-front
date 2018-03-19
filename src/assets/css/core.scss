@@ -1,7 +1,12 @@
+// Core
+//
+// The core file is the origin for the css assets. 
+// They should be imported here and core.scss is then imported where needed.
+//
+
 @import './src/assets/css/ress-reset.scss';
 @import './src/assets/css/variables.scss';
 @import './src/assets/css/baseline.scss';
-
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
@@ -11,13 +16,9 @@ body {
   background-color: var(--body-bg-color);
 }
 
-/*
- * Hide only visually, but have it available for screen readers:
- * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
- *
- */
+// Utility
 
- .visuallyhidden {
+.visuallyhidden {
   border: 0;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
@@ -28,6 +29,19 @@ body {
   position: absolute;
   width: 1px;
   white-space: nowrap;
+}
+
+// Font mixin
+// Ex: @include font(400, 1.2, 0, 3);
+@mixin font($weight: 400, $size: 1.2, $lh: 0, $ls: 3, $style: normal) {
+  font-weight: $weight;
+  font-size: baseline($size);
+  letter-spacing: #{$ls}px;
+  font-style: $style;
+
+  @if ($lh != 0) {
+    line-height: baseline($lh);
+  }
 }
 
 @keyframes loader-bounce {

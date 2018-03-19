@@ -1,4 +1,4 @@
-@import './src/assets/css/baseline.scss';
+@import './src/assets/css/core.scss';
 
 .main-copy__wrapper {
   width: 100%;
@@ -10,14 +10,13 @@
 }
 
 .main-copy__title {
-  font-weight: bold; // TO-DO: ADD FONT-MIXIN
+  @include font(bold, 1.2, 0, 3);
   text-transform: uppercase;
   margin-bottom: baseline(.5);
 }
 
 .main-copy__period {
-  letter-spacing: 2px;
-  font-size: baseline(1);
+  @include font(400, 1, 0, 3);
   margin-bottom: baseline(.5);
 }
 
