@@ -1,10 +1,11 @@
-# <> Desafio Frontend BIT - SP | Nayara </>
+# <> Desafio Frontend BIT - SP | Nayara Alves </>
 
 ## Sobre o desafio:
 
 Esse teste consiste em implementar uma aplicação client-side, que consulte uma [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5) e mostre os dados do perfil de um usuário. Esta aplicação deve funcionar nos navegadores mais recentes do mercado.
 
 Layout de referência para o teste:
+
 ![Layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg)
 
 
@@ -28,15 +29,15 @@ Desenvolva a página seguindo os seguintes critérios:
 
 - Clone ou baixe o repositório.
 
-  - *Rodando a build:* Há uma build na pasta `dist` que pode ser *** utilizando Node e [serve](https://github.com/zeit/serve) (`npm install -g serve` caso não tenha instalado):
+  - **Rodando a build:** Há uma build na pasta `dist` que pode ser acessado utilizando Node e [serve](https://github.com/zeit/serve) (`npm install -g serve` caso não tenha instalado):
 
-  `serve -s dist` na pasta do projeto.
+    `serve -s dist` na pasta do projeto.
 
-  - *Rodando o src:* Na pasta raíz do projeto, rode os seguintes comandos no terminal:
+  - **Rodando o src:** Na pasta raíz do projeto, rode os seguintes comandos no terminal:
 
-  `npm install`
-  `npm start`
+    `npm install`
+    `npm start`
 
-  Isso irá inicializar o projeto na porta 3000. Acesse [localhost:3000](http://localhost:3000/) para visualizar.
+    Isso irá inicializar o projeto na porta 3000. Acesse [localhost:3000](http://localhost:3000/) para visualizar.
 
 - Para rodar os testes (feitos em [Jest](https://facebook.github.io/jest/)), após o `npm install` e ainda na pasta raíz, rode `npm test` e os resultados dos testes aparecerão no terminal.
