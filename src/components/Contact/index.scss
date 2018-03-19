@@ -1,0 +1,45 @@
+@import './src/assets/css/core.scss';
+
+.contact__holder {
+  width: 100%;
+  @include font(400, 1.2, 0, 3);
+}
+
+.contact__block {
+  margin-bottom: baseline(2);
+}
+
+.contact__link {
+  color: var(--base-1);
+  text-decoration: none;
+  display: inline-block;
+  padding-bottom: 1px;
+  margin-bottom: baseline(.5);
+  position: relative;
+  
+  &:after {
+    display: inline-block;
+    content: '';
+    background-color: var(--base-1);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 1px;
+    transition: width 0.3s ease-in-out;
+  }
+
+  &:hover {
+    background-image: gradient( linear, left top, right top, color-stop(0, #f2f), color-stop(1, #2ff) );
+    background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f2f), color-stop(1, #2ff) );
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    transition: all 0.3s ease-in-out;
+
+    &:after {
+      width: 100%;
+      transition: width 0.3s ease-in-out;
+    }
+  }
+}

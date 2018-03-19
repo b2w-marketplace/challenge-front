@@ -1,0 +1,60 @@
+@import './src/assets/css/core.scss';
+
+.summary__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: baseline(5);
+  margin-bottom: baseline(7);
+  border-bottom: 1px solid var(--base-1);
+}
+
+.summary__image {
+  display: flex;
+  justify-content: space-around;
+  box-sizing: content-box;
+  width: baseline(12);
+  height: baseline(12);
+  padding: 5px;
+  margin-bottom: baseline(5);
+  background-color: transparent;
+  border: 2px solid var(--base-1);
+  transform: rotate(45deg);
+}
+
+.summary__image-holder {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.summary__image-content {
+  transform: rotate(-45deg);
+  width: 140%;
+  height: 140%;
+  margin-top: -20%;
+  margin-left: -20%;
+  background-color: var(--base-1);
+  background-image: url('http://via.placeholder.com/350x350');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.summary__user-info {
+  width: 100%;
+  display: block;
+  text-align: center;
+}
+
+.summary__user-name {
+  @include font(bold, 4, 5, 6);
+  text-transform: uppercase;
+  margin-bottom: baseline(1);
+}
+
+.summary__user-profession {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}

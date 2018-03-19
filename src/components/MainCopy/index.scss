@@ -1,0 +1,25 @@
+@import './src/assets/css/core.scss';
+
+.main-copy__wrapper {
+  width: 100%;
+  margin-bottom: baseline(5);
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.main-copy__title {
+  @include font(bold, 1.2, 0, 3);
+  text-transform: uppercase;
+  margin-bottom: baseline(.5);
+}
+
+.main-copy__period {
+  @include font(400, 1, 0, 3);
+  margin-bottom: baseline(.5);
+}
+
+.main-copy__job-description {
+  line-height: 2rem;
+}

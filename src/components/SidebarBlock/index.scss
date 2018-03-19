@@ -1,0 +1,27 @@
+@import './src/assets/css/core.scss';
+
+.sidebar-block__wrapper {
+  width: 100%;
+  text-align: center;
+  padding: 0 baseline(3);
+  margin-bottom: baseline(2);
+  letter-spacing: 1px;
+
+  @media (min-width: 1024px) {
+    padding: 0 baseline(6);
+    margin-bottom: baseline(3);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.sidebar-block__section-title {
+  @include font(bold, 1.5, 0, 3);
+  display: block;
+  text-transform: uppercase;
+  margin: 0 baseline(3) baseline(1.5);
+  padding-bottom: baseline(.5);
+  border-bottom: 1px solid var(--base-1);
+}

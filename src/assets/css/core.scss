@@ -1,0 +1,55 @@
+// Core
+//
+// The core file is the origin for the css assets. 
+// They should be imported here and core.scss is then imported where needed.
+//
+
+@import './src/assets/css/ress-reset.scss';
+@import './src/assets/css/variables.scss';
+@import './src/assets/css/baseline.scss';
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: baseline(1.2);
+  background-color: var(--body-bg-color);
+}
+
+// Utility
+
+.visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+// Font mixin
+// Ex: @include font(400, 1.2, 0, 3);
+@mixin font($weight: 400, $size: 1.2, $lh: 0, $ls: 3, $style: normal) {
+  font-weight: $weight;
+  font-size: baseline($size);
+  letter-spacing: #{$ls}px;
+  font-style: $style;
+
+  @if ($lh != 0) {
+    line-height: baseline($lh);
+  }
+}
+
+@keyframes loader-bounce {
+  0%, 80%, 100% {
+    transform: scale(0);
+  }
+
+  40% {
+    transform: scale(1);
+  }
+}

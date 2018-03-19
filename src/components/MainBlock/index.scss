@@ -1,0 +1,19 @@
+@import './src/assets/css/core.scss';
+
+.main-block__wrapper {
+  padding: 0 baseline(3);
+
+  @media (min-width: 1024px) {
+    padding: 0 baseline(9);
+    margin-bottom: baseline(4);
+  }
+}
+
+.main-block__section-title {
+  font-size: baseline(2);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-bottom: 1px solid var(--base-5);
+  padding-bottom: baseline(.5);
+  margin-bottom: baseline(3);
+}
