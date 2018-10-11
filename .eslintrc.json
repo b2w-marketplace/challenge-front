@@ -1,0 +1,18 @@
+{
+    "extends": [
+        "standard",
+        "plugin:react/recommended"
+    ],
+    "parser": "babel-eslint",
+    "rules": {
+        "indent": ["error", 4]
+    },
+    "plugins": [
+        "react"
+    ],
+    "settings": {
+        "react": {
+            "propWrapperFunctions": [ "forbidExtraProps" ]
+        }
+    }
+}

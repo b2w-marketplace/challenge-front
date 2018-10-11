@@ -1,0 +1,12 @@
+@import "compass/reset";
+@import "compass/css3";
+
+$primary-color: #333333;
+
+body{
+    background-color: darken($primary-color, 10%);
+    font-family: 'Roboto', sans-serif;
+}
+
+@import "sidebar";
+@import "content";
