@@ -10,9 +10,9 @@ class Header extends Component {
     const {profile} = this.props;
     return (
       <div className="header">
-        <img src={avatar} alt="avatar" title="avatar" className="image-header"/>
-        <span className="header-name">{(profile.name || "").toUpperCase()}</span>
-        <span className="header-job-name">{(profile.profession || "").toUpperCase()}</span>
+        <img src={avatar} alt="avatar" title="avatar"/>
+        <p>{(profile.name || "").toUpperCase()}</p>
+        <span>{(profile.profession || "").toUpperCase()}</span>
       </div>
     )
   }

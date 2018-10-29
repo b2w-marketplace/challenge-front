@@ -18,8 +18,7 @@ $paddingBase1: 2.5vh/2;
 $paddingBase5: 5vh;
 $spaceBetween: space-between;
 $headerFontSize: 5vw;
-$width: 100%;
-$height: 100%;
+$maxSize: 100%;
 $heightHeader: 30%;
 $borderLine: solid 1px;
 $sans-serif: "Arial", "Source Sans Pro", Verdana, sans-serif;
@@ -46,12 +45,12 @@ body {
 .container {
   flex-direction: $rowDirection;
   display: flex;
-  width: $width;
-  height: 100%;
+  width: $maxSize;
+  height: $maxSize;
 }
 
 .contact {
-  display: flex;
+  display: $display;
   flex-direction: $columnDirection;
   justify-content: $center;
   align-items: $center;
@@ -60,37 +59,41 @@ body {
   letter-spacing: 0.2vw;
   text-align: $center;
   font-size: 1vw;
-}
-
-.separator {
-  text-align: $center;
-  padding-bottom: $paddingBase2;
-  display: flex;
-  flex-direction: $columnDirection;
+  div {
+    padding-bottom: $paddingBase2;
+    display: $display;
+    flex-direction: $columnDirection;
+  }
 }
 
 .body-container {
-  display: flex;
+  display: $display;
   flex-direction: $columnDirection;
   justify-content: space-evenly;
   padding: 1vh 3vw;
   width: 70vw;
+  p {
+    border-bottom: 0.2vw solid $primary-color;
+    padding-top: $paddingBase5;
+    font-weight: 800;
+    font-size: 1.5vw;
+    padding-bottom: 1vw;
+    letter-spacing: 0.3vw;
+  }
+  span {
+    justify-content: $spaceBetween;
+    display: $display;
+    flex-direction: $columnDirection;
+    width: $maxSize;
+    height: $maxSize;
+  }
 
-}
-
-.title-experience {
-  border-bottom: 0.2vw solid $primary-color;
-  padding-top: $paddingBase5;
-  font-weight: 800;
-  font-size: 1.5vw;
-  padding-bottom: 1vw;
-  letter-spacing: 0.3vw;
 }
 
 .experienceWrap {
-  display: flex;
+  display: $display;
   flex-direction: $columnDirection;
-  width: 60vw;
+  width: $width*0.6;
   margin: $paddingBase2 0;
 }
 
@@ -115,14 +118,6 @@ body {
   letter-spacing: 0.1vw;
 }
 
-.body-experience {
-  justify-content: $spaceBetween;
-  display: flex;
-  flex-direction: $columnDirection;
-  width: 100%;
-  height: 100%;
-}
-
 .container-header {
   color: $second-color;
   background-color: $third-color;
@@ -133,14 +128,7 @@ body {
   justify-content: $spaceBetween;
   align-items: $center;
   font-size: 1.5vw;
-  width: 30vw;
-}
-
-.image-header {
-  width: 20vw;
-  height: 20vh;
-  max-height: 20vw;
-  margin: $paddingBase2 0;
+  width: $width*0.3;
 }
 
 .header {
@@ -148,41 +136,46 @@ body {
   font-weight: $bold;
   background-color: $third-color;
   color: $second-color;
-  display: flex;
+  display: $display;
   align-items: $center;
-  width: 25vw;
+  width: $width*0.25;
   border-bottom: 1px solid $second-color;
   font-size: 4vw;
   flex-direction: $columnDirection;
+  img {
+    width: $width*0.2;
+    height: $height*0.2;
+    max-height: $width*0.2;;
+    margin: $paddingBase2 0;
+  }
+  p {
+    font-size: 4vw;
+    justify-items: $center;
+    display: $display;
+    justify-content: $center;
+    align-items: $center;
+    white-space: pre-wrap;
+    letter-spacing: 1vw;
+    text-align: $center;
+    line-height: $maxSize;
+    padding: $paddingBase2 0;
+    margin-top: $paddingBase2;
+  }
+  span {
+    font-size: 2vw;
+    justify-items: $center;
+    letter-spacing: 0.3vw;
+    line-height: $maxSize/2;
+    padding-bottom: $paddingBase5;
+  }
+
 }
 
 .nav-body {
-  display: flex;
+  display: $display;
   justify-content: space-evenly;
   flex-direction: $columnDirection;
   flex-grow: 1;
-}
-
-.header-name {
-  font-size: 4vw;
-  justify-items: $center;
-  display: flex;
-  justify-content: $center;
-  align-items: $center;
-  white-space: pre-wrap;
-  letter-spacing: 1vw;
-  text-align: $center;
-  line-height: 100%;
-  padding: $paddingBase2 0;
-  margin-top: $paddingBase2;
-}
-
-.header-job-name {
-  font-size: 2vw;
-  justify-items: $center;
-  letter-spacing: 0.3vw;
-  line-height: 50%;
-  padding-bottom: $paddingBase5;
 }
 
 .bodyNav {
@@ -193,13 +186,13 @@ body {
   color: $second-color;
   display: $display;
   align-items: $center;
-  width: $width;
-  height: $height - $heightHeader;
+  width: $maxSize;
+  height: $maxSize - $heightHeader;
   justify-content: $spaceBetween;
 }
 
 .profile {
-  display: flex;
+  display: $display;
   flex-direction: $columnDirection;
   justify-content: $center;
   align-items: $center;
@@ -210,7 +203,7 @@ body {
 }
 
 .textProfile {
-  display: flex;
+  display: $display;
   font-size: 1vw;
   flex-direction: $columnDirection;
   justify-content: $center;
@@ -220,7 +213,7 @@ body {
 }
 
 .skills-container {
-  display: flex;
+  display: $display;
   flex-direction: $columnDirection;
   justify-content: $center;
   align-items: $center;
@@ -238,7 +231,7 @@ body {
 
 .container-bar {
   border: 0.2vh solid $second-color;
-  width: 20vw;
+  width: $width*0.2;
   background-color: $third-color;
 }
 
@@ -251,12 +244,9 @@ body {
   background-color: $second-color;
 }
 
-/* Green */
-
-/* Container for skill bars */
 .container {
-  width: 100%; /* Full width */
-  background-color: #ddd; /* Grey background */
+  width: $maxSize;
+  background-color: #ddd;
 }
 
 @mixin width-class($size) {

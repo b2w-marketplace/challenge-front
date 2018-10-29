@@ -8,14 +8,14 @@ class Article extends PureComponent {
     const {profile} = this.props;
     return (
       <div className="body-container">
-        <span className="title-experience"> WORK EXPERIENCE</span>
-        <div className="body-experience">
+        <p> WORK EXPERIENCE</p>
+        <span>
           {((profile || {}).experience || []).map((experience, id) =>
             <ExperienceItem key={`${id}_${experience.name}`} experience={experience}/>
           )}
-        </div>
-        <span className="title-experience">EDUCATION</span>
-        <div className="body-experience">
+        </span>
+        <p>EDUCATION</p>
+        <div>
           {((profile || {}).education || []).map((experience, id) =>
             <ExperienceItem key={`${id}_${experience.name}`} experience={experience}/>
           )}

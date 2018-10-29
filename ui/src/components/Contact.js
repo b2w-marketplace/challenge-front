@@ -11,15 +11,15 @@ class Contact extends PureComponent {
     return (
       <div className="contact">
         <Title name={"Contact"}/>
-        <div className="separator">
+        <div>
           <span>{(profile.contact || {}).tel}</span>
           <span>{(profile.contact || {}).cel}</span>
         </div>
-        <div className="separator">
+        <div>
           <span>{`${address[0]}.`}</span>
           <span>{address[1]}</span>
         </div>
-        <div className="separator">
+        <div>
           <span>{(profile.contact || {}).website}</span>
           <span>{(profile.contact || {}).mail}</span>
         </div>

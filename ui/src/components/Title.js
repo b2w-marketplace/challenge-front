@@ -4,9 +4,9 @@ class Title extends PureComponent {
   render() {
     const {name} = this.props;
     return (
-      <span className="textTitle">
+      <p className="textTitle">
         {(name || "").toUpperCase()}
-      </span>
+      </p>
     )
   }
 }
