@@ -1,0 +1,22 @@
+@import "styles.scss";
+
+.profile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vh;
+  margin-bottom: 2.5vh;
+  letter-spacing: 0.4vw;
+  text-align: center;
+}
+
+.textProfile{
+  display: flex;
+  font-size: 1vw;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.1vw;
+}

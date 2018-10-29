@@ -1,0 +1,11 @@
+@import "styles.scss";
+
+$borderLine: solid 1px;
+
+.textTitle {
+  border-bottom: $borderLine $second-color;
+  padding: 5% 10%;
+  font-weight: 900;
+  margin-bottom: 2.5vh;
+  font-size: 1.5vw;
+}

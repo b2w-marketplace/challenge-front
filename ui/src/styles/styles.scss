@@ -1,0 +1,38 @@
+$primary-color: #000000;
+$second-color: #ffffff;
+$third-color: #232323;
+$serif: Merriweather, Georgia, "Times New Roman", serif;
+$mono: "Source Code Pro", Courier, mono;
+$light: 300;
+$normal: 400;
+$semi-bold: 500;
+$bold: 700;
+$display: flex;
+
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/HELR45W.ttf') format('truetype');
+}
+
+$sans-serif: "Arial", "Source Sans Pro", Verdana, sans-serif;
+
+* {box-sizing:border-box}
+
+body{
+  color: $primary-color;
+  background-color: $second-color;
+  font-family: $sans-serif;
+  margin:0;
+  border:0;
+}
+
+.container{
+  flex-direction: row;
+  display: flex;
+  width: 100vw;
+  height: 100%;
+}
+
+

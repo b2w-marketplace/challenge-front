@@ -1,0 +1,47 @@
+.skills-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5vh;
+  margin-bottom: 2.5vh;
+  letter-spacing: 0.2vw;
+  text-align: center;
+  font-size: 1vw;
+}
+
+.bar-container {
+  margin: 1.25vh 0;
+  justify-content: space-between;
+}
+
+.container-bar {
+  border: 0.2vh solid #ffffff;
+  width: 20vw;
+  background-color: #1d2124;
+}
+
+.skills {
+  text-align: center; /* Right-align text */
+  color: #ffffff; /* White text color */
+}
+
+.barSize {
+  background-color: #ffffff;
+}
+
+/* Green */
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+
+@mixin width-class($size) {
+  .barSize#{$size} {
+    width: $size * 1%;
+    background-color: #ffffff;
+  }
+}
