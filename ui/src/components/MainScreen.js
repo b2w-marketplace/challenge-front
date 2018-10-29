@@ -4,7 +4,6 @@ import Flexbox from 'flexbox-react'
 import Nav from './Nav'
 import Article from './Article'
 
-import '../styles/styles.scss'
 
 class MainScreen extends Component {
   render() {

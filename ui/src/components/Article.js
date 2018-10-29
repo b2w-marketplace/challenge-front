@@ -2,11 +2,10 @@ import React, {PureComponent} from 'react'
 import ExperienceItem from "./ExperienceItem"
 import PropTypes from "prop-types";
 import connect from "react-redux/es/connect/connect";
-import '../styles/contentExperience.scss'
 
 class Article extends PureComponent {
   render() {
-    const {profile} = this.props
+    const {profile} = this.props;
     return (
       <div className="body-container">
         <span className="title-experience"> WORK EXPERIENCE</span>
@@ -28,14 +27,14 @@ class Article extends PureComponent {
 
 Article.defaultProps = {
   profile: {}
-}
+};
 Article.propsTypes = {
   profile: PropTypes.object
-}
+};
 
 const mapStateToProps = state => ({
   profile: state.profile,
-})
+});
 export default connect(mapStateToProps)(Article)
 
 

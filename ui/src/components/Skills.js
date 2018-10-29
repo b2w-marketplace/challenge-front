@@ -4,11 +4,9 @@ import {connect} from "react-redux";
 
 import Title from "./Title";
 
-import '../styles/skills.scss'
-
 class Skills extends PureComponent {
   render() {
-    const {profile} = this.props
+    const {profile} = this.props;
     return (
       <div className="skills-container">
         <Title name={"Skills"}/>
@@ -33,13 +31,13 @@ class Skills extends PureComponent {
 
 Skills.defaultProps = {
   profile: {}
-}
+};
 Skills.propsTypes = {
   profile: PropTypes.object
-}
+};
 
 const mapStateToProps = state => ({
   profile: state.profile,
-})
+});
 export default connect(mapStateToProps)(Skills)
 

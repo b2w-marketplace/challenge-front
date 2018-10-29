@@ -4,12 +4,10 @@ import {connect} from "react-redux";
 
 import Title from "./Title";
 
-import '../styles/contact.scss'
-
 class Contact extends PureComponent {
   render() {
-    const {profile} = this.props
-    let address = ((profile.contact || {}).address || "").split(".") || ["", ""]
+    const {profile} = this.props;
+    let address = ((profile.contact || {}).address || "").split(".") || ["", ""];
     return (
       <div className="contact">
         <Title name={"Contact"}/>
@@ -32,13 +30,13 @@ class Contact extends PureComponent {
 
 Contact.defaultProps = {
   profile: {}
-}
+};
 Contact.propsTypes = {
   profile: PropTypes.object
-}
+};
 
 const mapStateToProps = state => ({
   profile: state.profile,
-})
+});
 export default connect(mapStateToProps)(Contact)
 

@@ -1,6 +1,6 @@
 $primary-color: #000000;
 $second-color: #ffffff;
-$third-color: #232323;
+$third-color: #1d2124;
 $serif: Merriweather, Georgia, "Times New Roman", serif;
 $mono: "Source Code Pro", Courier, mono;
 $light: 300;
@@ -8,6 +8,21 @@ $normal: 400;
 $semi-bold: 500;
 $bold: 700;
 $display: flex;
+$rowDirection: row;
+$columnDirection: column;
+$center: center;
+$height: 100vh;
+$width: 100vw;
+$paddingBase2: 2.5vh;
+$paddingBase1: 2.5vh/2;
+$paddingBase5: 5vh;
+$spaceBetween: space-between;
+$headerFontSize: 5vw;
+$width: 100%;
+$height: 100%;
+$heightHeader: 30%;
+$borderLine: solid 1px;
+$sans-serif: "Arial", "Source Sans Pro", Verdana, sans-serif;
 
 @font-face {
   font-family: 'Helvetica';
@@ -16,23 +31,245 @@ $display: flex;
   src: url('../fonts/HELR45W.ttf') format('truetype');
 }
 
-$sans-serif: "Arial", "Source Sans Pro", Verdana, sans-serif;
+* {
+  box-sizing: border-box
+}
 
-* {box-sizing:border-box}
-
-body{
+body {
   color: $primary-color;
   background-color: $second-color;
   font-family: $sans-serif;
-  margin:0;
-  border:0;
+  margin: 0;
+  border: 0;
 }
 
-.container{
-  flex-direction: row;
+.container {
+  flex-direction: $rowDirection;
   display: flex;
-  width: 100vw;
+  width: $width;
   height: 100%;
 }
 
+.contact {
+  display: flex;
+  flex-direction: $columnDirection;
+  justify-content: $center;
+  align-items: $center;
+  padding: 0 $paddingBase5;
+  margin-bottom: $paddingBase2;
+  letter-spacing: 0.2vw;
+  text-align: $center;
+  font-size: 1vw;
+}
 
+.separator {
+  text-align: $center;
+  padding-bottom: $paddingBase2;
+  display: flex;
+  flex-direction: $columnDirection;
+}
+
+.body-container {
+  display: flex;
+  flex-direction: $columnDirection;
+  justify-content: space-evenly;
+  padding: 1vh 3vw;
+  width: 70vw;
+
+}
+
+.title-experience {
+  border-bottom: 0.2vw solid $primary-color;
+  padding-top: $paddingBase5;
+  font-weight: 800;
+  font-size: 1.5vw;
+  padding-bottom: 1vw;
+  letter-spacing: 0.3vw;
+}
+
+.experienceWrap {
+  display: flex;
+  flex-direction: $columnDirection;
+  width: 60vw;
+  margin: $paddingBase2 0;
+}
+
+.name-experience {
+  padding-bottom: 0.4vh;
+  font-size: 1.2vw;
+  letter-spacing: 0.3vw;
+  font-weight: 600;
+  margin-top: $paddingBase5;
+}
+
+.date-experience {
+  color: $third-color;
+  font-size: 0.8vw;
+  font-weight: 100;
+  letter-spacing: 0.2vw;
+}
+
+.description-experience {
+  font-weight: 500;
+  font-size: 1vw;
+  letter-spacing: 0.1vw;
+}
+
+.body-experience {
+  justify-content: $spaceBetween;
+  display: flex;
+  flex-direction: $columnDirection;
+  width: 100%;
+  height: 100%;
+}
+
+.container-header {
+  color: $second-color;
+  background-color: $third-color;
+  font-family: $sans-serif;
+  font-weight: $light;
+  display: $display;
+  flex-direction: $columnDirection;
+  justify-content: $spaceBetween;
+  align-items: $center;
+  font-size: 1.5vw;
+  width: 30vw;
+}
+
+.image-header {
+  width: 20vw;
+  height: 20vh;
+  max-height: 20vw;
+  margin: $paddingBase2 0;
+}
+
+.header {
+  font-family: $sans-serif;
+  font-weight: $bold;
+  background-color: $third-color;
+  color: $second-color;
+  display: flex;
+  align-items: $center;
+  width: 25vw;
+  border-bottom: 1px solid $second-color;
+  font-size: 4vw;
+  flex-direction: $columnDirection;
+}
+
+.nav-body {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: $columnDirection;
+  flex-grow: 1;
+}
+
+.header-name {
+  font-size: 4vw;
+  justify-items: $center;
+  display: flex;
+  justify-content: $center;
+  align-items: $center;
+  white-space: pre-wrap;
+  letter-spacing: 1vw;
+  text-align: $center;
+  line-height: 100%;
+  padding: $paddingBase2 0;
+  margin-top: $paddingBase2;
+}
+
+.header-job-name {
+  font-size: 2vw;
+  justify-items: $center;
+  letter-spacing: 0.3vw;
+  line-height: 50%;
+  padding-bottom: $paddingBase5;
+}
+
+.bodyNav {
+  font-family: $sans-serif;
+  font-weight: $bold;
+  font-size: $headerFontSize;
+  background-color: $third-color;
+  color: $second-color;
+  display: $display;
+  align-items: $center;
+  width: $width;
+  height: $height - $heightHeader;
+  justify-content: $spaceBetween;
+}
+
+.profile {
+  display: flex;
+  flex-direction: $columnDirection;
+  justify-content: $center;
+  align-items: $center;
+  padding: 0 $paddingBase5;
+  margin-bottom: $paddingBase2;
+  letter-spacing: 0.4vw;
+  text-align: $center;
+}
+
+.textProfile {
+  display: flex;
+  font-size: 1vw;
+  flex-direction: $columnDirection;
+  justify-content: $center;
+  align-items: $center;
+  text-align: $center;
+  letter-spacing: 0.1vw;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: $columnDirection;
+  justify-content: $center;
+  align-items: $center;
+  padding: 0 $paddingBase5;
+  margin-bottom: $paddingBase2;
+  letter-spacing: 0.2vw;
+  text-align: $center;
+  font-size: 1vw;
+}
+
+.bar-container {
+  margin: $paddingBase1 0;
+  justify-content: $spaceBetween;
+}
+
+.container-bar {
+  border: 0.2vh solid $second-color;
+  width: 20vw;
+  background-color: $third-color;
+}
+
+.skills {
+  text-align: $center; /* Right-align text */
+  color: $second-color; /* White text color */
+}
+
+.barSize {
+  background-color: $second-color;
+}
+
+/* Green */
+
+/* Container for skill bars */
+.container {
+  width: 100%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+@mixin width-class($size) {
+  .barSize#{$size} {
+    width: $size * 1%;
+    background-color: $second-color;
+  }
+}
+
+.textTitle {
+  border-bottom: $borderLine $second-color;
+  padding: 5% 10%;
+  font-weight: 900;
+  margin-bottom: $paddingBase2;
+  font-size: 1.5vw;
+}

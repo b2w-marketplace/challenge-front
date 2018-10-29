@@ -5,8 +5,6 @@ import {connect} from "react-redux";
 
 import Title from "./Title";
 
-import '../styles/profile.scss'
-
 class Profile extends PureComponent {
   render() {
     return (
@@ -20,13 +18,13 @@ class Profile extends PureComponent {
 
 Profile.defaultProps = {
   profile: {}
-}
+};
 Profile.propsTypes = {
   profile: PropTypes.object
-}
+};
 
 const mapStateToProps = state => ({
   profile: state.profile,
-})
+});
 export default connect(mapStateToProps)(Profile)
 
