@@ -42,6 +42,12 @@ body {
   border: 0;
 }
 
+.page-container {
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
 .container {
   flex-direction: $rowDirection;
   display: flex;
@@ -71,7 +77,7 @@ body {
   flex-direction: $columnDirection;
   justify-content: space-evenly;
   padding: 1vh 3vw;
-  width: 70vw;
+  height: 100vh;
   p {
     border-bottom: 0.2vw solid $primary-color;
     padding-top: $paddingBase5;
@@ -84,8 +90,6 @@ body {
     justify-content: $spaceBetween;
     display: $display;
     flex-direction: $columnDirection;
-    width: $maxSize;
-    height: $maxSize;
   }
 
 }
@@ -93,8 +97,6 @@ body {
 .experienceWrap {
   display: $display;
   flex-direction: $columnDirection;
-  width: $width*0.6;
-  margin: $paddingBase2 0;
 }
 
 .name-experience {
@@ -129,6 +131,7 @@ body {
   align-items: $center;
   font-size: 1.5vw;
   width: $width*0.3;
+  flex-grow: 1;
 }
 
 .header {
@@ -175,7 +178,8 @@ body {
   display: $display;
   justify-content: space-evenly;
   flex-direction: $columnDirection;
-  flex-grow: 1;
+  width: 100%;
+  height: 70%;
 }
 
 .bodyNav {
@@ -236,24 +240,13 @@ body {
 }
 
 .skills {
-  text-align: $center; /* Right-align text */
-  color: $second-color; /* White text color */
-}
-
-.barSize {
-  background-color: $second-color;
+  text-align: $center;
+  color: $second-color;
 }
 
 .container {
   width: $maxSize;
   background-color: #ddd;
-}
-
-@mixin width-class($size) {
-  .barSize#{$size} {
-    width: $size * 1%;
-    background-color: $second-color;
-  }
 }
 
 .textTitle {

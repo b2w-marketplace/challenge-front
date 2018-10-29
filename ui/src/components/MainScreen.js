@@ -1,5 +1,4 @@
 import React, {Component} from 'react'
-import Flexbox from 'flexbox-react'
 
 import Nav from './Nav'
 import Article from './Article'
@@ -8,10 +7,10 @@ import Article from './Article'
 class MainScreen extends Component {
   render() {
     return (
-      <Flexbox flexDirection="row">
+      <div className="page-container">
         <Nav/>
         <Article/>
-      </Flexbox>
+      </div>
     )
   }
 }

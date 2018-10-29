@@ -1,8 +1,8 @@
 import React, {PureComponent} from 'react'
-import PropTypes from "prop-types";
-import {connect} from "react-redux";
+import PropTypes from 'prop-types'
+import {connect} from 'react-redux'
 
-import Title from "./Title";
+import Title from './Title'
 
 class Skills extends PureComponent {
   render() {
@@ -12,14 +12,16 @@ class Skills extends PureComponent {
         <Title name={"Skills"}/>
         {(profile.skills || []).map((skill, id) => {
           const divStyle = {
-            width: skill.value + '%',
-          };
-
+            'barSize': {
+              width: skill.value + '%',
+              backgroundColor: '#ffffff'
+            }
+          }
           return (
             <div key={`${id}_${skill.name}`} className="bar-container">
               <span>{skill.name}</span>
               <div className="container-bar">
-                <div className="skills barSize" style={divStyle}>{skill.value}</div>
+                <div className={`skills ${divStyle}`} style={divStyle}>{skill.value}</div>
               </div>
             </div>
           )
