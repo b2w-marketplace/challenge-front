@@ -1,0 +1,137 @@
+.sidenav {
+  height: 100%;
+  width: 22rem;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #212728;
+  overflow-x: hidden;
+  padding-top: 2rem;
+}
+
+.sidenav a {
+  padding: 0.6rem 0.8rem 0.6rem 1.6rem;
+  text-decoration: none;
+  font-size: 2.5rem;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.img {
+  width: 15rem;
+  margin-left: 3.3rem;
+  margin-bottom: 2rem;
+}
+
+.perfil {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  &-h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+
+  &-p {
+    font-size: 1rem;
+    color: #707575;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+.profile {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  &-h3 {
+    font-size: 1.5rem;
+    border-bottom: 0.1rem solid $white;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.2rem;
+  }
+
+  &-p {
+    text-align: center;
+    letter-spacing: 0.2rem;
+    margin: 2rem 3rem;
+  }
+}
+
+.contact-h3 {
+  font-size: 1.5rem;
+  border-bottom: 0.1rem solid $white;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+.p-contact-tel {
+  margin-top: 2rem;
+  text-align: center;
+  letter-spacing: 0.2rem;
+}
+
+.p-contact-cel {
+  margin-bottom: 2rem;
+  letter-spacing: 0.2rem;
+}
+
+.p-contact-address {
+  margin-bottom: 2rem;
+  letter-spacing: 0.3rem;
+  text-align: center;
+}
+
+.p-contact {
+  letter-spacing: 0.3rem;
+  text-align: center;
+}
+
+.h3-skills {
+  font-size: 1.5rem;
+  border-bottom: 0.1rem solid $white;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 0.2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.p-skills {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+
+  &-all {
+    width: 80%;
+    background-color: $white;
+    color: $black;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 1.5rem;
+  }
+
+  .sidenav a {
+    font-size: 1.8rem;
+  }
+}
