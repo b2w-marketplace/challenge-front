@@ -1,0 +1,12 @@
+.skill-title {
+  position: relative !important;
+}
+
+.skill-title::before {
+  content: "";
+  border-bottom: 2px solid #fff;
+  position: absolute !important;
+  width: 70%;
+  left: 15%;
+  bottom: 0;
+}
