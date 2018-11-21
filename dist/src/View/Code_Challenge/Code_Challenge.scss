@@ -1,0 +1,316 @@
+@import 'src/Global.scss';
+
+.page {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  max-width: 895px;
+  min-width: 285px;
+  margin: 0 auto;
+
+  & .page-left {
+    max-width: 640px;
+    min-width: 320px;
+    background: $black;
+    padding: 0 0 70px 15px;
+
+    .page-header {
+      height: 460px;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .page-header-profile {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .page-header-divImageBorder {
+          width: 130px;
+          height: 130px;
+          background: $white;
+          margin-top: 85px;
+          transform: rotate(45deg);
+          -webkit-transform: rotate(45deg);
+          -moz-transform: rotate(45deg);
+          -ms-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+          display: -webkit-box;
+          display: -moz-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          .page-header-divImage {
+            background: $white;
+            width: 126px;
+            height: 126px;
+            border: 3.5px solid $black;
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            img.header-profile-image {
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
+              -moz-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+              -o-transform: rotate(-45deg);
+            }
+            .header-profile-image-yourImage {
+              transform: rotate(-45deg);
+              -webkit-transform: rotate(-45deg);
+              -moz-transform: rotate(-45deg);
+              -ms-transform: rotate(-45deg);
+              -o-transform: rotate(-45deg);
+              color: $black;
+              font-size: 1.47rem;
+              text-transform: uppercase;
+              letter-spacing: 1.3px;
+              font-weight: 800;
+              width: 88px;
+              text-align: center;
+            }
+          }
+
+        }
+      }
+
+      .page-header-profession {
+        text-transform: uppercase;
+        font-size: 0.7em;
+        margin-top: 12px;
+        letter-spacing: 3px;
+        color: $white;
+      }
+
+      .page-header-name {
+        margin-top: 65px;
+        color: $white;
+        text-transform: uppercase;
+        font-size: 2.4em;
+        text-align: center;
+        letter-spacing: 4.5px;
+        font-weight: 700;
+        line-height: 1.3em;
+        width: 240px;
+      }
+    }
+    hr.page-header-hr {
+      background: $white;
+      margin: 0;
+    }
+    //SIDE
+    .page-slidebar {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 3.5rem auto 0;
+
+      .page-slidebarBlock {
+
+        &.profile, &.contact, &.skills {
+          max-width: 200px;
+        }
+        &.contact {
+          margin-top: 23px;
+        }
+        &.skills {
+          margin-top: 50px;
+        }
+
+      }
+      .page-slidebarBlock-contact {
+        margin: 22px auto 0;
+        text-align: center;
+        color: $white;
+        font-size: 0.7125rem;
+        letter-spacing: 3px;
+        line-height: 1.4rem;
+        &.phone {
+          width: 135px;
+          margin-top: 20px;
+        }
+      }
+
+      .page-slidebarBlock-tittle {
+        width: 135px;
+        height: 35px;
+        color: $white;
+        font-size: 1rem;
+        text-transform: uppercase;
+        border-bottom: 1px solid;
+        margin: 0 auto;
+        text-align: center;
+        letter-spacing: 1.7px;
+        font-weight: 600;
+      }
+
+      .page-slidebarBlock-profile {
+        margin-top: 12px;
+        text-align: center;
+        color: $white;
+        font-size: 0.7125rem;
+        letter-spacing: 1.1px;
+        line-height: 1.4rem;
+      }
+      //SKILLS
+      .page-slidebarBlock-skills {
+        width: 200px;
+        text-align: center;
+        margin-top: 22px;
+        .skills-tittle {
+          color: $white;
+          font-size: 0.7rem;
+          text-transform: uppercase;
+          margin: 0 auto 15px;
+          text-align: center;
+          letter-spacing: 2px;
+        }
+        .skills-Border {
+          border: 1px solid $white;
+          height: 15px;
+          box-sizing: border-box;
+
+          .skills-background {
+            background: $white;
+            height: 14px;
+          }
+        }
+      }
+
+    }
+
+  }
+
+  & .page-right {
+    max-width: 640px;
+    padding: 0 42px;
+
+    .page-right-information {
+      margin-top: 68px;
+
+      &.education {
+        margin-top: 50px;
+      }
+
+      .information-block {
+        &:nth-child(n+3) {
+          margin-top: 35px;
+        }
+      }
+
+      .information-divTittle {
+        color: $black;
+        font-size: 1.070rem;
+        text-transform: uppercase;
+        border-bottom: 2px solid;
+        margin: 0 auto 28px;
+        letter-spacing: 1.3px;
+        height: 38px;
+        font-weight: 800;
+
+      }
+
+      .information-block-tittle {
+        color: $black;
+        font-size: 0.9500rem;
+        text-transform: uppercase;
+        letter-spacing: 0.8px;
+        font-weight: 800;
+      }
+
+      .information-block-date {
+        color: $black;
+        font-size: 0.7100rem;
+        letter-spacing: 3px;
+        font-weight: 700;
+        margin-top: 5px;
+      }
+
+      p.information-block-description {
+        color: $black;
+        font-size: 0.7125rem;
+        letter-spacing: 0.7px;
+        font-weight: 700;
+        line-height: 1.4rem;
+        margin-top: 7px
+      }
+    }
+  }
+}
+
+@media (max-width: 474px) {
+  .page-left {
+    min-width: 200px !important;
+    padding: 0 0 70px 0 !important;
+  }
+  .page-right {
+    padding: 0px 22px !important;
+  }
+}
+
+@media (max-width: 640px) and (min-width: 475px) {
+
+  .page-left {
+    padding: 0 0 70px 0 !important;
+
+    .page-header {
+      height: 300px !important;
+    }
+    .page-header-name {
+      width: 200px !important;
+      margin-top: 105px !important;
+      margin-left: 60px;
+    }
+    .page-header-profession {
+      margin-left: 188px;
+    }
+    .page-header-profile {
+      flex-direction: row !important;
+    }
+    .page-slidebarBlock {
+      &.profile {
+        max-width: 450px !important;
+      }
+    }
+    .page-slidebar {
+      width: unset !important;
+      padding: 0 40px;
+    }
+    .auxFlex {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      min-width: 440px;
+    }
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    flex-direction: column;
+    max-width: 640px;
+  }
+}
