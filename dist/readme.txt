@@ -1,6 +1,6 @@
 Requisitos para rodar o projeto:
 
--NpmJS para a instalação dos pacotes e rodar o prejeto.
+-NpmJS para a instalação dos pacotes e rodar o projeto.
 -NodeJS versão 11.2 ou superior para rodar o react.
 
 Como rodar:
