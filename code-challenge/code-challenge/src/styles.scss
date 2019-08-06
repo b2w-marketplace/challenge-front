@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    font-family: "Montserrat";
+    font-size: 12px;
+}
+p{
+    font-size: 1rem;
+    letter-spacing: .2rem;
+}
+h2, h3{
+    letter-spacing: 0.3rem;
+}
+h4{
+    letter-spacing: 0.6rem;
+}
+h3{
+    font-size: 2rem;
+}
+h2{
+    padding-bottom: 1rem;
+    border-bottom: .3rem solid;
+    font-size: 3rem;
+}
