@@ -1,33 +1,33 @@
 <div class="row no-gutters mt-5 pt-5 text-center">
-    <div class="col-10 offset-1 mb-4">
+    <div class="col-6 offset-3 mb-4">
         <h2>PROFILE</h2>
     </div>
-    <div class="col-10 offset-1 mb-4">
+    <div class="col-8 offset-2 mb-4">
         <p [innerHTML]="description"></p>
     </div>
 </div>
 <div class="row no-gutters mb-5 text-center">
-    <div class="col-10 offset-1 mb-4">
+    <div class="col-6 offset-3 mb-4">
         <h2>CONTACT</h2>
     </div>
-    <div class="col-10 offset-1 mb-4">
+    <div class="col-8 offset-2 mb-4">
         <p [innerHTML]="contact?.tel"></p>
         <p [innerHTML]="contact?.cel"></p>
     </div>
-    <div class="col-10 offset-1 mb-4">
+    <div class="col-8 offset-2 mb-4">
         <p [innerHTML]="contact?.address"></p>
     </div>
-    <div class="col-10 offset-1">
+    <div class="col-8 offset-2">
         <p [innerHTML]="contact?.website"></p>
         <p [innerHTML]="contact?.mail"></p>
     </div>
 </div>
 <div class="row no-gutters text-center my-5 pb-5">
-    <div class="col-10 offset-1 mb-4">
+    <div class="col-6 offset-3 mb-4">
         <h2>SKILLS</h2>
     </div>
-    <div class="col-10 offset-1 my-2" *ngFor="let skill of skills">
+    <div class="col-8 offset-2 my-2" *ngFor="let skill of skills">
         <p [innerHTML]="skill.name" class="pb-2"></p>
-        <progress class="w-75" max="100" [value]="skill.value"></progress>
+        <progress class="w-100" max="100" [value]="skill.value"></progress>
     </div>
 </div>
