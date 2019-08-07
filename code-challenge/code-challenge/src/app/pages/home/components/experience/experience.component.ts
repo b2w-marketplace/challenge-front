@@ -6,12 +6,12 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./experience.component.scss']
 })
 export class ExperienceComponent implements OnInit {
-  @Input() public education;
   @Input() public experience;
+  @Input() public title;
   
   constructor() { }
 
   ngOnInit() {
   }
-
+  
 }

@@ -1,3 +1,13 @@
 *{
     color: #fff;
 }
+progress[value] {
+    &::-webkit-progress-bar{
+        background-color: #212628;
+    }
+    &::-webkit-progress-value{
+        background-color: #fff;
+    }
+    border-radius: 2px;
+    border: 1px solid #fff;
+}

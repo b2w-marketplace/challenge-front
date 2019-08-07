@@ -1,5 +1,5 @@
 <div class="row no-gutters" *ngIf="cv | async;let cv; else loading;">
-    <div class="col-4">
+    <div class="col-12 col-sm-4">
         <div class="row no-gutters">
             <header class="col-12">
                 <app-avatar
@@ -9,11 +9,22 @@
                 </app-avatar>
             </header>
             <aside class="col-12">
-                <app-profile></app-profile>
+                <app-profile
+                    [contact]="cv.profile.contact"
+                    [description]="cv.profile.description"
+                    [skills]="cv.profile.skills">
+                </app-profile>
             </aside>
         </div>    
     </div>
-    <section class="col-8">
-        <app-experience [education]="cv.profile.education" [experience]="cv.profile.experience"></app-experience>
+    <section class="col-12 col-sm-8 my-5 pb-5">
+        <app-experience
+            [experience]="cv.profile.education"
+            [title]="'WORK EXPERIENCE'">
+        </app-experience>
+        <app-experience
+            [experience]="cv.profile.experience"
+            [title]="'EDUCATION'">
+        </app-experience>
     </section>
 </div>

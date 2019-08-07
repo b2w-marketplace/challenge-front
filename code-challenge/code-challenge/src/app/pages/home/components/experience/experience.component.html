@@ -1,13 +1,13 @@
-<div class="row no-gutters py-5">
+<div class="row no-gutters pt-5">
     <div class="col-10 offset-1">
         <div class="row no-gutters">
             <div class="col-12">
-                <h2>WORK EXPERIENCE</h2>
+                <h2 [innerHTML]="title"></h2>
             </div>
-            <div class="col-12 my-4">
-                <h3>FRONT END DEVELOPER @ HILLSONG</h3>
-                <h4>January 2014 -</h4>
-                <p>Text</p>
+            <div class="col-12 my-4" *ngFor="let xp of experience">
+                <h3 [innerHTML]="xp.name"></h3>
+                <h4 [innerHTML]="xp.date"></h4>
+                <p [innerHTML]="xp.description"></p>
             </div>
         </div>
     </div>
