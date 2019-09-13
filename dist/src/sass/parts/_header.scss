@@ -1,0 +1,35 @@
+header {
+	background: $cor-header;
+	color: $cor-bkg;
+	text-transform: uppercase;
+	&#header-principal{
+		@include mobile{
+			margin: 0px -15px;
+		}
+		h1,
+		h2{
+			text-align: center;
+			padding: 0 15%;
+		}
+		h1{
+			@include mobile{
+				font-size:$font-grd;
+			}
+			@include tablet{
+				font-size: 1.5rem;
+			} 
+			@include tablet-landscase{
+				font-size:$font-grd;
+			} 
+		}
+		h2{
+			font-weight: 400;
+			font-size:$font-peq;
+			border-bottom: 1px solid $cor-bkg;
+    		padding-bottom: 20px;
+		}
+		img{
+			padding:15% 15%;
+		}
+	}
+}
