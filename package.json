@@ -1,0 +1,24 @@
+{
+  "name": "b2w-challenge",
+  "version": "1.0.0",
+  "description": "Uma aplicação client-side que consulta uma API e mostra os dados de perfil",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "b2w",
+    "code-challenge"
+  ],
+  "author": "Lucas Álek",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.26.10"
+  },
+  "dependencies": {
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  }
+}

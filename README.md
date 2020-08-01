@@ -1,27 +1,25 @@
-# <> Desafio Frontend BIT - SP </>
+# Desafio B2W
 
-## Sobre
+Essa é a minha solução para o code challenge proposto pela B2W cujo enunciado pode ser encontrado [aqui](https://github.com/b2w-marketplace/code-challenge)
 
-Nosso teste consiste em implementar uma aplicação client-side, que consulte uma [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5) e mostre os dados do perfil de um usuário. Esta aplicação deve funcionar nos navegadores mais recentes do mercado.
+O projeto é responsivo e se comporta bem em telas pequenas, médias e grandes
 
-Nesse link você encontra o [layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg) do desafio:
+## Rodando o projeto localmente
+Clone esse repositório e navegue para dentro dele. Digite os seguintes comandos:
+```js 
+npm install
+``` 
+Depois
+```js 
+npm run dev
+``` 
 
-![Layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg)
+O projeto estará disponível em __localhost:1234__
 
 
-Aqui temos o arquivo .psd para [download](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.psd).
+## Tecnologias
+* React
+* Parcel
+* SASS
 
-Esse é o link da [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5).
-
-## Desafio:
-
-Desenvolva a página seguindo os seguintes critérios:
-
-- Utilize algum pré-processador pro seu css, de preferência sass. (Se quiser, fique a vontade para usar alguma lib/framework css)
-- Faça que sua página tenha uma ótima experiência para o usuário, independente do dispositivo que ele esteja usando.
-- Você pode usar Angular ou React para o desenvolvimento.
-- Crie um build do seu projeto em uma pasta chamada 'dist'
-
-Crie um Fork desse repositório e nos envie um **pull request**
-
-Não esqueça de nos ensinar como rodar seu projeto :sunglasses:
+O build do projeto se encontra na pasta 'dist'

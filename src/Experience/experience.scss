@@ -1,0 +1,46 @@
+.resume__experience {
+  grid-area: b;
+  background-color: #fff;
+  color: #010101;
+  padding: 2rem;
+
+  .title {
+    font-size: var(--fontsize--medium);
+    text-transform: uppercase;
+    position: relative;
+    height: 2.5rem;
+    font-weight: bold;
+  }
+
+  .experience {
+    line-height: 150%;
+    margin-bottom: 12px;
+
+    &__name {
+      font-size: var(--fontsize--medium);
+      text-transform: uppercase;
+      margin: 4px 0;
+      font-weight: 500;
+    }
+
+    &__date {
+      font-size: var(--fontsize--normal);
+      margin: 4px 0;
+      letter-spacing: 2px;
+    }
+
+    &__description {
+      font-size: var(--fontsize--small);
+    }
+  }
+
+  .education {
+    margin-top: 3rem;
+  }
+
+  @media (max-width: 768px) {
+    .title {
+      text-align: center;
+    }
+  }
+}

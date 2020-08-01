@@ -1,0 +1,68 @@
+.resume__presentation {
+  grid-area: a;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-align: center;
+  background-color: #333;
+  padding: 2rem;
+  position: relative;
+
+  .image-wrapper {
+    width: 8rem;
+    height: 8rem;
+    background-color: #fff;
+    transform: rotate(45deg);
+    border: 3px solid #fff;
+    position: relative;
+    box-shadow: inset 0 0 0 5px #333;
+    overflow: hidden;
+
+    img {
+      display: flex;
+      align-items: center;
+      transform: rotate(-45deg);
+      font-size: var(--fontsize--medium);
+      line-height: 110%;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      font-weight: bold;
+      color: #333;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .text-wrapper {
+    color: #fff;
+
+    .name {
+      font-size: var(--fontsize--large);
+      line-height: 120%;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .profession {
+      font-size: var(--fontsize--small);
+      letter-spacing: 1px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: row;
+
+    .divider.divider--presentation {
+      display: none;
+    }
+  }
+  @media (max-width: 620px) {
+    flex-direction: column;
+
+    .text-wrapper {
+      margin-top: 3rem
+    }
+  }
+}

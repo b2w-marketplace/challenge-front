@@ -1,0 +1,54 @@
+.resume__profile {
+  grid-area: c;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+
+  .wrapper {
+    width: 100%;
+
+    .phones,
+    .address,
+    .social {
+      margin: 4px 0;
+    }
+
+    .title {
+      text-transform: uppercase;
+      height: 2rem;
+      position: relative;
+      font-weight: 500;
+    }
+
+    .content {
+      font-size: var(--fontsize--small);
+      line-height: 150%;
+      width: 75%;
+      margin: 0 auto;
+    }
+
+    .skill-name {
+      font-size: var(--fontsize--small);
+    }
+
+    .skill-bar {
+      width: 75%;
+      height: var(--fontsize--small);
+      border: 2px solid #fff;
+      margin: 6px auto;
+
+      .loaded {
+        background: #fff;
+        height: 100%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 2rem 0;
+  }
+}
