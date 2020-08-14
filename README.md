@@ -1,27 +1,32 @@
-# <> Desafio Frontend BIT - SP </>
+# <> Desafio Frontend BIT </>
 
 ## Sobre
 
-Nosso teste consiste em implementar uma aplicação client-side, que consulte uma [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5) e mostre os dados do perfil de um usuário. Esta aplicação deve funcionar nos navegadores mais recentes do mercado.
+O desafio consiste em implementar uma aplicação client-side, que rode de forma consistente nos navegadores mais recentes e que seja responsiva para melhor visualização em dispositivos móveis.
 
-Nesse link você encontra o [layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg) do desafio:
+## Regras
 
-![Layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg)
+Baseado no Layout (disponível no link abaixo), desenvolva uma página web que exibe informações de usuários.
 
+Premissas:
+1. Ao carregar a página, as informações exibidas devem ser as suas próprias informações pessoais.
+2. Ao clicar no botão 'try the next one', a página deve chamar uma API (disponível no link abaixo) que retorna dados de usuários randômicos e exibi-los na tela.
+3. Ao clicar no botão 'Follow' a página deve armazenar essa informação. Caso o mesmo usuário seja exibido novamente o botão deve aparecer como 'Following' e com cor diferente
 
-Aqui temos o arquivo .psd para [download](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.psd).
+ Note que o Layout e as premissas não deixam claro todas as situações possíveis para os dados do usuário.
+ Você pode interpretar como quiser o que não foi definido como premissa e melhorar a funcionalidade da página, caso ache necessário.
+ 
+Recomendações:
+- Utilize a versão mais recente do Angular (https://angular.io/)
+- Utilize a versão mais recente do Bootstrap (https://getbootstrap.com/)
+- Atente-se a resposividade da tela (principalmente no formato mobile)
 
-Esse é o link da [API](http://www.mocky.io/v2/5a5e38f3330000b0261923a5).
+## Links
+Link do [Layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg).
 
-## Desafio:
+Link da [API](https://randomuser.me/api/).
 
-Desenvolva a página seguindo os seguintes critérios:
+## ...
 
-- Utilize algum pré-processador pro seu css, de preferência sass. (Se quiser, fique a vontade para usar alguma lib/framework css)
-- Faça que sua página tenha uma ótima experiência para o usuário, independente do dispositivo que ele esteja usando.
-- Você pode usar Angular ou React para o desenvolvimento.
-- Crie um build do seu projeto em uma pasta chamada 'dist'
+Crie um Fork desse repositório e abra um **pull request** quando finalizar ;)
 
-Crie um Fork desse repositório e nos envie um **pull request**
-
-Não esqueça de nos ensinar como rodar seu projeto :sunglasses:
