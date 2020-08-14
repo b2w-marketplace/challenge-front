@@ -22,7 +22,7 @@ Recomendações:
 - Atente-se a resposividade da tela (principalmente no formato mobile)
 
 ## Links
-Link do [Layout](https://github.com/b2w-marketplace/code-challenge/blob/master/files/layout-code-challenge.jpg).
+Link do [Layout](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about.me.jpg).
 
 Link da [API](https://randomuser.me/api/).
 
