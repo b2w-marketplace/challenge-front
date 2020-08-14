@@ -28,5 +28,5 @@ Link da [API](https://randomuser.me/api/).
 
 ## ...
 
-Crie um Fork desse repositório e abra um **pull request** quando finalizar ;)
+Tudo pronto? Basta clonar esse repositório e abrir um **pull request** quando finalizar ;)
 
