@@ -1,0 +1,30 @@
+/* Import Variáveis CSS */
+@import '../../../../variables.scss';
+
+.card {
+    width: 100%;
+    margin-bottom: 50px;
+
+    .card-body {
+        &:last-child {
+            border-top: 1px solid $color-light-gray;
+        }
+    
+        .card-title {
+            font-size: 20px;
+        }
+    
+        .card-text {
+            color: $color-gray;
+            font-weight: bold;
+        }
+
+        .more-info {
+            margin-top: $secondary-margin;
+        }
+    }
+
+    .bi-chevron-down {
+        margin-right: 5px;
+    }
+}
