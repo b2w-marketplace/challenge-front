@@ -1,3 +1,18 @@
+/* Import Variáveis CSS */
+@import '../../../variables.scss';
+
 .d-flex:last-child {
     margin-top: 40px;
+}
+
+.card-text {
+    color: $color-gray;
+    font-weight: bold;
+}
+
+/* Adaptação Mobile */
+@media (max-width: 500px) {
+    .d-flex {
+        display: block !important;
+    }
 }

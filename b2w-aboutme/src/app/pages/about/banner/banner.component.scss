@@ -29,3 +29,18 @@
         }
     } 
 }
+
+/* Adaptação Mobile */
+@media (max-width: 500px) {
+    .btn-primary {
+        float: none !important;
+        margin: $secondary-margin auto !important;
+        display: block;
+    }
+}
+
+@media (max-width: 400px) {
+    .main {
+        margin-top: $secondary-margin !important;
+    }
+}
