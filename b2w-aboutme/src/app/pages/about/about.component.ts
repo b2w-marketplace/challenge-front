@@ -15,7 +15,7 @@ export class AboutComponent implements OnInit {
   constructor(private userService: UserService, private mockService: MockService) { }
 
   ngOnInit(): void {
-    this.userData = this.mockService.getInitialData();
+
   }
 
   getUser() {
