@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'b2w-banner',
@@ -7,9 +7,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BannerComponent implements OnInit {
 
+  @Input() firstName: string;
+  @Input() lastName: string;
+  @Input() userImage: string;
+  @Input() state: string;
+  @Input() country: string;
+
+  @Output() followEvent: EventEmitter<any> = new EventEmitter();
+
+  @Input() following: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  follow() {
+    this.followEvent.emit();
   }
 
 }

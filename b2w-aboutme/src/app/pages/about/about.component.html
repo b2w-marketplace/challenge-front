@@ -1,41 +1,50 @@
-<b2w-header (buttonEvent)="getUser()"></b2w-header>
+<div *ngFor="let user of userData; let i = index">
+    <b2w-header (buttonEvent)="getUser(user.results[i].login.username)"></b2w-header>
 
-<section>
-    <div class="container">
-        <div class="d-flex">
-            <div class="p-2 flex-fill">
-                <b2w-banner></b2w-banner>
+    <section>
+        <div class="container">
+            <div class="d-flex">
+                <div class="p-2 flex-fill">
+                    <b2w-banner (followEvent)="setFollow(user.results[i].login.username)"
+                                [following]="following"
+                                [firstName]="user.results[i].name.first"
+                                [lastName]="user.results[i].name.last"
+                                [userImage]="user.results[i].picture.large"
+                                [state]="user.results[i].location.state" 
+                                [country]="user.results[i].location.country">
+                    </b2w-banner>
+                </div>
+            </div>
+            <div class="d-flex">
+                <div class="p-2 flex-fill">
+                    <b2w-card title="Personal info" buttonTitle="see more">
+                        <div firstContent>
+                            <p class="card-text">gender: {{user.results[i].gender}}</p>
+                            <p class="card-text">age: {{user.results[i].dob.age}} years old</p>
+                            <p class="card-text">born at: {{user.results[i].location.country}}</p>
+                        </div>
+                        <div secondContent>
+                            <p class="card-text">address: {{user.results[i].location.street.name}}, {{user.results[i].location.street.number}}</p>
+                            <p class="card-text">postcode: {{user.results[i].location.postcode}}</p>
+                        </div>
+                    </b2w-card>
+                </div>
+                <div class="p-2 flex-fill">
+                    <b2w-card title="Contact info" buttonTitle="see more">
+                        <div firstContent>
+                            <p class="card-text">email: {{user.results[i].email}}</p>
+                            <p class="card-text">phone: {{user.results[i].phone}}</p>
+                            <p class="card-text">cell: {{user.results[i].cell}}</p>
+                        </div>
+                        <div secondContent>
+                            <p class="card-text">username: {{user.results[i].login.username}}</p>
+                            <p class="card-text">registered: {{user.results[i].registered.age}} years ago</p>
+                        </div>
+                    </b2w-card>
+                </div>
             </div>
         </div>
-        <div class="d-flex">
-            <div class="p-2 flex-fill">
-                <b2w-card title="Personal info" buttonTitle="see more">
-                    <div firstContent>
-                        <p class="card-text">gender: male</p>
-                        <p class="card-text">age: 24 years old</p>
-                        <p class="card-text">born at: US</p>
-                    </div>
-                    <div secondContent>
-                        <p class="card-text">address: avenue, 999</p>
-                        <p class="card-text">postcode: G2L 7B4</p>
-                    </div>
-                </b2w-card>
-            </div>
-            <div class="p-2 flex-fill">
-                <b2w-card title="Contact info" buttonTitle="see more">
-                    <div firstContent>
-                        <p class="card-text">email: email@email.com</p>
-                        <p class="card-text">phone: (404)-108-4965</p>
-                        <p class="card-text">cell: 977-407-9935</p>
-                    </div>
-                    <div secondContent>
-                        <p class="card-text">username: raphaelbzr</p>
-                        <p class="card-text">registered: 10 years ago</p>
-                    </div>
-                </b2w-card>
-            </div>
-        </div>
-    </div>
-</section>
+    </section>
+</div>
 
 

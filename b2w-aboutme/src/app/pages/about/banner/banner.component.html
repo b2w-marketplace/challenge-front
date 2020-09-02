@@ -1,9 +1,12 @@
 <div class="main">
     <div class="banner"></div>
     <div class="text-center">
-        <img class="img-fluid" src="https://media-exp1.licdn.com/dms/image/C4E03AQHdOmFp7YpgBA/profile-displayphoto-shrink_200_200/0?e=1604534400&v=beta&t=rxfOmXptf5PxpkXfJXj3cO4i2kLoLBr559cv5LSEBC0" alt="imagem do usuário">
-        <h2>Raphael S. Bezerra</h2>
-        <strong>são paulo, brasil</strong>
-        <button type="button" class="btn btn-primary">Follow</button>
+        <img class="img-fluid" [src]="userImage" alt="imagem do usuário">
+        <h2>{{firstName}} {{lastName}}</h2>
+        <strong>{{state}}, {{country}}</strong>
+        <button type="button" class="btn btn-primary" [class.btn-danger]="following" (click)="follow()">
+            <span *ngIf="!following">Follow</span>
+            <span *ngIf="following">Following</span>
+        </button>
     </div>
 </div>

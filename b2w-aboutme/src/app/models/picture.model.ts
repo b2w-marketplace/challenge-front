@@ -1,5 +1,5 @@
 export interface PictureModel {
-    large: string;
-    medium: string;
-    thumbnail: string;
+    large?: string;
+    medium?: string;
+    thumbnail?: string;
 }
