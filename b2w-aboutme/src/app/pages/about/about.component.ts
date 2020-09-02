@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserModel } from 'src/app/models/user.model';
+import { UserService } from '../../services/user.service';
+import { MockService } from '../../services/mock.service';
 
 @Component({
   selector: 'b2w-about',
@@ -7,13 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  userData: UserModel[] = [];
+
+  constructor(private userService: UserService, private mockService: MockService) { }
 
   ngOnInit(): void {
+    this.userData = this.mockService.getInitialData();
   }
 
   getUser() {
-    console.log('get user');
+    this.userService.getUser().subscribe((userData: UserModel[]) => {
+      this.userData = userData;
+      console.log(this.userData);
+    });
   }
 
 }

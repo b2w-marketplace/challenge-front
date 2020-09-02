@@ -4,11 +4,13 @@ import { AboutComponent } from './about/about.component';
 import { HeaderComponent } from './about/header/header.component';
 import { BannerComponent } from './about/banner/banner.component';
 import { CardComponent } from './about/card/card.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [ AboutComponent, HeaderComponent, BannerComponent, CardComponent ],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule
   ],
   exports: [ AboutComponent ]
 })
