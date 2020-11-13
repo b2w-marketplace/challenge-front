@@ -29,6 +29,7 @@ Recomendações:
 [Layout 3](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_followers-list.jpg)
 
 Link da [API](https://randomuser.me/api/).
+*a Api costuma ficar fora do ar em alguns momentos, caso aconteça insista algumas vezes (pense nisso quando for desevolver as chamadas).
 
 ## ...
 
