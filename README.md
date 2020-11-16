@@ -1,3 +1,14 @@
+
+## Instalação e Configuração
+
+Após clonar o projeto, instalar as dependencias
+### `npm install`
+
+
+Com todas a dependencias, você pode usar o comando abaixo para o build
+### `npm start`
+
+
 # <> Desafio Frontend BIT </>
 
 ## Sobre

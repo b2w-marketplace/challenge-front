@@ -1,0 +1,21 @@
+<div class="shadow-sm border bg-light p-4">
+    <h5>{{title}}</h5>
+    <p *ngFor="let user of informacoes">
+        {{user.label}}: {{user.value}}
+    </p>
+
+    <div *ngIf="condition">
+        <p *ngFor="let user of informacoes.addInfo">
+            {{user.label}}: {{user.value}}
+        </p>
+    </div>
+</div>
+
+<div class="bg-light border p-3" *ngIf="informacoes.addInfo">
+    <div *ngIf="!condition" (click)="condition = true">
+        See More
+    </div>
+    <div *ngIf="condition" (click)="condition = false">
+        See Less
+    </div>
+</div>

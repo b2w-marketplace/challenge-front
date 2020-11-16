@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light bg-light shadow-sm" *ngIf="users.length > 0">
+    <a class="navbar-brand offset-lg-2 pl-5 text-light" href="#"> users_like.me</a>
+    <div class="dropdown mr-5 tamanhobotao" *ngIf="mostrarBotaoSeguidores">
+        <button class="bg-transparent border-0 btn btn-secondary dropdown-toggle text-right tamanhobotao font-weight-bolder" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Following {{users.length}} user
+        </button>
+        <div class="dropdown-menu tamanhobotao" aria-labelledby="dropdownMenuButton">
+            <div class="dropdown-item" *ngFor="let user of users">
+                <div class="row">
+                    <div class="col-3 p-0">
+                        <img [src]="user.user" class="rounded-circle" style="width: 50px; height: 50px;">
+                    </div>
+                    <div class="col-6 p-0">
+                        <p class="m-0 mt-2" style="font-size: 13px;">{{user.firstName}} {{user.lastName}}</p>
+                        <p class="m-0" style="font-size: 10px;">{{user.city}}, {{user.country}}</p>
+                    </div>
+                    <div class="col-3 p-0">
+                        <a href="#" class="btn btn-danger btn-sm mt-3" *ngIf="user.follow" (click)="followUser(user.user)">Unfollow</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,22 @@
+.profile-header {
+    background-position: center 40%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 150px;
+}
+
+.user-detail {
+    margin: -105px 0px -45px 0px;
+}
+
+.text-header {
+    background-color: #9022f3;
+    height: 190px;
+    font-size: 25px;
+    margin-bottom: -95px;
+}
+
+.rounded-circle {
+    max-width: 200px;
+    max-height: 200px;
+}

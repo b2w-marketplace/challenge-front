@@ -1,0 +1,51 @@
+<app-navbar [mostrarBotaoSeguidores]="usuarios.follow" [usuarioAtual]="usuarios.picture.large"></app-navbar>
+
+<div class="text-header">
+    <p class="text-center p-4 text-light">Find new users like you</p>
+</div>
+
+<div class="container mb-5" *ngIf="usuarios">
+    <div class="row">
+        <div class="offset-lg-2 col-lg-8 col-12 shadow-sm border bg-light text-center">
+
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-12 profile-header" style="background-image: url('{{usuarios.picture.large}}')"></div>
+            </div>
+
+            <div class="row user-detail mb-4">
+                <div class="col-lg-12 col-sm-12 col-12">
+                    <img [src]="usuarios.picture.large" class="rounded-circle h-50">
+                    <br>
+                    <div class="offset-4 pl-4 mb-3">
+                        <a href="#" class="btn btn-primary btn-sm mt-3" *ngIf="!usuarios.follow" (click)="followUser()">Follow</a>
+                        <a href="#" class="btn btn-danger btn-sm mt-3" *ngIf="usuarios.follow" (click)="unfollowUser()">Unfollow</a>
+                        <a href="#" class="btn btn-secondary btn-sm mt-3 offset-4" (click)="consultarDados()">try the next one</a>
+                    </div>
+                    <h5>{{usuarios.name.first}} {{usuarios.name.last}}</h5>
+                    <p>
+                        <i class="fa fa-map-marker" aria-hidden="true"></i> {{usuarios.location.city}}, {{usuarios.location.country}}.
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="offset-lg-2 col-lg-8 col-12 mt-2  text-center">
+            <div class="row text-left">
+                <div class="col-md-6 col-12 p-0 p-1">
+                    <app-informacoes title="Personal Info" [informacoes]="personalInfo"></app-informacoes>
+                </div>
+
+                <div class="col-md-6 col-12 p-0 p-1">
+                    <app-informacoes title="Contact Info" [informacoes]="contactInfo"></app-informacoes>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,12 @@
+.navbar {
+    background-color: #9022f3!important;
+}
+
+.show>.btn-secondary.dropdown-toggle:focus {
+    background-color: white !important;
+    color: #9022f3;
+}
+
+.tamanhobotao {
+    width: 290px;
+}
