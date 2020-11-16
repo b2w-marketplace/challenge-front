@@ -16,10 +16,10 @@
                 <div class="col-lg-12 col-sm-12 col-12">
                     <img [src]="usuarios.picture.large" class="rounded-circle h-50">
                     <br>
-                    <div class="offset-4 pl-4 mb-3">
+                    <div class="offset-4 pl-lg-4 mb-3">
                         <a href="#" class="btn btn-primary btn-sm mt-3" *ngIf="!usuarios.follow" (click)="followUser()">Follow</a>
                         <a href="#" class="btn btn-danger btn-sm mt-3" *ngIf="usuarios.follow" (click)="unfollowUser()">Unfollow</a>
-                        <a href="#" class="btn btn-secondary btn-sm mt-3 offset-4" (click)="consultarDados()">try the next one</a>
+                        <a href="#" class="btn btn-secondary btn-sm mt-3 offset-lg-4" (click)="consultarDados()">try the next one</a>
                     </div>
                     <h5>{{usuarios.name.first}} {{usuarios.name.last}}</h5>
                     <p>
