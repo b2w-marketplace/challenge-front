@@ -53,7 +53,7 @@ export class PerfilComponent implements OnInit {
 
     this.contactInfo = [
       { label: "email", value: "leticia.schneider@fatec.sp.gov.br" },
-      { label: "phone", value: "(11) 4797-2315" }
+      { label: "phone", value: "(11) 99770-2127" }
     ];
 
     // chamando a função para verificar se o usuário foi seguido
