@@ -30,7 +30,7 @@ Recomendações:
 
 Link da [API](https://randomuser.me/api/).
 
-*a Api costuma ficar fora do ar em alguns momentos, caso aconteça insista algumas vezes (pense nisso quando for desevolver as chamadas).
+*a Api pode demorar pra responder ou ficar fora do ar em alguns momentos (pense nisso quando for desevolver).
 
 ## ...
 
