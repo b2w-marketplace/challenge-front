@@ -14,6 +14,7 @@ Premissas:
 3. Ao clicar no botão 'Follow' a página deve armazenar essa informação. Caso o mesmo usuário seja exibido novamente o botão deve aparecer como 'Following' e com cor diferente
 4. Ao seguir um usuário, deverá ser exibido um link na parte superior direita da página ([Layout](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_following.jpg))
 5. Ao clicar no link, uma lista com os usuários seguidos deve ser exibida ([Layout](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_followers-list.jpg))
+6. Ao navegar entre os usuários (via 'try the next one'), os usuários que NÃO forem seguidos devem aparecer na lista de sugestões ([Exemplo com 1](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_sugestions-list-1.png)) ([Exemplo com vários](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_sugestions-list-5.png)). Guarde essas informações no Browser, para que quando a página for acessada novamente ou recarregada, já exista sugestões iniciais.
 
  Note que o Layout e as premissas não deixam claro todas as situações possíveis para os dados do usuário.
  Você pode interpretar como quiser o que não foi definido como premissa e melhorar a funcionalidade da página, caso ache necessário.
@@ -27,6 +28,7 @@ Recomendações:
 [Layout 1](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about.jpg)
 [Layout 2](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_following.jpg)
 [Layout 3](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_followers-list.jpg)
+[Layout 4](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_sugestions-list-5.png)
 
 Link da [API](https://randomuser.me/api/).
 
