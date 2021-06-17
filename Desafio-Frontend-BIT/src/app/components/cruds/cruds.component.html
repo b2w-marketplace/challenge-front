@@ -1,0 +1,7 @@
+{{users|json}}
+
+
+<div *ngFor="let c  users">
+  <h1>{{c.title}} </h1>
+  <img [attr.src] = "c.large" />
+</div>

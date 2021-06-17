@@ -1,0 +1,59 @@
+@import '~bootstrap/dist/css/bootstrap.css';
+
+
+.card{
+width:20%;
+height: 15%;
+margin-left: 20%;
+
+}
+
+.card-img-top{
+  width: 30%;
+  margin-left: 35%;
+  border-radius: 100%;
+  margin-top: 10%;
+}
+
+.card-title{
+  margin-left: 30%;
+}
+
+.card-img{
+  border-radius: 100%;
+  width: 20%;
+  margin-top: -10%;
+  margin-left: 2%;
+}
+
+.fundo{
+width: 945px;
+height: 150px;
+margin-left: -1%;
+margin-top: -0.8%;
+}
+
+.btn-follow{
+  background-color: rgb(247, 245, 242);
+  width: 15%;
+  height: 10%;
+  border-radius: 10%;
+}
+
+.title{
+margin-left: 20%;
+margin-top: 5%;
+}
+
+.navbar-brand{
+  color: aliceblue;
+  margin-top: -22%;
+  margin-left: 15%;
+}
+
+h1{
+  margin-right: 35%;
+  margin-top: -15%;
+  color: aliceblue;
+}
+
