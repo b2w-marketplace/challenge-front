@@ -36,5 +36,6 @@ Link da [API](https://randomuser.me/api/).
 
 ## ...
 
-Tudo pronto? Basta clonar esse repositório e abrir um **pull request** quando finalizar ;)
+Preparado?
+Crie um fork desse repositório, quando finalizar, envie o link para o seu contato na B2W ;)
 
