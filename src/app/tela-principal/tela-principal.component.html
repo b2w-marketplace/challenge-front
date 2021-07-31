@@ -1,0 +1,96 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #9022f3;">
+    <div class="container-fluid">
+      <a style="color: #ffff;" class="navbar-brand" href="#">user_like.me</a>
+    </div>
+    <div class="dropdown" style="margin-right: 5em;">
+      <button class="btn btn-secondary dropdown-toggle text-right font-weight-bolder size bg-transparent border-0 " type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Following {{pessoas.length}} users
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenuButton size">
+          <div class="dropdown-item" *ngFor="let pessoa of pessoas">
+              <div class="row">
+                  <div class="col-3 p-0">
+                      <img [src]="pessoa.userImg" class="rounded-circle circle-img-list" style="width: 50px; height: 50px;">
+                  </div>
+                  <div class="col-6 p-0">
+                      <p class="m-0 mt-2" style="font-size: 13px;">{{pessoa.firstName}} {{pessoa.lastName}}</p>
+                      <p class="m-0" style="font-size: 10px;">{{pessoa.city}}, {{pessoa.country}}</p>
+                  </div>
+                  <div class="col-3 p-0">
+                      <a href="#" class="btn btn-danger btn-sm mt-3" *ngIf="pessoa.follow" (click)="deixarDeSeguir(pessoa.userImg)">Unfollow</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+</nav>
+
+<div class="msg-header">
+    <p class="text-center p-4 text-light">Find new users like you</p>
+</div>
+
+<div class="container mb-5" *ngIf="pessoa">
+    <div class="row">
+        <div class="offset-lg-2 col-lg-8 col-12 shadow-sm border bg-light text-center box-info">
+          <div class="back-image" style="background-image: url('{{pessoa.picture.large}}')">
+            </div>
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-12 profile-header" style="background-image: url('{{pessoa.picture.large}}')"></div>
+            </div>
+
+            <div class="row user-detail mb-4">
+                <div class="col-lg-12 col-sm-12 col-12">
+                    <img [src]="pessoa.picture.large" style="width:128px; height:128px" class="rounded-circle h50">
+                    <br>
+                    <div class="offset-4 pl-lg-4 mb-3">
+                        <a href="#" class="btn btn-primary btn-sm mt-3" *ngIf="!pessoa.seguido" (click)="seguirPessoa()">Follow</a>
+                        <a href="#" class="btn btn-danger btn-sm mt-3" *ngIf="pessoa.seguido" (click)="deixarDeSeguir()">Following</a>
+                        <a href="#" class="btn btn-secondary btn-sm mt-3 offset-lg-4" (click)="getPessoa()">try the next one</a>
+                    </div>
+                    <h5>{{pessoa.name.first}} {{pessoa.name.last}}</h5>
+                    <p>
+                      <i class="fa fa-map-marker" aria-hidden="true"></i> {{pessoa.location.city}}, {{pessoa.location.country}}.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+      <div class="offset-lg-2 col-lg-8 col-12 mt-2 text-center">
+          <div class="row text-left">
+              <div class="col-md-6 col-12 p-0 p-1">
+                <div class="shadow-sm border bg-light p-4">
+                  <h5>Personal Info</h5>
+                  <p>Gender: {{pessoa.gender}}</p>
+                  <div>
+                      <p>Age: {{pessoa.dob.age}}</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6 col-12 p-0 p-1">
+                <div class="shadow-sm border bg-light p-4">
+                  <h5>Contact Info</h5>
+                  <p>Email: {{pessoa.email}}</p>
+                  <div>
+                      <p>Phone: {{pessoa.phone}}</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+<div *ngFor="let pessoa of sugestoes" class="card bg-light" style="width: 18rem;">
+  <img [src]="pessoa.picture.large" style="width:100px; height:100px" class="card-img-top rounded-circle circle-img-list-sugestion">
+  <div class="card-body">
+    <h5 class="card-title">{{pessoa.name.first}} {{pessoa.name.last}}</h5>
+    <p class="card-text">{{pessoa.location.city}}, {{pessoa.location.country}}</p>
+    <a href="#" class="btn btn-primary" (click)="seguirPessoa(pessoa)">Follow</a>
+  </div>
+</div>
+
+
+

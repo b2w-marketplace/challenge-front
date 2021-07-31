@@ -1,41 +1,31 @@
-# <> Desafio Frontend BIT </>
+# DesafioB2W
 
-## Sobre
+Link para a versão online: https://desafio-b2-w.vercel.app/
 
-O desafio consiste em implementar uma aplicação client-side, que rode de forma consistente nos navegadores mais recentes e que seja responsiva para melhor visualização em dispositivos móveis.
+Para rodar localmente: ng s -o
 
-## Regras
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
-Baseado no [Layout](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about.jpg), desenvolva uma página web que exibe informações de usuários.
+## Development server
 
-Premissas:
-1. Ao carregar a página, as informações exibidas devem ser as suas próprias informações pessoais.
-2. Ao clicar no botão 'try the next one', a página deve chamar uma API (disponível no link abaixo) que retorna dados de usuários randômicos e exibi-los na tela.
-3. Ao clicar no botão 'Follow' a página deve armazenar essa informação. Caso o mesmo usuário seja exibido novamente o botão deve aparecer como 'Following' e com cor diferente
-4. Ao seguir um usuário, deverá ser exibido um link na parte superior direita da página ([Layout](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_following.jpg))
-5. Ao clicar no link, uma lista com os usuários seguidos deve ser exibida ([Layout](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_followers-list.jpg))
-6. Ao navegar entre os usuários (via 'try the next one'), os usuários que NÃO forem seguidos devem aparecer na lista de sugestões ([Exemplo com 1](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_sugestions-list-1.png)) ([Exemplo com vários](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_sugestions-list-5.png)). Guarde essas informações no Browser, para que quando a página for acessada novamente ou recarregada, já exista sugestões iniciais.
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
- Note que o Layout e as premissas não deixam claro todas as situações possíveis para os dados do usuário.
- Você pode interpretar como quiser o que não foi definido como premissa e melhorar a funcionalidade da página, caso ache necessário.
- 
-Recomendações:
-- Utilize a versão mais recente do Angular (https://angular.io/)
-- Utilize a versão mais recente do Bootstrap (https://getbootstrap.com/)
-- Atente-se a resposividade da tela (principalmente no formato mobile)
+## Code scaffolding
 
-## Links
-[Layout 1](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about.jpg)
-[Layout 2](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_following.jpg)
-[Layout 3](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_followers-list.jpg)
-[Layout 4](https://github.com/b2w-marketplace/challenge-front/blob/master/files/layout-about_sugestions-list-5.png)
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-Link da [API](https://randomuser.me/api/).
+## Build
 
-*a Api pode demorar pra responder ou ficar fora do ar em alguns momentos (pense nisso quando for desenvolver).
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## ...
+## Running unit tests
 
-Preparado?
-Crie um fork desse repositório, quando finalizar, envie o link para o seu contato na B2W ;)
+Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
+## Running end-to-end tests
+
+Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+
+## Further help
+
+To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.

@@ -1,0 +1,49 @@
+.back-image {
+  background-repeat: no-repeat; background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; height: 10em;
+  filter: blur(4px);
+}
+
+.box-info{
+  padding: 0px;
+}
+
+.rounded-circle {
+  margin-top: -5em;
+  filter: blur(0px);
+  max-width: 200px;
+  max-height: 200px;
+}
+
+.circle-img-list {
+  margin-top: 0em !important;
+}
+.circle-img-list-sugestion {
+  margin-top: 2em !important;
+  margin-left: 5em;
+}
+
+.msg-header {
+  background-color: #9022f3;
+  height: 190px;
+  font-size: 25px;
+  margin-bottom: -95px;
+}
+
+.show>.btn-secondary.dropdown-toggle:focus {
+  background-color: white !important;
+  color: #9022f3;
+}
+
+.size {
+  width: 24em;
+}
+
+.dropdown-menu {
+  width: 24rem !important
+}
+.card {
+  display: inline-flex;
+  margin: 2.5em;
+}
