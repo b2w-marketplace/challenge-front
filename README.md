@@ -1,8 +1,9 @@
 # DesafioB2W
 
-Link para a versão online: https://desafio-b2-w.vercel.app/
+Link para a versão online: https://desafio-b2w.vercel.app/
 
 Para rodar localmente: ng s -o
+
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.4.
 
