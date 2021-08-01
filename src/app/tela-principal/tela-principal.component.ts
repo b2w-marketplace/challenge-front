@@ -44,13 +44,13 @@ export class TelaPrincipalComponent implements OnInit {
     this.carregaSugestao();
   }
 
-  getPessoa() {
+  buscaPessoa() {
 
     if (!this.pessoa.seguido) {
       this.salvaSugestao(this.pessoa);
     }
 
-    this.pessoasService.getPessoa().subscribe((pessoas: any) => {
+    this.pessoasService.buscaPessoa().subscribe((pessoas: any) => {
       this.pessoa = pessoas.results[0];
     });
 

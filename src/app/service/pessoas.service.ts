@@ -19,7 +19,7 @@ export class PessoasService {
   }
 
   // busca pessoa
-  getPessoa(): Observable<Pessoa[]> {
+  buscaPessoa(): Observable<Pessoa[]> {
     return this.httpClient.get<Pessoa[]>(this.url)
       .pipe(
         retry(2),
